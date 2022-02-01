@@ -1,0 +1,35 @@
+@import url("http://fonts.cdnfonts.com/css/anurati");
+
+.container {
+    // sizing
+    width: 100%;
+    background-color: $bg-primary;
+    height: 40px;
+    // dispaly
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navitem {
+    // font
+    font-family: "Anurati", sans-serif;
+    font-size: 14px;
+    // bg coloring
+    background-color: inherit;
+    border: none;
+    // margin
+    margin: 10px 0;
+    // coloring
+    color: $text-secondary;
+}
+
+.navitem:hover {
+    color: $primary;
+}
+
+.container > a:nth-child(2) {
+    margin-left: auto;
+}
