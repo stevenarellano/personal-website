@@ -5,11 +5,13 @@ export default function Navbar() {
         <div className={styles.container}>
             <a className={`${styles.navitem} ${styles.logo}`}>logo</a>
 
-            <a className={styles.navitem}>about</a>
-            <a className={styles.navitem}>experience</a>
-            <a className={styles.navitem}>portfolio</a>
-            <a className={styles.navitem}>contact</a>
-            <a className={styles.navitem}>resume</a>
+            <a className={`${styles.navitem} ${styles.underline}`}>about</a>
+            <a className={`${styles.navitem} ${styles.underline}`}>
+                experience
+            </a>
+            <a className={`${styles.navitem} ${styles.underline}`}>portfolio</a>
+            <a className={`${styles.navitem} ${styles.underline}`}>contact</a>
+            <a className={`${styles.navitem} `}>resume</a>
         </div>
     );
 }
