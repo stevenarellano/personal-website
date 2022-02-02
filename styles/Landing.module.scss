@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 15px;
+    width: 65%;
+}
+
+.hi {
+    font-size: 20px;
+    color: $primary;
+    font-weight: 100;
+}
+
+@mixin header-size {
+    font-size: 60px;
+}
+.head {
+    @include header-size;
+    color: $text-primary;
+}
+
+.subhead {
+    font-size: 50px;
+    color: $text-secondary;
+}
+
+.about {
+    font-size: 16px;
+    color: $text-secondary;
+    width: 65%;
+}

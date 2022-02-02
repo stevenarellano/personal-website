@@ -4,16 +4,17 @@ import styles from "../styles/Home.module.scss";
 
 // components
 import Navbar from "./navbar/navbar";
+import Main from "./main/main";
 
 export default function Home() {
     return (
-        <div className={styles.container}>
+        <div>
             <Head>
                 <title>Steven Arellano</title>
             </Head>
-            <body>
+            <body className={styles.container}>
                 <Navbar />
-                here we go
+                <Main />
             </body>
         </div>
     );
