@@ -12,11 +12,11 @@ export default function Home() {
             <Head>
                 <title>Steven Arellano</title>
             </Head>
-            <body>
+            <div className="root">
                 <Navbar />
                 <Main />
                 <Footer />
-            </body>
+            </div>
         </div>
     );
 }

@@ -7,3 +7,19 @@ encorporate react icons into ui
 CURIOUS
 what save-dev vs --save is for 
 understand server side rendering
+    clinet side 
+        server sending response to browser -> borwser downloads js -> browser executes react -> page now viewable and interactable
+    server side 
+        server sending ready to be rendereds html response to browser ->
+        browser renders the page, now viewable, and broser donwloads js -> browser executes react -> page not interactable
+
+next.js routes
+    create easy routes
+    api routes within next file structure
+    easy deployment
+    out of the box typescript & sass
+    static site generation (next export)
+    easy deployment (anything you can host with )
+
+creating API calls
+    call a https request to the route of the file

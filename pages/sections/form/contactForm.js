@@ -5,13 +5,15 @@ export default function ContactForm() {
         <form className={styles.formCont}>
             <div className={styles.formRow}>
                 <input
-                    className={styles.halfInput}
+                    className={styles.maxInput}
                     name="name"
                     placeholder="Name"
                     type={"text"}
                 />
+            </div>
+            <div className={styles.formRow}>
                 <input
-                    className={styles.halfInput}
+                    className={styles.maxInput}
                     name="email"
                     placeholder="Email"
                     type={"text"}

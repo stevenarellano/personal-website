@@ -1,4 +1,5 @@
 import styles from "../../styles/misc/Footer.module.scss";
+import axios from "axios";
 
 // icons
 import { BsGithub } from "react-icons/bs";
@@ -7,6 +8,16 @@ import { BsInstagram } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 
 export default function Footer() {
+    function handler() {
+        axios.get("/api/hello").then(
+            (response) => {
+                console.log(response.data);
+            },
+            (error) => {
+                console.log(error);
+            }
+        );
+    }
     return (
         <div className={styles.container}>
             <hr />
@@ -25,7 +36,7 @@ export default function Footer() {
                     <a className={styles.socialI}>
                         <BsFacebook />
                     </a>
-                    <a className={styles.socialI}>
+                    <a onClick={handler} className={styles.socialI}>
                         <BsLinkedin />
                     </a>
                 </div>
