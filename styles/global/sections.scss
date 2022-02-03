@@ -1,0 +1,36 @@
+.sectionContainer {
+    width: 65%;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+}
+
+.sectionHeader > hr {
+    height: 1px;
+    width: 100%;
+    border: none;
+    background-color: $primary;
+}
+
+.sectionHeader > h4 {
+    font-family: "Orbitron", sans-serif;
+    white-space: nowrap;
+}
+
+.sectionHeader > h4 > div {
+    font-family: "Orbitron", sans-serif;
+    display: inline;
+    color: $primary;
+}
+
+.padRight {
+    padding-right: 7px;
+}
+.padLeft {
+    padding-left: 7px;
+}

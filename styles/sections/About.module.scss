@@ -1,32 +1,12 @@
 .container {
     display: grid;
-    grid-template:
-        "brk brk" auto
-        "txt photo" auto / 6fr 4fr;
-    height: 250px;
+
+    grid-template: "txt photo" auto / 6fr 4fr;
     box-sizing: border-box;
+    
 }
 
-.brk {
-    grid-area: brk;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow-x: hidden;
-    margin-bottom: 20px;
-}
 
-.brk > hr {
-    height: 1px;
-    width: 85%;
-    border: none;
-    background-color: $primary;
-}
-
-.brk > h4 {
-    width: 15%;
-}
 
 .contentText {
     display: inline-block;
