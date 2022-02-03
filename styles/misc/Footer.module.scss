@@ -1,0 +1,47 @@
+.container {
+    margin: auto;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socHold {
+    display: flex;
+    gap: 20px;
+
+}
+
+.footText {
+    color: $primary;
+    font-weight: lighter;
+}
+.container > hr {
+    height: 1px;
+    width: 100%;
+    border: none;
+    background-color: $primary;
+    margin-bottom: 5px;
+}
+
+.socCont {
+    width: 100%;
+    background-color: $bg-primary;
+
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socialI {
+    color: $text-primary;
+    height: 30px;
+    width: 30px;
+}
+
+.socialI > * {
+    height: 100%;
+    width: 100%;
+}
