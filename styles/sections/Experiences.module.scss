@@ -1,0 +1,29 @@
+.cv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.experiences {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.experiences > div {
+    cursor: pointer;
+    height: 30px;
+    padding: 5px;
+}
+
+.experiences > div:hover {
+    background-color: $bg-secondary;
+}
+
+.exp {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
