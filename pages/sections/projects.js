@@ -1,5 +1,7 @@
 import styles from "../../styles/sections/Projects.module.scss";
 
+import ProjectRow from "./projects/projectRow";
+
 export default function Projects() {
     return (
         <div className="sectionContainer">
@@ -10,6 +12,8 @@ export default function Projects() {
                     <div>02.</div> Projects
                 </h4>
             </div>
+            <ProjectRow />
+            <ProjectRow />
         </div>
     );
 }
