@@ -1,5 +1,5 @@
-@import "./global//text.scss";
-@import "./global/sections.scss";
+@import "./text.scss";
+@import "./sections.scss";
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
 html,
@@ -17,4 +17,7 @@ a {
 
 * {
     box-sizing: border-box;
+}
+mainContainer {
+    height: 100vh;
 }

@@ -1,0 +1,76 @@
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.formCont {
+    width: 60%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formI {
+    width: 100%;
+}
+
+.pWrapper {
+    width: 40%;
+}
+
+.formRow {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@mixin formInput {
+    border: solid 1px $primary;
+    border-radius: 0.75rem;
+    height: 30px;
+    background-color: $bg-secondary;
+    padding-left: 5px;
+    color: $text-primary;
+    &::-webkit-input-placeholder {
+        color: $text-secondary;
+    }
+    &:-moz-placeholder {
+        color: $text-secondary;
+    }
+    &::-moz-placeholder {
+        color: $text-secondary;
+    }
+    &:-ms-input-placeholder {
+        color: $text-secondary;
+    }
+}
+
+.halfInput {
+    @include formInput;
+    width: 50%;
+}
+
+.maxInput {
+    @include formInput;
+    width: 100%;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100px;
+    padding: 5px;
+}
+
+.submit {
+    cursor: pointer;
+    background-color: $primary;
+    color: $text-primary;
+}
+
+.submit:hover {
+    background-color: $primary-dark;
+    border-color: $primary-dark;
+}

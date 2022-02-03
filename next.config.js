@@ -9,6 +9,7 @@ module.exports = {
         $text-secondary: #c9c9c9;
 
         $primary: #f887ff;
+        $primary-dark: #C554CC;
         $secondary: #de004e;
         $secondary-dark: #860029;
         

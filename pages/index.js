@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.scss";
 
 // components
-import Navbar from "./navbar/navbar";
+import Navbar from "./misc/navbar";
 import Main from "./main/main";
+
 
 export default function Home() {
     return (
@@ -12,7 +12,7 @@ export default function Home() {
             <Head>
                 <title>Steven Arellano</title>
             </Head>
-            <body className={styles.container}>
+            <body>
                 <Navbar />
                 <Main />
             </body>
