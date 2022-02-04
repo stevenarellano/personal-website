@@ -14,7 +14,7 @@ export default function About() {
             <div className={styles.container}>
                 <h5 className={styles.contentText}>
                     <p>
-                        hi! i'm <span className="pColor">steven</span>!
+                        hi, i'm <span className="pColor">steven</span>!
                     </p>
                     <br />
                     <p>

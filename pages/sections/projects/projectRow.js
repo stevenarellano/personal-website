@@ -7,7 +7,6 @@ export default function ProjectRow() {
         <div className={styles.row}>
             <Project />
             <Project />
-            <Project />
         </div>
     );
 }
