@@ -23,23 +23,21 @@ export default function Footer() {
             <hr />
 
             <div className={styles.socCont}>
-                <div className={styles.socHold}>
-                    <a className={styles.socialI}>
-                        <BsGithub />
-                    </a>
-                    <a className={styles.socialI}>
-                        <BsInstagram />
-                    </a>
-                </div>
+                <a className={styles.socialI}>
+                    <BsGithub />
+                </a>
+                <a className={styles.socialI}>
+                    <BsInstagram />
+                </a>
+
                 <h5 className={styles.footText}>SOCIALS</h5>
-                <div className={styles.socHold}>
-                    <a className={styles.socialI}>
-                        <BsFacebook />
-                    </a>
-                    <a onClick={handler} className={styles.socialI}>
-                        <BsLinkedin />
-                    </a>
-                </div>
+
+                <a className={styles.socialI}>
+                    <BsFacebook />
+                </a>
+                <a onClick={handler} className={styles.socialI}>
+                    <BsLinkedin />
+                </a>
             </div>
         </div>
     );

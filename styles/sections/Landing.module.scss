@@ -1,9 +1,16 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: 15px;
+    justify-content: center;
     width: 65%;
+    height: 35vw;
+    gap: 10px;
+}
+
+.container > * {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0%;
 }
 
 .hi {
@@ -13,6 +20,7 @@
 }
 
 @mixin header-size {
+    line-height: 40px;
     font-size: 60px;
 }
 .head {
