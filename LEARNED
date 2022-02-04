@@ -23,3 +23,8 @@ next.js routes
 
 creating API calls
     call a https request to the route of the file
+
+how to add icons into next.js / react
+    install react icons
+    import the name from react icons / library
+    then <NameImport/> 

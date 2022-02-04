@@ -15,20 +15,80 @@
 }
 
 .projC {
-    background-color: black;
     grid-area: cont;
     border-radius: 0.75rem 0 0 0.75rem;
-    padding: 5px;
+    padding: 10px;
+    // grid tempalte
+    display: grid;
+    grid-template:
+        "icons" 15%
+        "title" 15%
+        "description" 55%
+        "tools" auto;
+    gap: 5px;
+}
+
+.iRow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.iLink {
+    font-size: 24px;
+    color: $text-secondary;
+}
+
+.iLink:hover {
+    color: $primary-dark;
+    cursor: pointer;
+}
+
+.cTit {
+    font-size: 20px;
+    color: $text-secondary;
+}
+
+.cText {
+    font-size: 12px;
+
+    color: $text-secondary;
+}
+
+.tRow {
+    grid-area: tools;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: $text-secondary;
+}
+
+.tRow > span {
+    font-size: 10px;
 }
 
 .projP {
-    background-color: white;
     grid-area: pict;
     height: 100%;
     border-radius: 0 0.75rem 0.75rem 0;
     object-fit: cover;
+    filter: grayscale(100%);
 }
 
 .project:hover {
-    background-color: $bg-secondary;
+    .projP {
+        filter: grayscale(0);
+    }
+    .cTit {
+        color: $text-primary;
+    }
+    .iLink {
+        color: $primary;
+    }
+    .iLink:hover {
+        color: $primary-dark;
+    }
 }

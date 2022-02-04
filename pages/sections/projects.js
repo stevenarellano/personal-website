@@ -14,7 +14,6 @@ export default function Projects() {
             </div>
             <ProjectRow />
             <ProjectRow />
-            <ProjectRow />
         </div>
     );
 }
