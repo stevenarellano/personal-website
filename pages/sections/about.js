@@ -1,6 +1,6 @@
 import styles from "../../styles/sections/About.module.scss";
 import Image from "next/image";
-import headshot from "../../public/headshot.jpeg";
+import headshot from "../../public/headshot.png";
 
 export default function About() {
     return (
@@ -9,24 +9,38 @@ export default function About() {
                 <h4 className="padRight">
                     <div>01.</div> About Me
                 </h4>
-
                 <hr />
             </div>
             <div className={styles.container}>
                 <h5 className={styles.contentText}>
                     <p>
-                        hi my name is Steven and I've been in web development
-                        for the past 3 years. I enjoy problem solving and
-                        helping others.
+                        hi! i'm <span className="pColor">steven</span>!
                     </p>
                     <br />
                     <p>
-                        I'm skilled in using Javascript, Python, SQL, Rust, and
-                        C! I hopoe to be an amazing full stack webdeveloper and
-                        create an impact in the defi community.
+                        i'm a{" "}
+                        <span className="pColor">
+                            {" "}
+                            full stack software engineer{" "}
+                        </span>
+                        specializing in creating satisfying UIs. i spent my time
+                        practicing algorithm questions and learning how to
+                        create an impact in the upcoming{" "}
+                        <span className="pColor">metaverse</span>.
                     </p>
                     <br />
-                    <p>Feel free to reach out, and I'd love to help you out.</p>
+                    <p>
+                        i currently attend the{" "}
+                        <span className="pColor"> university of chicago</span>{" "}
+                        and am studying both{" "}
+                        <span className="pColor">
+                            {" "}
+                            computer scinece and business
+                        </span>
+                        . tech has always been an exciting subject for me, and i
+                        strive to innovate and provide exciting projects for
+                        everyone.
+                    </p>
                 </h5>
                 <div className={styles.pContainer}>
                     <Image

@@ -3,23 +3,27 @@
 
     grid-template: "txt photo" auto / 6fr 4fr;
     box-sizing: border-box;
-    
 }
-
-
 
 .contentText {
     display: inline-block;
+    width: 90%;
     grid-area: txt;
+    font-size: 16px;
+    padding: 0 20px 0;
 }
 
 .pContainer {
     box-sizing: border-box;
     grid-area: photo;
-    height: 100%;
-    width: 100%;
+    width: 85%;
+    object-fit: scale-down;
     display: flex;
-    padding: 2.5% 25% 7.5% 5%;
+    margin: 0 30px 20px 0;
+    background-color: purple;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px,
+        rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px,
+        rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
 .headshot {

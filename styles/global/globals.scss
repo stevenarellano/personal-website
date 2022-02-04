@@ -1,27 +1,7 @@
+@import "./resets.scss";
 @import "./text.scss";
 @import "./sections.scss";
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap");
-html,
-.root,
-.root * {
-    padding: 0;
-    margin: 0;
-    font-family: "Exo 2", sans-serif;
-}
 
-body {
-    background-color: $bg-primary;
-}
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-* {
-    box-sizing: border-box;
-}
-mainContainer {
-    height: 100vh;
-}
