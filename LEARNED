@@ -43,3 +43,6 @@ using the polygon particles
         }
     then check the copy and pasted code
     place svg in the public folder and the url should be as if you were in teh public folder
+
+responsive design
+    using vh on some coimponents can be a bad idea, especially contasiners
