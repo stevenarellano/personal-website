@@ -28,3 +28,18 @@ how to add icons into next.js / react
     install react icons
     import the name from react icons / library
     then <NameImport/> 
+
+particles.js
+    install typical ts
+    peer install dependencies npm
+    regualar use of the Particels element
+    make sure to add fullScreen: false to option if that's what you hope to do
+    
+using the polygon particles
+    npm i pathseg
+    include in the same conponent: 
+        if (typeof window !== "undefined") {
+            require("pathseg");
+        }
+    then check the copy and pasted code
+    place svg in the public folder and the url should be as if you were in teh public folder

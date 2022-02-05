@@ -1,21 +1,26 @@
 .container {
     display: flex;
     width: 100%;
+    gap: 20px;
+    height: 300px;
 }
 
 .formCont {
     width: 50%;
+    height: 100%;
     gap: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .formI {
-    width: 100%;
+    width: 40%;
 }
 
 .pWrapper {
     width: 50%;
+    height: 100%;
 }
 
 .formRow {
@@ -27,7 +32,7 @@
 
 @mixin formInput {
     border: solid 1px $primary;
-    border-radius: 0.75rem;
+    border-radius: 0.5rem;
     height: 30px;
     background-color: $bg-secondary;
     padding-left: 5px;

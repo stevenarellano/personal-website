@@ -13,7 +13,6 @@ export default function Main() {
             <Landing />
             <About />
             <Projects />
-            <Experiences />
             <Connect />
         </div>
     );

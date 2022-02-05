@@ -76,6 +76,7 @@
     border-radius: 0 0.75rem 0.75rem 0;
     object-fit: cover;
     filter: grayscale(100%);
+    z-index: 0;
 }
 
 .project:hover {
