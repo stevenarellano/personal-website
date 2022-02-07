@@ -3,7 +3,7 @@ import ProjSchema from "./pSchema";
 export const PROJECT_DATA = [
     new ProjSchema(
         "Speed Typer",
-        "https://imgur.com/a/58O7Tg4",
+        "/projects/personal-project-typing.jpg",
         "A web application designed with 14 lessons to help individuals increase typing speed.",
         "https://github.com/stevenarellano/speed-typing",
         "https://stevenarellano.github.io/speed-typing/",
@@ -12,7 +12,7 @@ export const PROJECT_DATA = [
     ),
     new ProjSchema(
         "Speed Typer",
-        "https://imgur.com/a/Pxl0oD5",
+        "/projects/personal-project-file-hoster.png",
         "A web application designed with 14 lessons to help individuals increase typing speed.",
         "https://github.com/stevenarellano/file-hoster-client",
         "https://gifted-babbage-c8b4d5.netlify.app/",

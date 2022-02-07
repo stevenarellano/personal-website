@@ -35,7 +35,14 @@ export default function Project({ data }) {
                     })}
                 </div>
             </div>
-            <Image className={styles.projP} src={headshot} alt="headshot" />
+            <Image
+                layout="responsive"
+                width={100}
+                height={100}
+                className={styles.projP}
+                src={data.image}
+                alt="headshot"
+            />
         </div>
     );
 }

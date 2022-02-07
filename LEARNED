@@ -46,3 +46,7 @@ using the polygon particles
 
 responsive design
     using vh on some coimponents can be a bad idea, especially contasiners
+
+
+images next.js
+    if you want ot use a relative path, include the path as if you were inside of the public folder
