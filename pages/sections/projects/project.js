@@ -5,23 +5,34 @@ import headshot from "../../../public/headshot.png";
 import { VscSourceControl } from "react-icons/vsc";
 import { GoLinkExternal } from "react-icons/go";
 
-export default function Project() {
+import ProjSchema from "./pSchema";
+
+export default function Project({ data }) {
     return (
         <div className={styles.project}>
             <div className={styles.projC}>
                 <div className={styles.iRow}>
-                    <GoLinkExternal className={styles.iLink} />
-                    <VscSourceControl className={styles.iLink} />
+                    {data.website ? (
+                        <a target={"_blank"} href={data.website}>
+                            <GoLinkExternal className={styles.iLink} />
+                        </a>
+                    ) : (
+                        ""
+                    )}
+                    {data.github ? (
+                        <a target={"_blank"} href={data.github}>
+                            <VscSourceControl className={styles.iLink} />
+                        </a>
+                    ) : (
+                        ""
+                    )}
                 </div>
-                <div className={styles.cTit}>Project 1</div>
-                <p className={styles.cText}>
-                    this project was built over 3 weeks encorporating the react
-                    library, vanilla css, and some pretty swaggy javascript.
-                </p>
+                <div className={styles.cTit}>{data.name}</div>
+                <p className={styles.cText}>{data.description}</p>
                 <div className={styles.tRow}>
-                    <span>React</span>
-                    <span>Material UI</span>
-                    <span>Next.js</span>
+                    {data.tools.map((tool) => {
+                        return <span key={tool}>{tool}</span>;
+                    })}
                 </div>
             </div>
             <Image className={styles.projP} src={headshot} alt="headshot" />

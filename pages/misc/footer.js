@@ -23,19 +23,36 @@ export default function Footer() {
             <hr />
 
             <div className={styles.socCont}>
-                <a className={styles.socialI}>
+                <a
+                    href="https://github.com/stevenarellano"
+                    target={"_blank"}
+                    className={styles.socialI}
+                >
                     <BsGithub />
                 </a>
-                <a className={styles.socialI}>
+                <a
+                    href="https://www.instagram.com/_stevenarellano/?hl=en"
+                    target={"_blank"}
+                    className={styles.socialI}
+                >
                     <BsInstagram />
                 </a>
 
                 <h5 className={styles.footText}>SOCIALS</h5>
 
-                <a className={styles.socialI}>
+                <a
+                    href="https://www.facebook.com/steven.arellano.5095/"
+                    target={"_blank"}
+                    className={styles.socialI}
+                >
                     <BsFacebook />
                 </a>
-                <a onClick={handler} className={styles.socialI}>
+                <a
+                    href="https://www.linkedin.com/in/stevenjarellano/"
+                    target={"_blank"}
+                    onClick={handler}
+                    className={styles.socialI}
+                >
                     <BsLinkedin />
                 </a>
             </div>
