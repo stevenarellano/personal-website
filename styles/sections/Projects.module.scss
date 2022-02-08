@@ -1,10 +1,12 @@
 .row {
     width: 100%;
     display: grid;
-    grid-template: "a b" auto / 1fr 1fr;
-    height: 200px;
-    gap: 10px;
-    margin-bottom: 10px;
+    grid-template:
+        "a" auto
+        "b" auto;
+    height: auto;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 .project {
@@ -93,4 +95,14 @@
         color: $primary-dark;
     }
     border-color: $primary;
+}
+
+@media only screen and (min-width: 768px) {
+    .row {
+        width: 100%;
+        display: grid;
+        grid-template: "a b" auto / 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
 }
