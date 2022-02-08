@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 65%;
+    width: 90%;
     height: auto;
     gap: 10px;
 }
@@ -40,6 +40,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+    .container {
+        width: 65%;
+    }
+
     @mixin header-size {
         line-height: 40px;
     }

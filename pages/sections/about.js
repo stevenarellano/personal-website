@@ -44,8 +44,10 @@ export default function About() {
                 </h5>
                 <div className={styles.pContainer}>
                     <Image
+                        layout="fill"
+                        objectFit="cover"
                         className={styles.headshot}
-                        src={headshot}
+                        src={"/headshot.png"}
                         alt="headshot"
                     />
                 </div>

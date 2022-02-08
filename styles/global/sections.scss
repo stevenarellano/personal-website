@@ -1,5 +1,5 @@
 .sectionContainer {
-    width: 65%;
+    width: 90%;
 }
 
 .sectionHeader {
@@ -38,4 +38,10 @@
 #tsparticles1 {
     height: 100%;
     width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .sectionContainer {
+        width: 65%;
+    }
 }
