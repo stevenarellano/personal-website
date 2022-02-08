@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "../../../styles/sections/Connect.module.scss";
-import Email from "./email";
+import Email from "../../../data/email";
 
 export default function ContactForm() {
     let [formData, setFormData] = useState(new Email("", "", ""));

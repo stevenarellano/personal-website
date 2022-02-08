@@ -1,11 +1,8 @@
 import styles from "../../../styles/sections/Projects.module.scss";
 import Image from "next/image";
-import headshot from "../../../public/headshot.png";
 
 import { VscSourceControl } from "react-icons/vsc";
 import { GoLinkExternal } from "react-icons/go";
-
-import ProjSchema from "./pSchema";
 
 export default function Project({ data }) {
     if (!data) {

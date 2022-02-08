@@ -1,7 +1,5 @@
-import styles from "../../styles/sections/Projects.module.scss";
-
 import ProjectRow from "./projects/projectRow";
-import { PROJECT_DATA } from "./projects/pData";
+import { PROJECT_DATA } from "../../data/pData";
 
 export default function Projects() {
     const projDOM = [];

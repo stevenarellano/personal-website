@@ -1,6 +1,5 @@
 import styles from "../../styles/sections/About.module.scss";
 import Image from "next/image";
-import headshot from "../../public/headshot.png";
 
 export default function About() {
     return (
