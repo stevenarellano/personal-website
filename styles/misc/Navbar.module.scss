@@ -5,14 +5,44 @@
     height: 50px;
     // dispaly
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 20px;
     align-items: center;
     padding: 0 20px;
     // position
     position: fixed;
     top: 0%;
+    left: 0;
     z-index: 1;
+    // margin
+    margin: 0;
+}
+
+.container {
+    a:not(:last-child):not(.logo) {
+        display: none;
+    }
+
+    a:last-child {
+        border: solid 2px $primary;
+        padding: 5px;
+        border-radius: 0.5rem;
+        color: $primary;
+    }
+
+    a:last-child:hover {
+        background-color: $bg-secondary;
+    }
+
+    .logo {
+        color: $primary;
+    }
+
+    .logoCont {
+        border: solid 2px $primary;
+        border-radius: 0.5rem;
+        padding: 5px;
+    }
 }
 
 .navitem {
@@ -33,34 +63,31 @@
     color: $primary;
 }
 
-.container > a:nth-child(2) {
-    margin-left: auto;
-}
-
-.container > a:last-child {
-    border: solid 2px $primary;
-    padding: 5px;
-    border-radius: 0.5rem;
-    color: $primary;
-}
-
-.container > a:last-child:hover {
-    background-color: $bg-secondary;
-}
-
-.logo {
-    color: $primary;
-}
-.logoCont {
-    border: solid 2px $primary;
-    border-radius: 0.5rem;
-    padding: 5px;
-}
-
 .logoCont:hover {
     background-color: $bg-secondary;
 }
 
 .logoText {
     font-family: "Orbitron", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        justify-content: flex-end;
+    }
+
+    .container {
+        a {
+            display: inline-block;
+        }
+        a:nth-child(2) {
+            margin-left: auto;
+        }
+    }
+
+    .logoCont {
+        border: solid 2px $primary;
+        border-radius: 0.5rem;
+        padding: 5px;
+    }
 }

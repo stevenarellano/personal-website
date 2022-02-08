@@ -8,6 +8,9 @@ import { GoLinkExternal } from "react-icons/go";
 import ProjSchema from "./pSchema";
 
 export default function Project({ data }) {
+    if (!data) {
+        return null;
+    }
     return (
         <div className={styles.project}>
             <div className={styles.projC}>

@@ -1,7 +1,7 @@
 export default class Email {
-    constructor(name, address, message) {
+    constructor(name, subject, message) {
         this.name = name;
-        this.address = address;
+        this.subject = subject;
         this.message = message;
     }
 }

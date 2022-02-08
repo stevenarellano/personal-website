@@ -13,7 +13,13 @@ export default function Navbar() {
             <a className={`${styles.navitem} underline`}>experience</a>
             <a className={`${styles.navitem} underline`}>portfolio</a>
             <a className={`${styles.navitem} underline`}>contact</a>
-            <a className={`${styles.navitem} `}>resume</a>
+            <a
+                href="/StevenArellanoCV.pdf"
+                download="StevenArellanoCV"
+                className={`${styles.navitem} `}
+            >
+                resume
+            </a>
         </div>
     );
 }

@@ -15,7 +15,13 @@ export default function ContactForm() {
 
     function submitForm(e) {
         e.preventDefault();
-        console.log(formData);
+        window.open(
+            `mailto:${"stevenjarellano2@gmail.com"}?subject=Inquiry From Personal Website&body=${
+                formData.message
+            }`
+        );
+        let newEmail = new Email("", "", "");
+        setFormData(newEmail);
     }
 
     return (
@@ -35,10 +41,10 @@ export default function ContactForm() {
                 <input
                     autoComplete="off"
                     className={styles.maxInput}
-                    name="address"
-                    placeholder="Email"
+                    name="subject"
+                    placeholder="Subject"
                     type={"text"}
-                    value={formData.address}
+                    value={formData.subject}
                     onChange={handleUserInput}
                 />{" "}
             </div>

@@ -8,7 +8,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 25vh auto 50vh;
 
+    padding-top: 25vh;
     gap: 50vh;
+}
+
+@media only screen and (min-width: 768px) {
 }

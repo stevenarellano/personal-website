@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     width: 65%;
-    height: 35vw;
+    height: auto;
     gap: 10px;
 }
 
@@ -20,7 +20,7 @@
 }
 
 @mixin header-size {
-    line-height: 40px;
+    line-height: 50px;
     font-size: 60px;
 }
 .head {
@@ -29,12 +29,28 @@
 }
 
 .subhead {
-    font-size: 50px;
+    font-size: 40px;
     color: $text-secondary;
 }
 
 .about {
     font-size: 16px;
     color: $text-secondary;
-    width: 65%;
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    @mixin header-size {
+        line-height: 40px;
+    }
+
+    .subhead {
+        font-size: 50px;
+        color: $text-secondary;
+    }
+
+    .about {
+        font-size: 16px;
+        width: 65%;
+    }
 }
