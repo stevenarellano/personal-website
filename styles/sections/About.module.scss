@@ -36,7 +36,7 @@
 
 @media only screen and (min-width: 768px) {
     .container {
-        grid-template: "txt photo" auto / 6fr 4fr;
+        grid-template: "txt photo" auto / 5fr 5fr;
         gap: 0px;
     }
 
@@ -45,7 +45,8 @@
     }
 
     .pContainer {
-        width: 85%;
+        width: 60%;
+        height: 100%;
         margin: 0 30px 20px 0;
     }
 }

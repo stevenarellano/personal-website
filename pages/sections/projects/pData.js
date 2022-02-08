@@ -3,7 +3,7 @@ import ProjSchema from "./pSchema";
 export const PROJECT_DATA = [
     new ProjSchema(
         "Speed Typer",
-        "/projects/personal-project-typing.jpg",
+        "/projects/personal-project-typing.png",
         "A web application designed with 14 lessons to help individuals increase typing speed.",
         "https://github.com/stevenarellano/speed-typing",
         "https://stevenarellano.github.io/speed-typing/",

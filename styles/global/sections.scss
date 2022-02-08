@@ -35,9 +35,12 @@
     padding-left: 7px;
 }
 
-#tsparticles1 {
-    height: 100%;
-    width: 100%;
+#coffee {
+    background-color: #6e4228;
+    background: radial-gradient(#956f5a 0%, #6e4228 100%);
+    cursor: move;
+    width: 100vw;
+    height: 100vh;
 }
 
 @media only screen and (min-width: 768px) {

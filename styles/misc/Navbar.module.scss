@@ -77,9 +77,10 @@
     }
 
     .container {
-        a {
+        a:not(:last-child):not(.logo) {
             display: inline-block;
         }
+
         a:nth-child(2) {
             margin-left: auto;
         }
