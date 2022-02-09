@@ -13,11 +13,11 @@ export default function About() {
             <div className={styles.container}>
                 <h5 className={styles.contentText}>
                     <p>
-                        hi, i'm <span className="pColor">steven</span>!
+                        hi, i&apos;m <span className="pColor">steven</span>!
                     </p>
                     <br />
                     <p>
-                        i'm a{" "}
+                        i&apos;m a{" "}
                         <span className="pColor">
                             {" "}
                             full stack software engineer{" "}

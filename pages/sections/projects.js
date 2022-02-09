@@ -1,15 +1,17 @@
-import ProjectRow from "./projects/projectRow";
+import ProjectRow from "../../data/projectRow";
 import { PROJECT_DATA } from "../../data/pData";
 
 export default function Projects() {
     const projDOM = [];
     for (let i = 0; i < PROJECT_DATA.length / 2; i++) {
-        let row = (
-            <ProjectRow
-                key={i}
-                data={[PROJECT_DATA[i * 2], PROJECT_DATA[i * 2 + 1]]}
-            />
+        let data1 = PROJECT_DATA[i * 2];
+        let data2 = PROJECT_DATA[i * 2 + 1] ? PROJECT_DATA[i * 2 + 1] : null;
+        let row = data2 ? (
+            <ProjectRow key={i} data={[data1, data2]} />
+        ) : (
+            <ProjectRow key={i} data={[data1]} />
         );
+
         projDOM.push(row);
     }
 

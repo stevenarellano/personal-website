@@ -27,6 +27,7 @@ export default function Footer() {
                     href="https://github.com/stevenarellano"
                     target={"_blank"}
                     className={styles.socialI}
+                    rel="noreferrer"
                 >
                     <BsGithub />
                 </a>
@@ -34,6 +35,7 @@ export default function Footer() {
                     href="https://www.instagram.com/_stevenarellano/?hl=en"
                     target={"_blank"}
                     className={styles.socialI}
+                    rel="noreferrer"
                 >
                     <BsInstagram />
                 </a>
@@ -44,6 +46,7 @@ export default function Footer() {
                     href="https://www.facebook.com/steven.arellano.5095/"
                     target={"_blank"}
                     className={styles.socialI}
+                    rel="noreferrer"
                 >
                     <BsFacebook />
                 </a>
@@ -52,6 +55,7 @@ export default function Footer() {
                     target={"_blank"}
                     onClick={handler}
                     className={styles.socialI}
+                    rel="noreferrer"
                 >
                     <BsLinkedin />
                 </a>

@@ -7,8 +7,9 @@ export default function Landing() {
             <h1 className={styles.head}>steven arellano.</h1>
             <h1 className={styles.subhead}>i build interactive web apps.</h1>
             <p className={styles.about}>
-                I'm currently a sophomore at the University of Chicago working
-                to build satisfying UIs and amazing decentralized applications.
+                I&apos;m currently a sophomore at the University of Chicago
+                working to build satisfying UIs and amazing decentralized
+                applications.
             </p>
         </div>
     );

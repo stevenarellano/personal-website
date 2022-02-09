@@ -46,6 +46,8 @@ using the polygon particles
     still don't know how to make completely responsive
     
 
+the purpose of rel="noreferrer" when using target="_blank"
+
 responsive design
     using vh on some coimponents can be a bad idea, especially contasiners
 
