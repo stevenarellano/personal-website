@@ -5,7 +5,7 @@
 .projects > * {
     margin-top: 2vw;
     margin-top: 2vw;
-    height: 20vh;
+    height: 25vh;
 }
 
 .project {
@@ -85,48 +85,7 @@
     z-index: 0;
 }
 
-// .iRow {
-//     display: flex;
-//     align-items: flex-start;
-//     justify-content: flex-start;
-//     gap: 10px;
-//     width: 100%;
-//     height: 100%;
-// }
 
-// .iLink {
-//     font-size: 24px;
-//     color: $primary;
-// }
-
-// .iLink:hover {
-//     color: $primary-dark;
-
-//     cursor: pointer;
-// }
-
-// .cTit {
-//     font-size: 20px;
-//     color: $text-primary;
-// }
-
-// .cText {
-//     font-size: 12px;
-
-//     color: $text-secondary;
-// }
-
-// .tRow {
-//     grid-area: tools;
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-evenly;
-//     color: $text-secondary;
-// }
-
-// .tRow > span {
-//     font-size: 10px;
-// }
 
 @media only screen and (min-width: 768px) {
 }
