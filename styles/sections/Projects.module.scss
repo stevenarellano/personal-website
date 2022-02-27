@@ -3,8 +3,8 @@
 }
 
 .projects > * {
-    margin-top: 2vw;
-    margin-top: 2vw;
+    margin-top: 2vh;
+    margin-top: 2vh;
     height: 25vh;
 }
 
@@ -13,13 +13,13 @@
     border: solid $primary 2px;
     border-radius: 0.75rem;
     display: grid;
-    grid-template: "cont pict" 100% / 6fr 3fr;
+    grid-template: "cont" 100%;
 }
 
 .projC {
     grid-area: cont;
     border-radius: 0.75rem 0 0 0.75rem;
-    padding: 1vw;
+    padding: 1vh;
     // grid tempalte
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@
     grid-template: "tit links";
     align-items: center;
     display: grid;
-    font-size: 2.5vw;
+    font-size: 2.5vh;
 }
 
 .cLinks {
@@ -52,7 +52,7 @@
 }
 
 .cLinks > * {
-    font-size: 2.5vw;
+    font-size: 2.5vh;
     margin-left: 5%;
 }
 
@@ -62,12 +62,12 @@
 
 .cDes {
     grid-area: description;
-    width: 60%;
-    font-size: 1vw;
+    width: 90%;
+    font-size: 1.25vh;
 }
 
 .cTools {
-    font-size: 1.25vw;
+    font-size: 1.25vh;
     grid-area: tools;
     width: 100%;
     display: flex;
@@ -85,7 +85,38 @@
     z-index: 0;
 }
 
-
-
 @media only screen and (min-width: 768px) {
+    .projects {
+        height: 100%;
+    }
+
+    .projects > * {
+        margin-top: 2vw;
+        margin-top: 2vw;
+    }
+
+    .project {
+        display: grid;
+        grid-template: "cont pict" 100% / 6fr 3fr;
+    }
+
+    .projC {
+        padding: 1vw;
+    }
+
+    .cHead {
+        font-size: 2.5vw;
+    }
+
+    .cLinks > * {
+        font-size: 2.5vw;
+    }
+
+    .cDes {
+        font-size: 1vw;
+    }
+
+    .cTools {
+        font-size: 1.25vw;
+    }
 }

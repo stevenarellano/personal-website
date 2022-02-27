@@ -2,11 +2,9 @@ import Image from "next/image";
 
 import { VscSourceControl } from "react-icons/vsc";
 import { GoLinkExternal } from "react-icons/go";
-import styles from "../../../styles/sections/Projects.module.scss";
+import styles from "../styles/sections/Projects.module.scss";
 
 export default function Project({ data }) {
-    console.log(data);
-
     const websiteEle = (data.website ? (
         <a
             target="_blank"

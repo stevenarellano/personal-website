@@ -1,7 +1,7 @@
 .container {
     display: flex;
     width: 100%;
-    gap: 1vw;
+    gap: 1vh;
     height: 30vh;
 }
 
@@ -31,12 +31,12 @@
 
 @mixin formInput {
     border: solid 1px $primary;
-    font-size: 1.5vw;
+    font-size: 1.5vh;
     border-radius: 0.5rem;
 
     height: 4vh;
     background-color: $bg-secondary;
-    padding-left: 0.5vw;
+    padding-left: 0.5vh;
     color: $text-primary;
     &::-webkit-input-placeholder {
         color: $text-secondary;
@@ -67,7 +67,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     height: 10vh;
-    padding: 0.5vw;
+    padding: 0.5vh;
 }
 
 .submit {
@@ -93,5 +93,20 @@
 
     .formCont {
         width: 50%;
+    }
+
+    // fix the vh to vw
+    .container {
+        gap: 1vw;
+    }
+
+    @mixin formInput {
+        font-size: 1.5vw;
+
+        padding-left: 0.5vw;
+    }
+
+    .message {
+        padding: 0.5vw;
     }
 }

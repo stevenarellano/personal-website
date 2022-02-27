@@ -1,6 +1,6 @@
 .container {
     margin: auto;
-    width: 75%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,7 +10,7 @@
 
 .socHold {
     display: flex;
-    gap: 1vw;
+    gap: 1vh;
 }
 
 .footText {
@@ -28,7 +28,7 @@
 .socCont {
     width: 100%;
     background-color: $bg-primary;
-    font-size: 1vw;
+    font-size: 1vh;
     height: 5vh;
     display: flex;
     align-items: center;
@@ -37,8 +37,8 @@
 
 .socialI {
     color: $text-primary;
-    height: 2vw;
-    width: 2vw;
+    height: 2vh;
+    width: 2vh;
 }
 
 .socialI > * {
@@ -48,4 +48,19 @@
 
 .socialI:hover {
     color: $primary;
+}
+
+@media only screen and (min-width: 768px) {
+    .socHold {
+        gap: 1vw;
+    }
+
+    .socCont {
+        font-size: 1vw;
+    }
+
+    .socialI {
+        height: 2vw;
+        width: 2vw;
+    }
 }

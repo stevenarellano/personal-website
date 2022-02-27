@@ -1,5 +1,5 @@
 import { PROJECT_DATA } from "../../data/pData";
-import Project from "./projects/project";
+import Project from "../../data/project";
 import styles from "../../styles/sections/Projects.module.scss"
 
 export default function Projects() {

@@ -14,14 +14,14 @@
 }
 
 .hi {
-    font-size: 2.5vw;
+    font-size: 2.5vh;
     color: $primary;
     font-weight: 100;
 }
 
 @mixin header-size {
-    line-height: 4vw;
-    font-size: 5vw;
+    line-height: 4vh;
+    font-size: 5vh;
 }
 .head {
     @include header-size;
@@ -29,12 +29,12 @@
 }
 
 .subhead {
-    font-size: 2vw;
+    font-size: 2vh;
     color: $text-secondary;
 }
 
 .about {
-    font-size: 1.5vw;
+    font-size: 1.5vh;
     color: $text-secondary;
     width: 100%;
 }
@@ -45,6 +45,8 @@
     }
 
     @mixin header-size {
+        line-height: 4vw;
+        font-size: 5vw;
     }
 
     .subhead {
@@ -55,5 +57,17 @@
     .about {
         font-size: 1.5vw;
         width: 100%;
+    }
+
+    .hi {
+        font-size: 2.5vh;
+    }
+
+    .subhead {
+        font-size: 2vw;
+    }
+
+    .about {
+        font-size: 1.5vw;
     }
 }
