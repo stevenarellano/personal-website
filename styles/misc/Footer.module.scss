@@ -5,10 +5,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 5vh;
+    height: 7vh;
 }
 
 .socHold {
+    margin-top: 3vh;
     display: flex;
     gap: 1vh;
 }
@@ -16,6 +17,7 @@
 .footText {
     color: $primary;
     font-weight: lighter;
+    font-size: 2vh;
 }
 .container > hr {
     height: 1px;
@@ -37,8 +39,8 @@
 
 .socialI {
     color: $text-primary;
-    height: 2vh;
-    width: 2vh;
+    height: 3vh;
+    width: 3vh;
 }
 
 .socialI > * {
@@ -56,7 +58,8 @@
     }
 
     .socCont {
-        font-size: 1vw;
+        font-size: 1.5vw;
+        margin-top: 1vh;
     }
 
     .socialI {

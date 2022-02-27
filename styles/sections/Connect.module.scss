@@ -3,6 +3,7 @@
     width: 100%;
     gap: 1vh;
     height: 30vh;
+    justify-content: space-between;
 }
 
 .formCont {
@@ -83,10 +84,9 @@
 
 @media only screen and (min-width: 768px) {
     .pWrapper {
-        height: 100%;
-        width: 100%;
+        height: 15vw;
+        width: 15vw !important;
 
-        width: 50%;
         display: inline-block;
         position: relative;
     }

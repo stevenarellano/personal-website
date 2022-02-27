@@ -74,6 +74,7 @@
 @media only screen and (min-width: 768px) {
     .container {
         justify-content: flex-end;
+        height: 7vh;
     }
 
     .container {
@@ -87,19 +88,13 @@
 
         a:last-child {
             border-radius: 0.5vw;
-            padding: 0.5vw;
+            padding: 0.5vh;
         }
 
         .logoCont {
             border-radius: 0.5vw;
-            padding: 0.5vw;
+            padding: 0.5vh;
         }
-    }
-
-    .logoCont {
-        border: solid 0.1vw $primary;
-        border-radius: 0.5vw;
-        padding: 5vw;
     }
 
     .navitem {
