@@ -1,17 +1,17 @@
 .container {
     display: flex;
     width: 100%;
-    gap: 20px;
-    height: 300px;
+    gap: 1vw;
+    height: 30vh;
 }
 
 .formCont {
     width: 100%;
     height: 100%;
-    gap: 10px;
+    gap: 1vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .formI {
@@ -31,10 +31,12 @@
 
 @mixin formInput {
     border: solid 1px $primary;
+    font-size: 1.5vw;
     border-radius: 0.5rem;
-    height: 30px;
+
+    height: 4vh;
     background-color: $bg-secondary;
-    padding-left: 5px;
+    padding-left: 0.5vw;
     color: $text-primary;
     &::-webkit-input-placeholder {
         color: $text-secondary;
@@ -64,8 +66,8 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 150px;
-    padding: 5px;
+    height: 10vh;
+    padding: 0.5vw;
 }
 
 .submit {

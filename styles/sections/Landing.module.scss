@@ -4,7 +4,7 @@
     justify-content: center;
     width: 90%;
     height: auto;
-    gap: 10px;
+    gap: 1vh;
 }
 
 .container > * {
@@ -14,14 +14,14 @@
 }
 
 .hi {
-    font-size: 20px;
+    font-size: 2.5vw;
     color: $primary;
     font-weight: 100;
 }
 
 @mixin header-size {
-    line-height: 50px;
-    font-size: 60px;
+    line-height: 4vw;
+    font-size: 5vw;
 }
 .head {
     @include header-size;
@@ -29,12 +29,12 @@
 }
 
 .subhead {
-    font-size: 40px;
+    font-size: 2vw;
     color: $text-secondary;
 }
 
 .about {
-    font-size: 16px;
+    font-size: 1.5vw;
     color: $text-secondary;
     width: 100%;
 }
@@ -45,16 +45,15 @@
     }
 
     @mixin header-size {
-        line-height: 40px;
     }
 
     .subhead {
-        font-size: 50px;
+        font-size: 3vw;
         color: $text-secondary;
     }
 
     .about {
-        font-size: 16px;
-        width: 65%;
+        font-size: 1.5vw;
+        width: 100%;
     }
 }

@@ -5,11 +5,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 5vh;
 }
 
 .socHold {
     display: flex;
-    gap: 20px;
+    gap: 1vw;
 }
 
 .footText {
@@ -27,21 +28,24 @@
 .socCont {
     width: 100%;
     background-color: $bg-primary;
-
-    height: 75px;
+    font-size: 1vw;
+    height: 5vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
 }
 
 .socialI {
     color: $text-primary;
-    height: 30px;
-    width: 30px;
+    height: 2vw;
+    width: 2vw;
 }
 
 .socialI > * {
     height: 100%;
     width: 100%;
+}
+
+.socialI:hover {
+    color: $primary;
 }

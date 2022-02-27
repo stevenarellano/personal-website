@@ -1,9 +1,9 @@
+
 import styles from "../../styles/sections/About.module.scss";
-import Image from "next/image";
 
 export default function About() {
     return (
-        <div className={`sectionContainer`}>
+        <div className="sectionContainer">
             <div className="sectionHeader">
                 <h4 className="padRight">
                     <div>01.</div> About Me
@@ -41,15 +41,6 @@ export default function About() {
                         everyone.
                     </p>
                 </h5>
-                <div className={styles.pContainer}>
-                    <Image
-                        layout="fill"
-                        objectFit="cover"
-                        className={styles.headshot}
-                        src={"/headshot.png"}
-                        alt="headshot"
-                    />
-                </div>
             </div>
         </div>
     );

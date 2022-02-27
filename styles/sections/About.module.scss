@@ -1,10 +1,10 @@
 .container {
-    display: grid;
-
-    grid-template:
-        "txt" auto
-        "photo" auto;
-    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2vw;
+    justify-content: center;
+    align-items: flex-start;
     box-sizing: border-box;
 }
 
@@ -12,7 +12,7 @@
     display: inline-block;
     width: 90%;
     grid-area: txt;
-    font-size: 16px;
+    font-size: 1.5vw;
 }
 
 .pContainer {
@@ -36,17 +36,11 @@
 
 @media only screen and (min-width: 768px) {
     .container {
-        grid-template: "txt photo" auto / 5fr 5fr;
         gap: 0px;
     }
 
     .contentText {
-        padding: 0 20px 0;
-    }
-
-    .pContainer {
-        width: 60%;
-        height: 100%;
-        margin: 0 30px 20px 0;
+        padding: 0 1vw 0;
+        width: 75%;
     }
 }

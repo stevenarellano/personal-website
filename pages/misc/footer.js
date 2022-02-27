@@ -1,11 +1,8 @@
-import styles from "../../styles/misc/Footer.module.scss";
 import axios from "axios";
 
 // icons
-import { BsGithub } from "react-icons/bs";
-import { BsFacebook } from "react-icons/bs";
-import { BsInstagram } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import styles from "../../styles/misc/Footer.module.scss";
 
 export default function Footer() {
     function handler() {
@@ -25,34 +22,34 @@ export default function Footer() {
             <div className={styles.socCont}>
                 <a
                     href="https://github.com/stevenarellano"
-                    target={"_blank"}
+                    target="_blank"
                     className={styles.socialI}
                     rel="noreferrer"
                 >
                     <BsGithub />
                 </a>
-                <a
+                {/* <a
                     href="https://www.instagram.com/_stevenarellano/?hl=en"
                     target={"_blank"}
                     className={styles.socialI}
                     rel="noreferrer"
                 >
                     <BsInstagram />
-                </a>
+                </a> */}
 
                 <h5 className={styles.footText}>SOCIALS</h5>
 
-                <a
+                {/* <a
                     href="https://www.facebook.com/steven.arellano.5095/"
                     target={"_blank"}
                     className={styles.socialI}
                     rel="noreferrer"
                 >
                     <BsFacebook />
-                </a>
+                </a> */}
                 <a
                     href="https://www.linkedin.com/in/stevenjarellano/"
-                    target={"_blank"}
+                    target="_blank"
                     onClick={handler}
                     className={styles.socialI}
                     rel="noreferrer"
