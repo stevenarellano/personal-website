@@ -2,13 +2,13 @@
     // sizing
     width: 100%;
     background-color: $bg-primary;
-    height: 50px;
+    height: 5vh;
     // dispaly
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 3vw;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 2vw;
     // position
     position: fixed;
     top: 0%;
@@ -24,9 +24,9 @@
     }
 
     a:last-child {
-        border: solid 2px $primary;
-        padding: 5px;
-        border-radius: 0.5rem;
+        border: solid 0.1vw $primary;
+        padding: 0.5vw;
+        border-radius: 0.5vw;
         color: $primary;
     }
 
@@ -39,20 +39,20 @@
     }
 
     .logoCont {
-        border: solid 2px $primary;
-        border-radius: 0.5rem;
-        padding: 5px;
+        border: solid 0.1vw $primary;
+        border-radius: 0.5vw;
+        padding: 0.5vw;
     }
 }
 
 .navitem {
     // font
-    font-size: 14px;
+    font-size: 1vw;
     // bg coloring
     background-color: inherit;
     border: none;
     // margin
-    margin: 10px 0;
+    margin: 1vh 0;
     // coloring
     color: $text-secondary;
     // cursor
@@ -87,8 +87,8 @@
     }
 
     .logoCont {
-        border: solid 2px $primary;
-        border-radius: 0.5rem;
-        padding: 5px;
+        border: solid 0.1vw $primary;
+        border-radius: 0.5vw;
+        padding: 5vw;
     }
 }

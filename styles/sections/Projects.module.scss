@@ -1,19 +1,19 @@
-.row {
-    width: 100%;
-    display: grid;
-    grid-template:
-        "a" auto
-        "b" auto;
-    height: auto;
-    gap: 20px;
-    margin-bottom: 20px;
+.projects {
+    height: 100%;
+}
+
+.projects > * {
+    margin-top: 2vw;
+    margin-top: 2vw;
+    height: 20vh;
 }
 
 .project {
+    width: 100%;
     border: solid $primary 2px;
     border-radius: 0.75rem;
     display: grid;
-    grid-template: "cont pict" 100% / 6fr 4fr;
+    grid-template: "cont pict" 100% / 6fr 3fr;
 }
 
 .projC {
@@ -21,73 +21,112 @@
     border-radius: 0.75rem 0 0 0.75rem;
     padding: 10px;
     // grid tempalte
-    display: grid;
-    grid-template:
-        "icons" 15%
-        "title" 15%
-        "description" 55%
-        "tools" auto;
-    gap: 5px;
-}
-
-.iRow {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 10px;
-    width: 100%;
-    height: 100%;
-}
-
-.iLink {
-    font-size: 24px;
-    color: $primary;
-}
-
-.iLink:hover {
-    color: $primary-dark;
-
-    cursor: pointer;
+    gap: 3%;
 }
 
 .cTit {
-    font-size: 20px;
-    color: $text-primary;
-}
-
-.cText {
-    font-size: 12px;
-
-    color: $text-secondary;
-}
-
-.tRow {
-    grid-area: tools;
+    grid-area: tit;
+    color: $primary;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: $text-secondary;
 }
 
-.tRow > span {
-    font-size: 10px;
+.cHead {
+    width: 100%;
+    grid-template: "tit links";
+    align-items: center;
+    display: grid;
+    font-size: 2.5vw;
+}
+
+.cLinks {
+    grid-area: links;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+}
+
+.cLinks > * {
+    font-size: 2.5vw;
+    margin-left: 5%;
+}
+
+.cLinks > *:hover {
+    color: $primary;
+}
+
+.cDes {
+    grid-area: description;
+    width: 60%;
+    font-size: 1vw;
+}
+
+.cTools {
+    font-size: 1.25vw;
+    grid-area: tools;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    // push
+    margin-top: auto;
 }
 
 .projP {
     grid-area: pict;
-    height: 100%;
+    width: 100%;
     border-radius: 0 0.75rem 0.75rem 0;
     object-fit: cover;
-
     z-index: 0;
 }
 
+// .iRow {
+//     display: flex;
+//     align-items: flex-start;
+//     justify-content: flex-start;
+//     gap: 10px;
+//     width: 100%;
+//     height: 100%;
+// }
+
+// .iLink {
+//     font-size: 24px;
+//     color: $primary;
+// }
+
+// .iLink:hover {
+//     color: $primary-dark;
+
+//     cursor: pointer;
+// }
+
+// .cTit {
+//     font-size: 20px;
+//     color: $text-primary;
+// }
+
+// .cText {
+//     font-size: 12px;
+
+//     color: $text-secondary;
+// }
+
+// .tRow {
+//     grid-area: tools;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-evenly;
+//     color: $text-secondary;
+// }
+
+// .tRow > span {
+//     font-size: 10px;
+// }
+
 @media only screen and (min-width: 768px) {
-    .row {
-        width: 100%;
-        display: grid;
-        grid-template: "a b" auto / 1fr 1fr;
-        gap: 10px;
-        margin-bottom: 10px;
-    }
 }
