@@ -3,7 +3,7 @@ import styles from "../../styles/sections/About.module.scss";
 
 export default function About() {
     return (
-        <div className="sectionContainer">
+        <div id="about" className="sectionContainer">
             <div className="sectionHeader">
                 <h4 className="padRight">
                     <div>01.</div> About Me

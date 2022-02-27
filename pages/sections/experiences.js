@@ -2,7 +2,7 @@ import styles from "../../styles/sections/Experiences.module.scss";
 
 export default function Experiences() {
     return (
-        <div className="sectionContainer">
+        <div id="experiences" className="sectionContainer">
             <div className="sectionHeader">
                 <h4 className="padRight">
                     <div>03.</div> Experiences

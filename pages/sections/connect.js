@@ -1,14 +1,12 @@
+import Image from "next/image";
 import styles from "../../styles/sections/Connect.module.scss";
 
 import ContactForm from "./form/contactForm";
-import Image from "next/image";
 
 export default function Connect() {
-    const particlesLoaded = (container) => {
-        console.log(container);
-    };
+
     return (
-        <div className="sectionContainer">
+        <div id="connect" className="sectionContainer">
             <div className="sectionHeader">
                 <hr />
                 <h4 className="padLeft">
@@ -19,7 +17,7 @@ export default function Connect() {
                 <ContactForm />
 
                 <div className={styles.pWrapper}>
-                    <Image layout="fill" objectFit="fill" src={"/pikachu.gif"} alt="pika" />
+                    <Image layout="fill" objectFit="fill" src="/pikachu.gif" alt="pika" />
                 </div>
             </div>
         </div>

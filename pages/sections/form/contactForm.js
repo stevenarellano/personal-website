@@ -3,11 +3,11 @@ import styles from "../../../styles/sections/Connect.module.scss";
 import Email from "../../../data/email";
 
 export default function ContactForm() {
-    let [formData, setFormData] = useState(new Email("", "", ""));
+    const [formData, setFormData] = useState(new Email("", "", ""));
     function handleUserInput(e) {
-        const name = e.target.name;
-        const value = e.target.value;
-        let newForm = { ...formData };
+        const { name } = e.target;
+        const { value } = e.target;
+        const newForm = { ...formData };
         newForm[name] = value;
         setFormData(newForm);
         console.log(value);
@@ -16,11 +16,10 @@ export default function ContactForm() {
     function submitForm(e) {
         e.preventDefault();
         window.open(
-            `mailto:${"stevenjarellano2@gmail.com"}?subject=Inquiry From Personal Website&body=${
-                formData.message
+            `mailto:${"stevenjarellano2@gmail.com"}?subject=Inquiry From Personal Website&body=${formData.message
             }`
         );
-        let newEmail = new Email("", "", "");
+        const newEmail = new Email("", "", "");
         setFormData(newEmail);
     }
 
@@ -32,7 +31,7 @@ export default function ContactForm() {
                     className={styles.maxInput}
                     name="name"
                     placeholder="Name"
-                    type={"text"}
+                    type="text"
                     value={formData.name}
                     onChange={handleUserInput}
                 />
@@ -43,7 +42,7 @@ export default function ContactForm() {
                     className={styles.maxInput}
                     name="subject"
                     placeholder="Subject"
-                    type={"text"}
+                    type="text"
                     value={formData.subject}
                     onChange={handleUserInput}
                 />{" "}
@@ -54,12 +53,13 @@ export default function ContactForm() {
                     className={`${styles.maxInput} ${styles.message}`}
                     name="message"
                     placeholder="Message"
-                    type={"text"}
+                    type="text"
                     value={formData.message}
                     onChange={handleUserInput}
                 />{" "}
             </div>
             <div className={styles.formRow}>
+
                 <button
                     onClick={submitForm}
                     className={`${styles.maxInput} ${styles.submit}`}

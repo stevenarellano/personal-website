@@ -12,7 +12,7 @@ export default function Projects() {
     }
 
     return (
-        <div className="sectionContainer">
+        <div id="projects" className="sectionContainer">
             <div className="sectionHeader">
                 <hr />
                 <h4 className="padLeft">
