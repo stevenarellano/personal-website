@@ -21,7 +21,7 @@ export const PROJECT_DATA = [
     ),
     new ProjSchema(
         "File Hoster",
-        "/projects/personal-project-typing.png",
+        "/projects/file-hoster.png",
         "A web application designed to host varying files and web apps that I have created. It utilzies a postgresql backend to host hold the data download link.",
         "https://github.com/stevenarellano/file-hoster-client",
         "https://file-hoster-client.vercel.app/",
