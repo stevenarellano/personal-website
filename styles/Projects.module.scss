@@ -1,0 +1,9 @@
+.thumbnail:hover > * {
+  display: inline-block;
+}
+
+@media (min-width: 769px) {
+  .thumbnail > * {
+    display: none;
+  }
+}

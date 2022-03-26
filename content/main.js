@@ -1,9 +1,9 @@
 import { Box, Flex } from "@chakra-ui/react";
-import SectionHead from "../misc/sectionHead";
 
 // components
 import About from "./about";
 import Projects from "./projects";
+import SectionHead from "../misc/sectionHead";
 
 export default function Main() {
   return (
