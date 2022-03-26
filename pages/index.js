@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 
 // components
 import Navbar from "../misc/navbar";

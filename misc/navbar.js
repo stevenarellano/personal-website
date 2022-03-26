@@ -1,11 +1,18 @@
 import { Box, Flex } from "@chakra-ui/react";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Misc.module.scss";
 
 export default function Navbar() {
   return (
-    <Flex p="1rem">
-      <Box>sdf</Box>
-      <Box>sdf</Box>
+    <Flex className={styles.navb} p="1rem" gap="2rem">
+      <Box>
+        <a href="#home">Home</a>
+      </Box>
+      <Box ml="auto">
+        <a href="#projects">Projects</a>
+      </Box>
+      <Box>
+        <a href="#contact">Contact</a>
+      </Box>
     </Flex>
   );
 }
