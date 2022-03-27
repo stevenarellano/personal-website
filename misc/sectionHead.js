@@ -3,9 +3,11 @@ import { Divider, Flex } from "@chakra-ui/react";
 // components
 
 export default function SectionHead({ name, number }) {
+  const ids = ["projects", "contact"];
+  const ind = parseInt(number) - 1;
   return (
     <Flex
-      id={name}
+      id={ids[ind]}
       px={{ base: "1rem", md: "0" }}
       fontSize="1.25rem"
       align="center"

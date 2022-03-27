@@ -1,5 +1,4 @@
 import {
-  SimpleGrid,
   Box,
   Flex,
   Modal,
@@ -13,14 +12,14 @@ import {
   Button,
   Link,
 } from "@chakra-ui/react";
-import styles from "../styles/Projects.module.scss";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
+import styles from "../styles/Projects.module.scss";
 
 // components
 
 export default function Project({ data }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { name, image, description, github, website, demo, tools } = data;
+  const { name, image, description, github, website, tools } = data;
 
   const toolEle = tools.map((tool) => (
     <Box bg="lightgrey" px=".5rem" mr=".5rem">
@@ -32,9 +31,13 @@ export default function Project({ data }) {
       <Flex
         bg={`url(${image})`}
         bgColor="blue"
-        w={{ base: "20rem", md: "15rem" }}
-        h={{ base: "20rem", md: "15rem" }}
+        backgroundSize="cover"
+        backgroundPosition="50%"
+        w={{ base: "20rem", md: "20rem" }}
+        h={{ base: "20rem", md: "20rem" }}
+        mb="2rem"
         align="center"
+        borderRadius=".25rem"
         justify="center"
         className={styles.thumbnail}
       >

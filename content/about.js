@@ -7,7 +7,7 @@ import styles from "../styles/About.module.scss";
 export default function About() {
   return (
     <Flex
-      h="90vh"
+      h="95vh"
       fontSize="3rem"
       flexDir="column"
       justify="center"
@@ -17,13 +17,25 @@ export default function About() {
       <Box lineHeight="1.5rem">Steven Arellano</Box>
       <Box fontSize="1.75rem">blockchain and web developer</Box>
       <Flex fontSize="2.5rem" gap="3rem">
-        <a href="https://github.com/stevenarellano">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/stevenarellano"
+        >
           <BsGithub />
         </a>
-        <a href="https://www.linkedin.com/in/stevenjarellano/">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/stevenjarellano/"
+        >
           <BsLinkedin />
         </a>
-        <a href="https://medium.com/@stevenjarellano">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://medium.com/@stevenjarellano"
+        >
           <BsMedium />
         </a>
         <a href="#contact">

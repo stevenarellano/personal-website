@@ -1,10 +1,9 @@
-// animations for navbar underline
-.navb > * {
+.ani {
   display: inline-block;
   position: relative;
 }
 
-.navb > *:after {
+.ani:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -17,7 +16,7 @@
   transition: transform 0.25s ease-out;
 }
 
-.navb > *:hover:after {
+.ani:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }

@@ -7,6 +7,7 @@
     "no-unused-vars": "warn",
     // allow jsx syntax in js files (for next.js project)
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "radix": "off"
   }
 }
