@@ -8,6 +8,8 @@ export default function About() {
   return (
     <Flex
       h="95vh"
+      w="100%"
+      background="linear-gradient(20deg, #eeeeee 0 50%, #0583d2 50% 100%);"
       fontSize="3rem"
       flexDir="column"
       justify="center"
@@ -47,6 +49,7 @@ export default function About() {
           resume
         </a>
       </Box>
+      <script src="finisher-header.es5.min.js" type="text/javascript" />
     </Flex>
   );
 }

@@ -3,7 +3,14 @@ import styles from "../styles/Misc.module.scss";
 
 export default function Navbar() {
   return (
-    <Flex className={styles.navb} fontSize="1.2rem" p="1rem" gap="2rem">
+    <Flex
+      className={styles.navb}
+      bg="#0583d2"
+      fontSize="1.2rem"
+      p="1rem"
+      top="0"
+      gap="2rem"
+    >
       <Box>
         <a href="#home">Home</a>
       </Box>

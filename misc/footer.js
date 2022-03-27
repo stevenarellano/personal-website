@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Link } from "@chakra-ui/react";
+import { Box, Divider, Flex } from "@chakra-ui/react";
 import { BsGithub, BsLinkedin, BsMedium, BsMailbox2 } from "react-icons/bs";
 
 import styles from "../styles/Misc.module.scss";
@@ -6,7 +6,7 @@ import styles from "../styles/Misc.module.scss";
 export default function Footer() {
   return (
     <Flex fontSize="1.5rem" w="100%" flexDir="column">
-      <Divider borderColor="purple" />
+      <Divider borderColor="#0583D2" />
       <Flex p="2rem" flexDir="column">
         <Flex align="center" gap="1rem">
           Links:{" "}

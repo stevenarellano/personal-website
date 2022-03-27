@@ -8,10 +8,15 @@ import Footer from "../misc/footer";
 
 export default function Home() {
   return (
-    <Box>
-      <Navbar />
-      <Main />
-      <Footer />
-    </Box>
+    <>
+      <head>
+        <title>Steven Arellano</title>
+      </head>
+      <Box bg="#eeeeee">
+        <Navbar />
+        <Main />
+        <Footer />
+      </Box>
+    </>
   );
 }

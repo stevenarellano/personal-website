@@ -47,6 +47,8 @@ export default function Project({ data }) {
           className={styles.clickme}
           variant="solid"
           colorScheme="blue"
+          bg="#11468F"
+          color="#eeeeee"
           onClick={onOpen}
         >
           SEE MORE
