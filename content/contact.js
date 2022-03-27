@@ -1,4 +1,4 @@
-import { Box, Flex, Link } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 
 // components
 import styles from "../styles/Contact.module.scss";
@@ -9,7 +9,7 @@ export default function Contact() {
       h="75vh"
       px={{ base: "1rem", md: "0" }}
       w={{ base: "100%", md: "65%" }}
-      fontSize="2rem"
+      fontSize="1.75rem"
       my="2rem"
       justify="flex-start"
     >
@@ -21,7 +21,7 @@ export default function Contact() {
         >
           {" "}
           stevenjarellano2@gmail.com{" "}
-        </a>
+        </a>{" "}
         or find me on{" "}
         <a
           className={`ani ${styles.lin}`}

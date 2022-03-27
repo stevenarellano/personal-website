@@ -17,8 +17,10 @@ export default function About() {
       gap="1rem"
     >
       <Box lineHeight="1.5rem">Steven Arellano</Box>
-      <Box fontSize="1.75rem">blockchain and web developer</Box>
-      <Flex fontSize="2.5rem" gap="3rem">
+      <Box fontSize={{ base: "1.5rem", md: "1.75rem" }}>
+        blockchain and web developer
+      </Box>
+      <Flex className={styles.iconBar} fontSize="2.5rem" gap="3rem">
         <a
           target="_blank"
           rel="noreferrer"
@@ -45,7 +47,7 @@ export default function About() {
         </a>
       </Flex>
       <Box fontSize="2rem">
-        <a className={styles.resume} href="#resume">
+        <a className={`${styles.resume} ani`} href="#resume">
           resume
         </a>
       </Box>

@@ -2,10 +2,15 @@ import "../styles/globals.scss";
 import { ChakraProvider } from "@chakra-ui/react";
 
 function MyApp({ Component, pageProps }) {
-  return ( 
-    <ChakraProvider>
-      <Component {...pageProps} />
-    </ChakraProvider>
+  return (
+    <>
+      <head>
+        <title>Steven Arellano</title>
+      </head>
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </>
   );
 }
 

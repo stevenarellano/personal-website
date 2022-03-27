@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import styles from "../styles/Home.module.scss";
+// import styles from "../styles/Home.module.scss";
 
 // components
 import Navbar from "../misc/navbar";
@@ -8,15 +8,10 @@ import Footer from "../misc/footer";
 
 export default function Home() {
   return (
-    <>
-      <head>
-        <title>Steven Arellano</title>
-      </head>
-      <Box bg="#eeeeee">
-        <Navbar />
-        <Main />
-        <Footer />
-      </Box>
-    </>
+    <Box w="100vw" bg="#eeeeee">
+      <Navbar />
+      <Main />
+      <Footer />
+    </Box>
   );
 }

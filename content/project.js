@@ -22,7 +22,7 @@ export default function Project({ data }) {
   const { name, image, description, github, website, tools } = data;
 
   const toolEle = tools.map((tool) => (
-    <Box bg="lightgrey" px=".5rem" mr=".5rem">
+    <Box key={Math.random()} bg="lightgrey" px=".5rem" mr=".5rem">
       {tool}
     </Box>
   ));
@@ -33,8 +33,8 @@ export default function Project({ data }) {
         bgColor="blue"
         backgroundSize="cover"
         backgroundPosition="50%"
-        w={{ base: "20rem", md: "20rem" }}
-        h={{ base: "20rem", md: "20rem" }}
+        w={{ base: "17.5rem", md: "20rem" }}
+        h={{ base: "17.5rem", md: "20rem" }}
         mb="2rem"
         align="center"
         borderRadius=".25rem"
