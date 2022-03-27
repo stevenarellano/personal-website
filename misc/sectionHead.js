@@ -7,7 +7,7 @@ export default function SectionHead({ name, number }) {
     <Flex
       id={name}
       px={{ base: "1rem", md: "0" }}
-      fontSize="1rem"
+      fontSize="1.25rem"
       align="center"
       w={{ base: "100%", md: "65%" }}
       justify="space-between"

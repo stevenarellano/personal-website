@@ -1,9 +1,9 @@
-.thumbnail:hover > * {
+.thumbnail:hover > .clickme {
   display: inline-block;
 }
 
 @media (min-width: 769px) {
-  .thumbnail > * {
+  .thumbnail > .clickme {
     display: none;
   }
 }

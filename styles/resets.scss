@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: 1.35vw;
+  font-size: 2.25vh;
 }
 
 a {
@@ -16,9 +16,9 @@ a {
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 768px) {
   html,
   body {
-    font-size: 2.25vh;
+    font-size: 1.35vw;
   }
 }
