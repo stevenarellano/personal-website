@@ -7,11 +7,11 @@ import Main from "../content/main";
 import Footer from "../misc/footer";
 
 export default function Home() {
-  return (
-    <Box w="100vw" bg="#eeeeee">
-      <Navbar />
-      <Main />
-      <Footer />
-    </Box>
-  );
+	return (
+		<Box maxW='100vw' bg='#eeeeee'>
+			<Navbar />
+			<Main />
+			<Footer />
+		</Box>
+	);
 }
