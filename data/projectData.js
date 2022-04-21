@@ -6,7 +6,7 @@ export const PROJECT_DATA = [
 		"/projects/fractal-fantasy.jpeg",
 		`Website for downloading and marketing the Fractal Fantasy game`,
 		"",
-		"fractal-fantasy.jpeg",
+		"https://nextjsfractalfantasy-devbranch-deployv1-harrypks19-gmailcom.vercel.app/",
 		"",
 		["NextJS", "ChakraUI"]
 	),
