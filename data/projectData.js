@@ -2,6 +2,15 @@ import ProjSchema from "./projectSchema";
 
 export const PROJECT_DATA = [
 	new ProjSchema(
+		"Fractal Fantasy",
+		"/projects/fractal-fantasy.jpeg",
+		`Website for downloading and marketing the Fractal Fantasy game`,
+		"",
+		"fractal-fantasy.jpeg",
+		"",
+		["NextJS", "ChakraUI"]
+	),
+	new ProjSchema(
 		"Decentralized Voting App",
 		"/projects/voting.png",
 		`A decentralized voting app that allows an individual to create an event or competitions,
