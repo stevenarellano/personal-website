@@ -4,4 +4,4 @@ export default class Email {
         this.subject = subject;
         this.message = message;
     }
-}
+}w
