@@ -2,7 +2,7 @@ import { Box, Divider, Flex } from "@chakra-ui/react";
 import { BsGithub, BsLinkedin, BsMedium, BsMailbox2 } from "react-icons/bs";
 
 import styles from "../styles/Misc.module.scss";
-
+   
 export default function Footer() {
   return (
     <Flex fontSize="1.5rem" w="100%" flexDir="column">
