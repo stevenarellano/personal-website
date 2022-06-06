@@ -1,17 +1,12 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
+import { BsGithub, BsLinkedin, BsMedium } from "react-icons/bs";
+import Construction from "../content/construction";
 // import styles from "../styles/Home.module.scss";
-
-// components
-import Navbar from "../misc/navbar";
-import Main from "../content/main";
-import Footer from "../misc/footer";
 
 export default function Home() {
 	return (
-		<Box maxW='100vw' bg='#eeeeee'>
-			<Navbar />
-			<Main />
-			<Footer />
+		<Box maxW='100vw' height='100vh' bg='#eeeeee'>
+			<Construction />
 		</Box>
 	);
 }
