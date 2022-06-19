@@ -13,3 +13,31 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+.section-container {
+	width: 95vw;
+	box-sizing: content-box;
+	padding: 0;
+	margin: 0;
+}
+
+.project-button:hover {
+	font-weight: 500;
+}
+
+.project-section-1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		"a b"
+		"a c";
+	gap: 2rem;
+}
+
+.project-text {
+	visibility: hidden;
+}
+
+.project-backdrop:hover .project-text {
+	visibility: visible;
+}

@@ -13,10 +13,6 @@ const Landing = () => {
         await loadFull(main);
     };
 
-    const particlesLoaded = (container: any) => {
-        console.log(container);
-    };
-
     const particleOptions: RecursivePartial<IOptions> = {
         fullScreen: {
             enable: false,
@@ -94,7 +90,7 @@ const Landing = () => {
                 init={particlesInit}
                 height="90vh"
                 width="95vw"
-                style={{ position: "absolute", top: "50%", left: "50%", marginRight: "-50%", transform: "translate(-50%, -50%)" }}
+                style={{ margin: 0, position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
                 id="tsparticles"
                 options={particleOptions}
             />
@@ -117,7 +113,6 @@ const Landing = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
         </>
     );
