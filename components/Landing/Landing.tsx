@@ -95,9 +95,11 @@ const Landing = () => {
                 options={particleOptions}
             />
             <div className="h-screen flex justify-center items-center ">
-                <div style={{ height: "90%", width: "85vw" }} className="relative">
-                    <div className="flex flex-col relative h-full w-full pt-24 items-center" >
-                        <div style={{ width: "100%" }} className="font-secondary text-center text-header-adj">STEVEN ARELLANO</div>
+                <div style={{
+                    height: "90vh", width: "85vw"
+                }} className="relative">
+                    <div className="flex flex-col relative h-full w-full pt-24 items-center">
+                        < div style={{ width: "100%" }} className="font-secondary text-center text-header-adj">STEVEN ARELLANO</div>
                         <div className="text-3xl text-center">fullstack blockchain engineer</div>
                         <div className="mt-auto"></div>
                         <div className="flex w-full  justify-end px-4 gap-2">
@@ -129,7 +131,7 @@ const Landing = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     );
 }
