@@ -24,28 +24,28 @@ a {
 	text-decoration: none;
 }
 
+/* GENERAL */
+
 .section-container {
 	width: 85vw;
-	box-sizing: content-box;
-	padding: 0;
 	margin-bottom: 8rem;
+}
+
+/* PROJECTS PAGE */
+.project-section-1 {
+	display: grid;
+	gap: 2rem;
+	grid-template-areas:
+		"a"
+		"b"
+		"c";
 }
 
 .project-button:hover {
 	font-weight: 500;
 }
 
-.project-section-1 {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-areas:
-		"a b"
-		"a c";
-	gap: 2rem;
-}
-
 .project-text {
-	visibility: hidden;
 	backdrop-filter: blur(5px);
 	background-color: rgba(255, 255, 255, 0.5);
 	width: 100%;
@@ -58,16 +58,15 @@ a {
 	background-repeat: no-repeat;
 }
 
-.project-backdrop:hover .project-text {
-	visibility: visible;
-	max-height: 90vh;
-}
-
+/* EXPERIENCES PAGE */
 .experience-backdrop {
-	height: 28rem;
 	background-position: center center;
 	background-size: 16rem auto;
 	background-repeat: no-repeat;
+}
+
+.company-demographic {
+	display: none;
 }
 
 .experience-text {
@@ -76,11 +75,6 @@ a {
 	padding: 2rem;
 	backdrop-filter: blur(5px);
 	background-color: rgba(255, 255, 255, 0.5);
-	visibility: hidden;
-}
-
-.experience-backdrop:hover .experience-text {
-	visibility: visible;
 }
 
 li {
@@ -91,5 +85,45 @@ li {
 .experiences {
 	display: flex;
 	flex-direction: column;
-	gap: 8rem;
+	gap: 4rem;
+}
+
+@media only screen and (min-width: 1290px) {
+	/* PROJECTS */
+	.project-section-1 {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"a b"
+			"a c";
+		height: "90vh";
+	}
+
+	.project-text {
+		visibility: hidden;
+	}
+
+	.project-backdrop:hover .project-text {
+		visibility: visible;
+	}
+
+	/* EXPERIENCE PAGE */
+	.company-demographic {
+		display: inline-block;
+	}
+
+	.experience-text {
+		visibility: hidden;
+	}
+
+	.experience-backdrop:hover .experience-text {
+		visibility: visible;
+	}
+
+	.experience-backdrop {
+		height: 28rem;
+	}
+
+	.experiences {
+		gap: 8rem;
+	}
 }
