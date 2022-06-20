@@ -17,7 +17,7 @@ const Experience = ({ backgroundColor, logo, company, location, start, end, role
             style={{ ...backdropStyles }}
             className="experience-backdrop">
             <div style={{ width: "100%", height: "100%" }} className="experience-text" >
-                <div style={{ width: "100%" }} className="flex justify-between">
+                <div style={{ width: "100%" }} className="flex items-center justify-between">
                     <p className="text-header-adj pb-1 font-secondary font-bold">{company}</p>
                     <div className="company-demographic flex flex-col" >
                         <p style={{ width: "100%" }} className="text-3xl  text-right">{location}</p>
