@@ -94,7 +94,7 @@ const Landing = () => {
                 id="tsparticles"
                 options={particleOptions}
             />
-            <div className="h-screen flex justify-center items-center ">
+            <div className="flex justify-center items-center ">
                 <div style={{
                     height: "90vh", width: "85vw"
                 }} className="relative">
