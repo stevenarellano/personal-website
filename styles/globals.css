@@ -31,6 +31,10 @@ a {
 	margin-bottom: 8rem;
 }
 
+.text-header-adj {
+	font-size: 2.5rem;
+}
+
 /* PROJECTS PAGE */
 .project-section-1 {
 	display: grid;
@@ -89,6 +93,11 @@ li {
 }
 
 @media only screen and (min-width: 960px) {
+	/* GENERAL */
+	.text-header-adj {
+		font-size: 5rem;
+	}
+
 	/* PROJECTS */
 	.project-section-1 {
 		grid-template-columns: 1fr 1fr;

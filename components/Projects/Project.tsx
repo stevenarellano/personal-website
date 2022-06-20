@@ -27,7 +27,7 @@ const Project = ({ templateArea, tools = [""], title = "", blurp = "", descripti
             className='flex flex-col justify-end project-backdrop'>
             <div className="project-text relative justify-end flex p-8 flex-col">
                 <p className="text-xl">{getToolsString(tools)}</p>
-                <p className="text-6xl font-bold pb-2">{title}</p>
+                <p className="text-header-adj font-secondary font-bold pb-2">{title}</p>
                 <p className="text-3xl ">{blurp}</p>
                 <p className="w-3/5 text-lg pb-2">{description}</p>
                 <div className="flex gap-4">
