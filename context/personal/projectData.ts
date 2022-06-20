@@ -7,7 +7,8 @@ const projectData = [
 			"A clone of the popular (or not so much so anymore) terra finder",
 		github: "https://github.com/stevenarellano/terra-finder",
 		website: "https://terra-finder-clone.vercel.app/",
-		backdrop: "projects/terra-finder.png",
+		backgroundColor: "#235F75",
+		logo: "projects/terra.png",
 	},
 	{
 		tools: ["react"],
@@ -17,7 +18,8 @@ const projectData = [
 			"This web app helps individuals increase their typing speed by providing a variety of levels and training for an individual todo",
 		github: "https://github.com/stevenarellano/speed-typing",
 		website: "https://github.com/stevenarellano/speed-typing",
-		backdrop: "projects/speed-typing.png",
+		backgroundColor: "#893440",
+		logo: "projects/typing.png",
 	},
 	{
 		tools: ["react", "chakraUI", "express", "postgreSql"],
@@ -27,7 +29,8 @@ const projectData = [
 			"Ten Takeaways is an app used to log my progression and book reading as I go through the year. This application can be used by me, my friends, or anyone with a computer.",
 		github: "https://github.com/stevenarellano/book-summaries-client",
 		website: "https://book-summaries.vercel.app/content",
-		backdrop: "projects/ten-takeaways.png",
+		backgroundColor: "#F1F1F1",
+		logo: "projects/books.png",
 	},
 ];
 

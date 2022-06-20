@@ -1,7 +1,7 @@
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { IOptions, RecursivePartial } from "tsparticles-engine";
-import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import { BsGithub, BsLinkedin, BsMedium } from 'react-icons/bs'
 
 
 const Landing = () => {
@@ -89,24 +89,40 @@ const Landing = () => {
             <Particles
                 init={particlesInit}
                 height="90vh"
-                width="95vw"
+                width="85vw"
                 style={{ margin: 0, position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
                 id="tsparticles"
                 options={particleOptions}
             />
             <div className="h-screen flex justify-center items-center ">
-                <div style={{ height: "90%", width: "95vw" }} className="relative">
+                <div style={{ height: "90%", width: "85vw" }} className="relative">
                     <div className="flex flex-col relative h-full w-full pt-24 items-center" >
-                        <div className="text-6xl">STEVEN ARELLANO</div>
+                        <div className="font-secondary text-6xl">STEVEN ARELLANO</div>
                         <div className="text-3xl">fullstack blockchain engineer</div>
 
                         <div className="flex w-full mt-auto justify-end px-4 gap-2">
-                            <div className="rounded-full border-2 border-black p-4 bg-white hover:bg-gray cursor-pointer" >
+                            <a
+                                href="https://www.linkedin.com/in/stevenjarellano/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="rounded-full border-2 border-black p-4 bg-white hover:bg-gray cursor-pointer"
+                            >
                                 <BsLinkedin />
-                            </div>
-                            <div className="rounded-full border-2 border-black p-4 bg-white hover:bg-gray cursor-pointer">
+                            </a>
+                            <a
+                                href="https://github.com/stevenarellano"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="rounded-full border-2 border-black p-4 bg-white hover:bg-gray cursor-pointer">
                                 <BsGithub />
-                            </div>
+                            </a>
+                            <a
+                                href="https://medium.com/@stevenjarellano"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="rounded-full border-2 border-black p-4 bg-white hover:bg-gray cursor-pointer">
+                                <BsMedium />
+                            </a>
                         </div>
                         <div className="flex w-full pt-2 px-4 pb-4 justify-end"  >
                             <div className="border-2 border-black px-8 py-2 bg-white hover:bg-gray cursor-pointer">Contact Me</div>

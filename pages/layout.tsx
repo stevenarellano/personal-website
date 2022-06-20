@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Experience, Landing, Projects } from '../components'
+import { Experiences, Landing, Projects } from '../components'
 
 const Layout: NextPage = () => {
     return (
@@ -8,7 +8,7 @@ const Layout: NextPage = () => {
         }}>
             <Landing />
             <Projects />
-            <Experience />
+            <Experiences />
         </div >
     )
 }

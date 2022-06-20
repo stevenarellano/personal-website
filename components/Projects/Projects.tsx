@@ -7,7 +7,7 @@ const Projects = () => {
         <div className="section-container">
             <SectionHeader title='PROJECTS' />
             <div style={{ height: "90vh" }} className="project-section-1" >
-                {projectData.map(({ tools, title, description, blurp, github, website, backdrop }, index) =>
+                {projectData.map(({ tools, title, description, blurp, github, website, backgroundColor, logo }, index) =>
                     <Project templateArea={alphabet[index]}
                         key={index}
                         tools={tools}
@@ -16,7 +16,8 @@ const Projects = () => {
                         blurp={blurp}
                         github={github}
                         website={website}
-                        backdrop={backdrop} />
+                        backgroundColor={backgroundColor}
+                        logo={logo} />
                 )}
             </div>
         </div>
