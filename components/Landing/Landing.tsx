@@ -94,44 +94,44 @@ const Landing = () => {
                 id="tsparticles"
                 options={particleOptions}
             />
-            <div className="flex justify-center items-center ">
-                <div style={{
-                    height: "90vh", width: "85vw"
-                }} className="relative">
-                    <div className="flex flex-col relative h-full w-full pt-24 items-center">
-                        < div style={{ width: "100%" }} className="font-secondary text-center text-header-adj">STEVEN ARELLANO</div>
-                        <div className="text-3xl text-center">fullstack blockchain engineer</div>
-                        <div className="mt-auto"></div>
-                        <div className="flex w-full  justify-end px-4 gap-2">
-                            <a
-                                href="https://www.linkedin.com/in/stevenjarellano/"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="rounded-full border-2 border-black p-4 bg-white hover:bg-gray cursor-pointer"
-                            >
-                                <BsLinkedin />
-                            </a>
-                            <a
-                                href="https://github.com/stevenarellano"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="rounded-full border-2 border-black p-4 bg-white hover:bg-gray cursor-pointer">
-                                <BsGithub />
-                            </a>
-                            <a
-                                href="https://medium.com/@stevenjarellano"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="rounded-full border-2 border-black p-4 bg-white hover:bg-gray cursor-pointer">
-                                <BsMedium />
-                            </a>
-                        </div>
-                        <div className="flex w-full pt-2 px-4 pb-4 justify-end"  >
-                            <div className="border-2 border-black px-8 py-2 bg-white hover:bg-gray cursor-pointer">Contact Me</div>
-                        </div>
+
+            <div style={{
+                height: "90vh", width: "85vw", margin: 0, position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)"
+            }} className="relative">
+                <div className="flex flex-col relative h-full w-full pt-24 items-center">
+                    < div style={{ width: "100%" }} className="font-secondary text-center text-header-adj">STEVEN ARELLANO</div>
+                    <div className="text-3xl text-center">fullstack blockchain engineer</div>
+                    <div className="mt-auto"></div>
+                    <div className="flex w-full  justify-end px-4 gap-2">
+                        <a
+                            href="https://www.linkedin.com/in/stevenjarellano/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="rounded-full border-2 border-black p-4 bg-white hover:bg-gray cursor-pointer"
+                        >
+                            <BsLinkedin />
+                        </a>
+                        <a
+                            href="https://github.com/stevenarellano"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="rounded-full border-2 border-black p-4 bg-white hover:bg-gray cursor-pointer">
+                            <BsGithub />
+                        </a>
+                        <a
+                            href="https://medium.com/@stevenjarellano"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="rounded-full border-2 border-black p-4 bg-white hover:bg-gray cursor-pointer">
+                            <BsMedium />
+                        </a>
+                    </div>
+                    <div className="flex w-full pt-2 px-4 pb-4 justify-end"  >
+                        <div className="border-2 border-black px-8 py-2 bg-white hover:bg-gray cursor-pointer">Contact Me</div>
                     </div>
                 </div>
-            </div >
+            </div>
+            <div style={{ height: "100vh" }}></div>
         </>
     );
 }
