@@ -27,7 +27,7 @@ const projectData = [
 		blurp: "Book Summary Web App",
 		description:
 			"Ten Takeaways is an app used to log my progression and book reading as I go through the year. This application can be used by me, my friends, or anyone with a computer.",
-		github: "https://github.com/stevenarellano/book-summaries-client",
+		github: "https://github.com/stevenarellano/ten-takeaways",
 		website: "https://book-summaries.vercel.app/content",
 		backgroundColor: "#F1F1F1",
 		logo: "projects/books.png",
