@@ -1,5 +1,5 @@
-import type { NextPage } from 'next'
-import { Experiences, Landing, Projects } from '../components'
+import type { NextPage } from 'next';
+import { Experiences, Landing, Projects } from '../components';
 
 const Layout: NextPage = () => {
     return (
@@ -7,10 +7,10 @@ const Layout: NextPage = () => {
             width: "100%", display: "flex", flexDirection: "column", alignItems: "center"
         }}>
             <Landing />
-            <Projects />
             <Experiences />
+            <Projects />
         </div >
-    )
-}
+    );
+};
 
-export default Layout
+export default Layout;
