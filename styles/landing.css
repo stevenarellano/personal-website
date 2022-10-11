@@ -46,7 +46,6 @@
 .social-box {
 	border: 1px black solid;
 	height: 100%;
-	font-weight: bold;
 
 	display: flex;
 	justify-content: center;
@@ -54,6 +53,7 @@
 }
 .social-content:hover {
 	background-color: lightgray;
+	font-weight: bold;
 }
 
 .social-hidden {
