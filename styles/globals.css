@@ -2,11 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+font-family: 'Darker Grotesque', sans-serif;
+font-family: 'Michroma', sans-serif;
+font-family: 'Raleway', sans-serif; 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500&family=Michroma&family=Raleway&display=swap');
+
 @import url('navbar.css');
+@import url('landing.css');
 
 * {
 	padding: 0;
 	margin: 0;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	font-size: 12px;
+	font-family: 'Darker Grotesque', 'sans-serif';
+	font-size: 16px;
+
+	box-sizing: border-box;
 }
