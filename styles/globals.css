@@ -11,6 +11,8 @@ font-family: 'Raleway', sans-serif;
 
 @import url('navbar.css');
 @import url('landing.css');
+@import url('general.css');
+@import url('experience.css');
 
 * {
 	padding: 0;

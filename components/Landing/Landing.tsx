@@ -1,7 +1,7 @@
 const Landing = () => {
 
     return (
-        <div className='landing-container'>
+        <div className='landing-container page-container'>
             <div id='black-offset' />
             <div id='landing-header'>
                 <h1>STEVEN ARELLANO.</h1>

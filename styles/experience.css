@@ -1,0 +1,144 @@
+.experience-container {
+	align-items: center;
+	padding: 2rem 2rem 2rem 2rem;
+}
+
+.experience-box {
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+
+	outline: 1px solid black;
+}
+
+.experience-box > div:first-child {
+	height: 7.5%;
+
+	font-size: 2rem;
+	font-weight: bold;
+
+	border-bottom: 1px solid black;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.experience-box > div:nth-child(2) {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+	height: 92.5%;
+	width: 100%;
+}
+
+.experience {
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+
+	position: relative;
+}
+.experience:hover {
+	background: lightgray;
+}
+
+.experience > * {
+	position: absolute;
+}
+
+.experience > img {
+	width: 20%;
+
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.company-title {
+	top: 0.5rem;
+	left: 0.5rem;
+	font-weight: bold;
+}
+
+.company-current {
+	top: 0.5rem;
+	right: 0.5rem;
+}
+
+.experience-modal {
+	position: fixed;
+
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 50vw;
+	height: 75vh;
+
+	background-color: white;
+	border: 2px solid black;
+
+	z-index: 1001;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	font-weight: bold;
+}
+
+.experience-modal-header {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+}
+
+.experience-modal-header > div:first-child {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	border-bottom: 2px solid black;
+
+	width: 100%;
+	height: 3rem;
+	padding: 0 1rem 0 1rem;
+}
+
+#modal-company-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	border-bottom: 2px solid black;
+
+	width: 100%;
+	height: 10rem;
+	padding: 0 1rem 0.5rem 1rem;
+}
+
+#MCI-left > span:first-child {
+	font-size: 1.5rem;
+}
+
+#MCI-left > div:nth-child(2) {
+	font-size: 3rem;
+	line-height: 2rem;
+}
+
+#MCI-right > span:nth-child(2) {
+	font-size: 1.5rem;
+	line-height: 1rem;
+}
+
+#experience-modal-resp {
+	border-top: 2px solid black;
+}
+
+#experience-modal-resp > div:first-child {
+	height: 2rem;
+	font-size: 1.5rem;
+}
