@@ -13,6 +13,7 @@ font-family: 'Raleway', sans-serif;
 @import url('landing.css');
 @import url('general.css');
 @import url('experience.css');
+@import url('projects.css');
 
 * {
 	padding: 0;

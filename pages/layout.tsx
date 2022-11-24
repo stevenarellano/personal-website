@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { Experiences, Landing, Navbar, } from '../components';
+import { Experiences, Landing, Navbar, Projects, } from '../components';
 
 const Layout: NextPage = () => {
     return (
@@ -8,7 +8,10 @@ const Layout: NextPage = () => {
         }}>
             <Navbar />
             <Landing />
+            <div id="experiences-page" style={{ height: "4rem", width: "100%" }} />
             <Experiences />
+            <div id="projects-page" style={{ height: "4rem", width: "100%" }} />
+            <Projects />
         </div >
     );
 };
