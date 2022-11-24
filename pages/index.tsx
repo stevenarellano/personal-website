@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import { MobileLayout, WebLayout } from './layout';
+import MobileLayout from './mobile';
+import WebLayout from './web';
 
 const Home: NextPage = () => {
   const [width, setWindowWidth] = useState(0);
