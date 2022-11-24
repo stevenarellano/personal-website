@@ -6,6 +6,11 @@ import { MobileLayout, WebLayout } from './layout';
 const Home: NextPage = () => {
   const [width, setWindowWidth] = useState(0);
 
+  const updateDimensions = () => {
+    const w = window.innerWidth;
+    setWindowWidth(w);
+  };
+
   useEffect(() => {
     updateDimensions();
     window.addEventListener("resize", updateDimensions);
@@ -16,10 +21,6 @@ const Home: NextPage = () => {
     };
   }, []);
 
-  const updateDimensions = () => {
-    const w = window.innerWidth;
-    setWindowWidth(w);
-  };
 
   return (
     <div>
