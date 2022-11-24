@@ -68,7 +68,7 @@ const Experience = ({ info }: { info: ExperienceInfo; }) => {
                 <div id='experience-modal-resp' className='flex flex-col flex-grow mt-4'>
                     <div className='flex justify-center items-center'>RESPONSIBILITIES</div>
                     <div className='responsibility-row flex flex-1'>
-                        {responsibilities.map((content, i) => <Responsibility content={content} i={i} />)}
+                        {responsibilities.map((content, i) => <Responsibility key={i} content={content} i={i} />)}
                     </div>
                 </div>
 
