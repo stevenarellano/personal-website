@@ -8,7 +8,7 @@ const Experiences = () => {
             <div className='experience-box' >
                 <div>EXPERIENCES</div>
                 <div>
-                    {experienceData.map((info) => <Experience info={info} />)}
+                    {experienceData.map((info, i) => <Experience key={i} info={info} />)}
                 </div>
 
 

@@ -11,6 +11,7 @@ const Landing = () => {
                 <a
                     href='https://www.linkedin.com/in/stevenjarellano/'
                     target='_blank'
+                    rel="noreferrer"
                     className='social-box social-content'>
                     linkedin
                 </a>
@@ -20,6 +21,7 @@ const Landing = () => {
                 <a
                     href='https://github.com/stevenarellano'
                     target='_blank'
+                    rel="noreferrer"
                     className='social-box social-content'>
                     github
                 </a>
@@ -27,12 +29,14 @@ const Landing = () => {
                 <a
                     href='https://medium.com/@stevenjarellano'
                     target='_blank'
+                    rel="noreferrer"
                     className='social-box social-content'>
                     medium
                 </a>
                 <a
                     href=''
                     target='_blank'
+                    rel="noreferrer"
                     className='social-box social-content'>
                     email
                 </a>

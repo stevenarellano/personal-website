@@ -44,6 +44,7 @@ const Experience = ({ info }: { info: ExperienceInfo; }) => {
                         <a
                             href={website}
                             target="_blank"
+                            rel="noreferrer"
                             style={{ visibility: website ? "visible" : "hidden" }}
                             className="experience-modal-website"
                         >

@@ -45,8 +45,8 @@ const ProjectBox = ({ info }: { info: ProjectInfo; }) => {
             </div>
 
             <div className="pb-links">
-                {github && <a href={github} target='_blank'>github</a>}
-                {website && <a href={website} target='_blank'>website</a>}
+                {github && <a href={github} target='_blank' rel="noreferrer">github</a>}
+                {website && <a href={website} target='_blank' rel="noreferrer">website</a>}
             </div>
         </div>
     );
@@ -65,6 +65,7 @@ const Projects = () => {
                         {projectData.map((info, i: number) => {
                             return (
                                 <ProjectSelector
+                                    key={i}
                                     name={info.title}
                                     subtitle={info.blurp}
                                     tools={info.tools}
