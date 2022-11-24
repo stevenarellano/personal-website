@@ -15,6 +15,7 @@
 .project-select-col {
 	height: 100%;
 	width: 25%;
+	min-width: 250px;
 
 	display: flex;
 	flex-direction: column;
@@ -170,8 +171,9 @@
 .pb-title {
 	border-bottom: solid black 1px;
 	width: 60%;
+	min-width: 350px;
 
-	font-size: 3.5rem;
+	font-size: 3rem;
 	font-weight: bold;
 }
 
@@ -181,7 +183,9 @@
 
 .pb-description {
 	width: 75%;
+	min-width: 350px;
 }
 .pb-tools {
 	width: 75%;
+	min-width: 350px;
 }

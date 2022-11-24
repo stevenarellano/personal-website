@@ -33,7 +33,7 @@ const projectData: ProjectInfo[] = [
 		title: 'Ten Takeaways',
 		blurp: 'Book Summary Web App',
 		description:
-			'Ten Takeaways is an app used to log my progression and book reading as I go through the year. This application can be used by me, my friends, or anyone with a computer.',
+			'Ten Takeaways is an app used to log my progression and book reading as I go through the year. ',
 		github: 'https://github.com/stevenarellano/ten-takeaways',
 		website: 'https://book-summaries.vercel.app/content',
 		logo: 'projects/books.png',
