@@ -125,7 +125,7 @@
 }
 
 #MCI-left > div:nth-child(2) {
-	font-size: 3rem;
+	font-size: 2.25rem;
 	line-height: 2rem;
 }
 
@@ -141,4 +141,34 @@
 #experience-modal-resp > div:first-child {
 	height: 2rem;
 	font-size: 1.5rem;
+}
+
+.responsibility-row > div {
+	flex: 1;
+	display: flex;
+
+	border: 2px solid black;
+	border-right: 0px solid black;
+
+	flex-direction: column;
+}
+
+.responsibility-row > div:first-child {
+	border-left: 0px solid black;
+	box-sizing: border-box;
+}
+
+.responsibility-title {
+	font-size: 2rem;
+	width: 80%;
+
+	margin-right: 1rem;
+	padding-left: 0.5rem;
+
+	border-bottom: 1px solid black;
+}
+
+.responsibility-content {
+	padding: 0.5rem;
+	font-size: 0.9rem;
 }

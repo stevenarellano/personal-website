@@ -1,3 +1,4 @@
+import { experienceData } from '../../context';
 import Experience from './Experience';
 
 const Experiences = () => {
@@ -7,17 +8,7 @@ const Experiences = () => {
             <div className='experience-box' >
                 <div>EXPERIENCES</div>
                 <div>
-                    <Experience name='ChicagoDAO' current link='experiences/dao.png' />
-                    <Experience name='ChicagoDAO' current link='experiences/dao.png' />
-                    <Experience name='ChicagoDAO' current link='experiences/dao.png' />
-                    <Experience name='ChicagoDAO' current link='experiences/dao.png' />
-                    <Experience name='ChicagoDAO' current link='experiences/dao.png' />
-                    <Experience name='ChicagoDAO' current link='experiences/dao.png' />
-                    <Experience name='ChicagoDAO' current link='experiences/dao.png' />
-                    <Experience name='ChicagoDAO' current link='experiences/dao.png' />
-                    <Experience name='ChicagoDAO' current link='experiences/dao.png' />
-
-
+                    {experienceData.map((info) => <Experience info={info} />)}
                 </div>
 
 
