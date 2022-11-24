@@ -25,8 +25,10 @@ const Experience = ({ info }: { info: ExperienceInfo; }) => {
         <>
             <div onClick={toggleModal} className='experience'>
                 <img alt='logo' src={logo} />
-                <div className='company-title'>{company}</div>
-                {current && <div className='company-current'>[current]</div>}
+                <div className='e-info'>
+                    <div className='e-title'>{company}</div>
+                    {current && <div className='e-current'>[current]</div>}
+                </div>
             </div>
             <div
                 onClick={toggleModal}
@@ -43,6 +45,7 @@ const Experience = ({ info }: { info: ExperienceInfo; }) => {
                             href={website}
                             target="_blank"
                             style={{ visibility: website ? "visible" : "hidden" }}
+                            className="experience-modal-website"
                         >
                             [website]
                         </a>

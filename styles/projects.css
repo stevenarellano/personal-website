@@ -19,7 +19,7 @@
 	display: flex;
 	flex-direction: column;
 
-	border-right: solid 1px black;
+	border-right: solid 2px black;
 }
 
 .project-select-col > div:first-child {
@@ -36,10 +36,11 @@
 }
 
 .project-select-col > div:nth-child(2) {
-	height: 10%;
+	height: 7.5%;
 
 	display: flex;
-	font-size: 1.5rem;
+	font-size: 1rem;
+	font-weight: bold;
 
 	justify-content: center;
 	align-items: center;
@@ -71,6 +72,8 @@
 	height: 22.5%;
 	width: 100%;
 	border-bottom: solid black 1px;
+
+	cursor: pointer;
 }
 
 .project-selector > * {

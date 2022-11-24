@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500&family=Michroma&family=Raleway&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,7 +9,6 @@ font-family: 'Darker Grotesque', sans-serif;
 font-family: 'Michroma', sans-serif;
 font-family: 'Raleway', sans-serif; 
 */
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500&family=Michroma&family=Raleway&display=swap');
 
 @import url('navbar.css');
 @import url('landing.css');
@@ -18,7 +19,7 @@ font-family: 'Raleway', sans-serif;
 * {
 	padding: 0;
 	margin: 0;
-	font-family: 'Darker Grotesque', 'sans-serif';
+	font-family: 'Darker Grotesque', sans-serif !important;
 	font-size: 16px;
 
 	box-sizing: border-box;

@@ -19,7 +19,7 @@
 	font-size: 2rem;
 	font-weight: bold;
 
-	border-bottom: 1px solid black;
+	border-bottom: 2px solid black;
 
 	display: flex;
 	justify-content: center;
@@ -42,6 +42,10 @@
 }
 .experience:hover {
 	background: lightgray;
+	cursor: pointer;
+}
+.experience:active {
+	background: darkgray;
 }
 
 .experience > * {
@@ -56,15 +60,18 @@
 	transform: translate(-50%, -50%);
 }
 
-.company-title {
-	top: 0.5rem;
-	left: 0.5rem;
-	font-weight: bold;
-}
+.e-info {
+	top: 0;
+	left: 0;
 
-.company-current {
-	top: 0.5rem;
-	right: 0.5rem;
+	display: flex;
+	flex-direction: column;
+
+	padding: 0.5rem 1rem;
+}
+.e-title {
+	font-size: 2rem;
+	font-weight: bold;
 }
 
 .experience-modal {
@@ -106,6 +113,10 @@
 	width: 100%;
 	height: 3rem;
 	padding: 0 1rem 0 1rem;
+}
+
+.experience-modal-website:hover {
+	color: gray;
 }
 
 #modal-company-info {
