@@ -82,6 +82,7 @@
 	transform: translate(-50%, -50%);
 
 	width: 50vw;
+	min-width: 650px;
 	height: 75vh;
 
 	background-color: white;

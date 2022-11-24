@@ -1,8 +1,26 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Layout from './layout';
+import { useEffect, useState } from 'react';
+import { MobileLayout, WebLayout } from './layout';
 
 const Home: NextPage = () => {
+  const [width, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+
+    return () => {
+      window.removeEventListener("resize", updateDimensions);
+
+    };
+  }, []);
+
+  const updateDimensions = () => {
+    const w = window.innerWidth;
+    setWindowWidth(w);
+  };
+
   return (
     <div>
       <Head>
@@ -12,7 +30,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main >
-        <Layout />
+        {(width < 1100) ? <MobileLayout /> : <WebLayout />}
       </main>
     </div>
   );
