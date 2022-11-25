@@ -9,6 +9,29 @@
 	position: relative;
 }
 
+.mobile-page {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	align-items: center;
+
+	border-top: solid black 1px;
+}
+
+.mobile-header {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	border-bottom: solid black 2px;
+	padding: 0 1rem;
+}
+
+.spacer-top {
+	margin-top: 4rem;
+}
+
 .overlay {
 	position: fixed;
 	top: 0;

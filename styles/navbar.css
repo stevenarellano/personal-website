@@ -18,6 +18,11 @@
 
 .navbar-container > .nav-item {
 	display: inline-block;
+	font-size: 1.15rem;
+}
+
+.navbar-container > .nav-item:hover {
+	font-weight: bold;
 }
 
 .navbar-container > .nav-item:last-child {

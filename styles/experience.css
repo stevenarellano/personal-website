@@ -1,3 +1,135 @@
+.m-experience-topbar {
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 0 1rem;
+}
+
+.m-experience-topbar > span:first-child {
+	font-size: 2rem;
+}
+.m-experience-topbar > span:nth-child(2) {
+	font-size: 2.5rem;
+}
+
+.m-experience-header {
+	padding: 0 1rem;
+
+	font-size: 3.5rem;
+	line-height: 1rem;
+
+	padding-bottom: 2rem;
+	border-bottom: solid black 2px;
+	font-weight: bold;
+
+	width: 60%;
+}
+
+.m-experience-subtitle {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+
+	border-bottom: solid 1px black;
+	padding: 0.25rem 1rem;
+	box-sizing: border-box;
+}
+
+.m-experience-subtitle > * {
+	font-size: 1.5rem;
+	text-transform: lowercase;
+}
+.m-experience-subtitle > span:first-child {
+	font-weight: bold;
+}
+
+.m-experience {
+	position: relative;
+
+	height: 12rem;
+	width: 100%;
+	border-bottom: solid black 1px;
+}
+.m-experience > * {
+	position: absolute;
+}
+
+.m-experience-resp {
+	text-transform: uppercase;
+	font-size: 2rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border-bottom: solid black 1px;
+	padding: 1rem;
+}
+
+.m-experience-list {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+
+	width: 100%;
+}
+.m-experience-list > div {
+	flex: 1;
+	border-bottom: solid black 1px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	padding: 0rem 1rem;
+}
+.m-experience-list > div > span:first-child {
+	font-size: 2rem;
+}
+
+.m-e-company {
+	font-size: 2rem;
+	left: 5%;
+}
+
+.m-e-thumbnail {
+	height: 6rem;
+
+	left: 50%;
+	top: 50%;
+
+	transform: translate(-50%, -50%);
+}
+
+.m-experience-tab {
+	position: fixed;
+
+	display: flex;
+	flex-direction: column;
+
+	bottom: 0%;
+	left: 0%;
+
+	height: 80vh;
+	width: 100vw;
+
+	background-color: white;
+	z-index: 1001;
+}
+
+.m-section-title {
+	font-size: 4rem;
+	line-height: 4rem;
+	padding-bottom: 1rem;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .experience-container {
 	align-items: center;
 	padding: 2rem 2rem 2rem 2rem;
@@ -70,7 +202,7 @@
 	padding: 0.5rem 1rem;
 }
 .e-title {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: bold;
 }
 

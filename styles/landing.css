@@ -1,10 +1,54 @@
+#m-landing-subtitle {
+	font-size: 2rem;
+}
+#m-landing-title {
+	font-size: 5rem;
+	line-height: 3rem;
+}
+
+.m-link-list {
+	margin-top: 2rem;
+	border-top: 2px solid black;
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+}
+
+.m-link-row {
+	display: flex;
+	width: 100%;
+}
+
+.m-link-row > a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	flex: 1;
+	padding: 2rem;
+	box-sizing: border-box;
+	height: 6rem;
+	border-bottom: solid black 1px;
+}
+.m-link-row > a:hover {
+	background-color: lightgray;
+}
+.m-link-row > a:first-child {
+	border-right: 1px solid black;
+}
+.m-filled-link {
+	background-color: black;
+	color: white;
+}
+
 @media only screen and (max-width: 1250px) {
 	#black-offset {
 		display: none;
 	}
 
 	#landing-header > h1 {
-		font-size: 5.25rem !important;
+		font-size: 4.5rem !important;
 	}
 }
 

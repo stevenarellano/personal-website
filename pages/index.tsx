@@ -32,7 +32,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main >
-        {(width < 1100) ? <MobileLayout /> : <WebLayout />}
+        {(width < 650) ? <MobileLayout /> : <WebLayout />}
       </main>
     </div>
   );

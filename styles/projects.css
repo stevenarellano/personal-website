@@ -145,10 +145,10 @@
 
 .pb-links > a:hover {
 	background-color: lightgray;
+	font-weight: bold;
 }
 .pb-links > a:active {
 	background-color: darkgray;
-	font-weight: bold;
 }
 
 .pb-general {
@@ -171,7 +171,7 @@
 .pb-title {
 	border-bottom: solid black 1px;
 	width: 60%;
-	min-width: 350px;
+	min-width: 300px;
 
 	font-size: 3rem;
 	font-weight: bold;
@@ -183,9 +183,9 @@
 
 .pb-description {
 	width: 75%;
-	min-width: 350px;
+	min-width: 300px;
 }
 .pb-tools {
 	width: 75%;
-	min-width: 350px;
+	min-width: 300px;
 }
