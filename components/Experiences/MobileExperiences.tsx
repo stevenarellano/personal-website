@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { experienceData, ExperienceInfo } from '../../context';
 import { ResponsibilityProps } from './Experience';
 
@@ -18,6 +18,11 @@ const MobileExperience = ({ info }: { info: ExperienceInfo; }) => {
     function toggleActive() {
         setActive(!active);
     }
+
+    useEffect(() => {
+        if (active) { document.body.style.overflow = "hidden"; }
+        if (!active) { document.body.style.overflow = "unset"; }
+    }, [active]);
 
     return (
         <>

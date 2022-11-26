@@ -21,6 +21,7 @@ const Experience = ({ info }: { info: ExperienceInfo; }) => {
     const [active, setActive] = useState(false);
     function toggleModal() { setActive(!active); }
 
+
     return (
         <>
             <div onClick={toggleModal} className='experience'>

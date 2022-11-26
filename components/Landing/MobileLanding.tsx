@@ -8,19 +8,37 @@ const MobileLanding = () => {
 
             <div className="m-link-list">
                 <div className="m-link-row">
-                    <a className="m-link">linkedin</a>
-                    <a className="m-link m-filled-link">github</a>
-                </div>
-                <div className="m-link-row">
-                    <a className="text-4xl m-link m-filled-link"></a>
-                    <a className="m-link">medium</a>
-                </div>
-                <div className="m-link-row">
-                    <a className="m-link "></a>
+                    <a
+                        href="https://www.linkedin.com/in/stevenjarellano/"
+                        rel="noreferrer"
+                        target="_blank"
+                        className="m-link">
+                        linkedin
+                    </a>
                     <a className="m-link m-filled-link"></a>
                 </div>
                 <div className="m-link-row">
-                    <a className="m-link m-filled-link">email</a>
+                    <a className="text-4xl m-link m-filled-link"></a>
+                    <a
+                        href="https://github.com/stevenarellano"
+                        rel="noreferrer"
+                        target="_blank"
+                        className="m-link">
+                        github
+                    </a>
+                </div>
+                <div className="m-link-row">
+                    <a
+                        href="https://medium.com/@stevenjarellano"
+                        rel="noreferrer"
+                        target="_blank"
+                        className="m-link ">
+                        medium
+                    </a>
+                    <a className="m-link m-filled-link"></a>
+                </div>
+                <div className="m-link-row">
+                    <a className="m-link m-filled-link"></a>
                     <a className="m-link text-4xl">:)</a>
                 </div>
             </div>
