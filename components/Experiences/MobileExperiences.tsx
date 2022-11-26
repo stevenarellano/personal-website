@@ -26,6 +26,7 @@ const MobileExperience = ({ info }: { info: ExperienceInfo; }) => {
                 <img alt={company} className="m-e-thumbnail" src={logo} />
             </div>
             <div
+                id="overlay"
                 onClick={() => toggleActive()}
                 style={{ display: active ? "flex" : "none" }}
                 className="overlay" />
