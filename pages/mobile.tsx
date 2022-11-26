@@ -9,9 +9,9 @@ const MobileLayout: NextPage = () => {
         }}>
             <Navbar />
             <MobileLanding />
-            {/* <div id="experiences-page" style={{ height: "4rem", width: "100%" }} /> */}
+            <div id="experiences-page" style={{ height: "4rem", width: "100%" }} />
             <MobileExperiences />
-            {/* <div id="projects-page" style={{ height: "4rem", width: "100%" }} /> */}
+            <div id="projects-page" style={{ height: "4rem", width: "100%" }} />
             <MobileProjects />
         </div >
     );
