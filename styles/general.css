@@ -28,6 +28,16 @@
 	padding: 0 1rem;
 }
 
+.m-section-title {
+	font-size: 3rem;
+	padding-bottom: 1rem;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .spacer-top {
 	margin-top: 4rem;
 }

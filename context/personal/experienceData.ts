@@ -27,7 +27,7 @@ export const experienceData: ExperienceInfo[] = [
 	},
 	{
 		company: 'Meta',
-		role: 'Computer Science Above & Beyond Fellow',
+		role: 'CS Above & Beyond Fellow',
 		location: 'Menlo Park, CA',
 		responsibilities: [
 			'Attending weekly development workshops geared towards enhancing knowledge of programming fundamentals',
@@ -78,7 +78,7 @@ export const experienceData: ExperienceInfo[] = [
 	},
 	{
 		company: 'Harris School of Public Policy',
-		role: 'Frontend Software Engineer Intern',
+		role: 'Frontend SWE Intern',
 		location: 'Chicago, IL',
 		responsibilities: [
 			'Built 20+ email components using HTML, CSS, and Javascript used in the school newsletter',

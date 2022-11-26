@@ -31,14 +31,22 @@
 .m-experience-header {
 	padding: 0 1rem;
 
-	font-size: 3.5rem;
+	font-size: 3rem;
 	line-height: 1rem;
 
 	padding-bottom: 2rem;
 	border-bottom: solid black 2px;
 	font-weight: bold;
 
-	width: 60%;
+	width: 90%;
+	overflow-x: scroll;
+	white-space: nowrap;
+
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+.m-experience-header::-webkit-scrollbar {
+	display: none;
 }
 
 .m-experience-subtitle {
@@ -53,7 +61,7 @@
 }
 
 .m-experience-subtitle > * {
-	font-size: 1.5rem;
+	font-size: 1rem;
 	text-transform: lowercase;
 }
 .m-experience-subtitle > span:first-child {
@@ -87,6 +95,7 @@
 	flex-direction: column;
 
 	width: 100%;
+	padding-bottom: 4rem;
 }
 .m-experience-list > div {
 	flex: 1;
@@ -130,17 +139,6 @@
 
 	background-color: white;
 	z-index: 1001;
-}
-
-.m-section-title {
-	font-size: 4rem;
-	line-height: 4rem;
-	padding-bottom: 1rem;
-	width: 100%;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .experience-container {
