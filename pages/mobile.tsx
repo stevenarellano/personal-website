@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { MobileExperiences, MobileLanding, Navbar, Projects, } from '../components';
+import { MobileExperiences, MobileLanding, MobileProjects, Navbar } from '../components';
 
 
 const MobileLayout: NextPage = () => {
@@ -12,7 +12,7 @@ const MobileLayout: NextPage = () => {
             {/* <div id="experiences-page" style={{ height: "4rem", width: "100%" }} /> */}
             <MobileExperiences />
             {/* <div id="projects-page" style={{ height: "4rem", width: "100%" }} /> */}
-            <Projects />
+            <MobileProjects />
         </div >
     );
 };

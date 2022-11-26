@@ -23,8 +23,8 @@ const MobileExperience = ({ info }: { info: ExperienceInfo; }) => {
         <>
             <div onClick={() => toggleActive()} className="m-experience">
                 <span className="m-e-company">{company}</span>
-                <img className="m-e-thumbnail" src={logo} />
-            </div>;
+                <img alt={company} className="m-e-thumbnail" src={logo} />
+            </div>
             <div
                 onClick={() => toggleActive()}
                 style={{ display: active ? "flex" : "none" }}
@@ -48,7 +48,7 @@ const MobileExperience = ({ info }: { info: ExperienceInfo; }) => {
                     responsibilities
                 </div>
                 <div className="m-experience-list">
-                    {responsibilities.map((content, i) => <MobileResponsibility i={i} content={content} />)}
+                    {responsibilities.map((content, i) => <MobileResponsibility key={i} i={i} content={content} />)}
                 </div>
             </div>
         </>
@@ -59,16 +59,25 @@ const MobileExperience = ({ info }: { info: ExperienceInfo; }) => {
 
 const MobileExperiences = () => {
     const [active, setActive] = useState(false);
+    const [endingIndex, setEndingIndex] = useState(3);
+
 
     function toggleIndex() { setActive(!active); }
-
+    function loadMore() { setEndingIndex(Math.min(endingIndex + 3, experienceData.length)); }
 
     return (
         <div className="mobile-page spacer-top">
             <div className="mobile-header">
                 <span className="m-section-title">EXPERIENCES</span>
             </div>
-            {experienceData.map((experience, index) => <MobileExperience info={experience} key={index} />)}
+            {experienceData.slice(0, endingIndex).map((experience, index) => <MobileExperience info={experience} key={index} />)}
+            <button
+                onClick={() => loadMore()}
+                style={{ display: endingIndex >= experienceData.length ? "none" : "flex" }}
+                id="m-e-load-button"
+            >
+                see more
+            </button>
         </div>
     );
 };

@@ -1,4 +1,4 @@
 export * from './Landing';
 export * from './Experiences';
+export * from './Projects';
 export { default as Navbar } from './Navbar';
-export { default as Projects } from './Projects';

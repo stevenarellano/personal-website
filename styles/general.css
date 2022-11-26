@@ -32,6 +32,10 @@
 	margin-top: 4rem;
 }
 
+.spacer-bottom {
+	margin-bottom: 4rem;
+}
+
 .overlay {
 	position: fixed;
 	top: 0;
