@@ -9,6 +9,16 @@ export type ProjectInfo = {
 };
 const projectData: ProjectInfo[] = [
 	{
+		tools: ['react', 'chakraUI', 'express', 'postgresSql'],
+		title: 'Ten Takeaways',
+		blurp: 'Book Summary Web App',
+		description:
+			'Ten Takeaways is an app used to log my progression and book reading as I go through the year. ',
+		github: 'https://github.com/stevenarellano/ten-takeaways',
+		website: 'https://book-summaries.vercel.app/content',
+		logo: 'projects/books.png',
+	},
+	{
 		tools: ['react', 'chakraUI'],
 		title: 'Terra Finder Clone',
 		blurp: 'Blockchain querying application',
@@ -27,16 +37,6 @@ const projectData: ProjectInfo[] = [
 		github: 'https://github.com/stevenarellano/speed-typing',
 		website: 'https://github.com/stevenarellano/speed-typing',
 		logo: 'projects/typing.png',
-	},
-	{
-		tools: ['react', 'chakraUI', 'express', 'postgresSql'],
-		title: 'Ten Takeaways',
-		blurp: 'Book Summary Web App',
-		description:
-			'Ten Takeaways is an app used to log my progression and book reading as I go through the year. ',
-		github: 'https://github.com/stevenarellano/ten-takeaways',
-		website: 'https://book-summaries.vercel.app/content',
-		logo: 'projects/books.png',
 	},
 ];
 

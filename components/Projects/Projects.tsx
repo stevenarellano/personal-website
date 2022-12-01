@@ -10,11 +10,12 @@ export type ProjectSelectorProps = {
 };
 
 const ProjectSelector = ({ name, subtitle, tools = [], active, indexSetter }: ProjectSelectorProps) => {
+
+
     return (
         <div
             onClick={indexSetter}
-            className="project-selector"
-            style={{ background: active ? "lightgray" : undefined }}
+            className={`project-selector ${active ? "project-selector-active" : undefined} `}
         >
 
             <div className="ps-info">
@@ -22,7 +23,7 @@ const ProjectSelector = ({ name, subtitle, tools = [], active, indexSetter }: Pr
                 <div className="ps-subtitle">{subtitle}</div>
                 <div className="ps-tools">[{tools.map((tool, i) => tool + `${(i === tools.length - 1) ? '' : ' / '}`)}]</div >
             </div>
-        </div>
+        </div >
     );
 };
 

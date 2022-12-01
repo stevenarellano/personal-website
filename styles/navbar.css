@@ -19,6 +19,7 @@
 .navbar-container > .nav-item {
 	display: inline-block;
 	font-size: 1.15rem;
+	box-sizing: border-box;
 }
 
 .navbar-container > .nav-item:hover {

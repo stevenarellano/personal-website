@@ -124,6 +124,11 @@
 
 .project-selector > * {
 	position: absolute;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.project-selector-active > * {
+	color: black !important;
 }
 
 .ps-info {
