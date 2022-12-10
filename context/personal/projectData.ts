@@ -15,8 +15,18 @@ const projectData: ProjectInfo[] = [
 		description:
 			'Ten Takeaways is an app used to log my progression and book reading as I go through the year. ',
 		github: 'https://github.com/stevenarellano/ten-takeaways',
-		website: 'https://book-summaries.vercel.app/content',
+		website: 'https://book-summaries.vercel.app/',
 		logo: 'projects/books.png',
+	},
+	{
+		tools: ['react'],
+		title: 'Speed Typing',
+		blurp: 'Typing Speed Tester',
+		description:
+			'This web app helps individuals increase their typing speed by providing a variety of levels and training for an individual todo',
+		github: 'https://github.com/stevenarellano/speed-typing',
+		website: 'https://stevenarellano.github.io/speed-typing/',
+		logo: 'projects/typing.png',
 	},
 	{
 		tools: ['react', 'chakraUI'],
@@ -27,16 +37,6 @@ const projectData: ProjectInfo[] = [
 		github: 'https://github.com/stevenarellano/terra-finder',
 		website: 'https://terra-finder-clone.vercel.app/',
 		logo: 'projects/terra.png',
-	},
-	{
-		tools: ['react'],
-		title: 'Speed Typing',
-		blurp: 'Typing Speed Tester',
-		description:
-			'This web app helps individuals increase their typing speed by providing a variety of levels and training for an individual todo',
-		github: 'https://github.com/stevenarellano/speed-typing',
-		website: 'https://github.com/stevenarellano/speed-typing',
-		logo: 'projects/typing.png',
 	},
 ];
 
