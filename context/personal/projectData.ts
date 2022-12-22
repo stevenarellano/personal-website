@@ -9,6 +9,15 @@ export type ProjectInfo = {
 };
 const projectData: ProjectInfo[] = [
 	{
+		tools: ['react, flask'],
+		title: 'Decked Out',
+		blurp: 'Presentation Generating AI Web App',
+		description:
+			'Decked Out generates a presentation given a short prompt or an essay about what you want the presentation to be about.',
+		github: 'https://github.com/the-buildrs/decked-out',
+		logo: 'projects/decked-out.png',
+	},
+	{
 		tools: ['react', 'chakraUI', 'express', 'postgresSql'],
 		title: 'Ten Takeaways',
 		blurp: 'Book Summary Web App',
