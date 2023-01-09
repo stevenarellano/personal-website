@@ -1,45 +1,44 @@
+import styles from '/styles/modules/landing.module.scss';
+
 const MobileLanding = () => {
     return (
         <div className="mobile-page">
             <div className="mobile-header py-4">
-                <span id="m-landing-subtitle">fullstack developer</span>
-                <span id="m-landing-title">Steven Arellano</span>
+                <span className={styles.mSubtitle}>fullstack developer</span>
+                <span className={styles.mTitle}>Steven Arellano</span>
             </div>
 
-            <div className="m-link-list">
-                <div className="m-link-row">
+            <div className={styles.mLinkList}>
+                <div className={styles.mLinkRow}>
                     <a
                         href="https://www.linkedin.com/in/stevenjarellano/"
                         rel="noreferrer"
-                        target="_blank"
-                        className="m-link">
+                        target="_blank">
                         linkedin
                     </a>
-                    <a className="m-link m-filled-link"></a>
+                    <a className={styles.mFilledLink}></a>
                 </div>
-                <div className="m-link-row">
-                    <a className="text-4xl m-link m-filled-link"></a>
+                <div className={styles.mLinkRow}>
+                    <a className={`text-4xl ${styles.mFilledLink}`}></a>
                     <a
                         href="https://github.com/stevenarellano"
                         rel="noreferrer"
-                        target="_blank"
-                        className="m-link">
+                        target="_blank">
                         github
                     </a>
                 </div>
-                <div className="m-link-row">
+                <div className={styles.mLinkRow}>
                     <a
                         href="https://medium.com/@stevenjarellano"
                         rel="noreferrer"
-                        target="_blank"
-                        className="m-link ">
+                        target="_blank">
                         medium
                     </a>
-                    <a className="m-link m-filled-link"></a>
+                    <a className={styles.mFilledLink}></a>
                 </div>
-                <div className="m-link-row">
-                    <a className="m-link m-filled-link"></a>
-                    <a className="m-link text-4xl">:)</a>
+                <div className={styles.mLinkRow}>
+                    <a className={styles.mFilledLink}></a>
+                    <a className="text-4xl">:)</a>
                 </div>
             </div>
         </div>

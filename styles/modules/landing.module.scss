@@ -1,13 +1,16 @@
-#m-landing-subtitle {
+// MOBILE STYLES
+
+.mSubtitle {
 	font-size: 2rem;
 }
-#m-landing-title {
+
+.mTitle {
 	font-size: 4rem;
 	line-height: 3rem;
 	padding-bottom: 2rem;
 }
 
-.m-link-list {
+.mLinkList {
 	margin-top: 2rem;
 	border-top: 2px solid black;
 	display: flex;
@@ -16,12 +19,11 @@
 	width: 100%;
 }
 
-.m-link-row {
+.mLinkRow {
 	display: flex;
 	width: 100%;
 }
-
-.m-link-row > a {
+.mLinkRow > a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -32,30 +34,74 @@
 	height: 6rem;
 	border-bottom: solid black 1px;
 }
-.m-link-row > a:first-child {
+.mLinkRow > a:first-child {
 	border-right: 1px solid black;
 }
-.m-filled-link {
+
+.mFilledLink {
 	background-color: black;
 	color: white;
 }
 
+// WEBPAGE STYLES
+
 @media only screen and (max-width: 1250px) {
-	#black-offset {
+	.blackOffset {
 		display: none;
 	}
 
-	#landing-header > h1 {
+	.header > h1 {
 		font-size: 4.5rem !important;
 	}
 }
 
-.landing-container {
+.landingContainer {
 	align-items: flex-start;
 	padding: 4rem 2rem 4rem 2rem;
 }
 
-#black-offset {
+.socialBoxes {
+	display: grid;
+
+	grid-template-columns: 10rem 10rem 10rem;
+	grid-template-rows: 4rem 4rem 4rem;
+}
+
+.socialBox {
+	outline: 1px solid black;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.socialContent:hover {
+	background-color: lightgray;
+	font-weight: bold;
+}
+
+.socialFilled {
+	background-color: black;
+}
+
+.socialHidden {
+	visibility: hidden;
+}
+
+.header {
+	text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff,
+		-1px -1px 0 #fff;
+}
+.header > h1 {
+	font-size: 6.5rem;
+}
+.header > h3 {
+	font-size: 4rem;
+	line-height: 0.5rem;
+}
+
+.blackOffset {
 	position: absolute;
 	right: 2rem;
 	top: 4rem;
@@ -64,46 +110,4 @@
 	width: 45vw;
 	background-color: black;
 	z-index: -1;
-}
-
-#landing-header > h1 {
-	font-size: 6.5rem;
-}
-
-#landing-header > h3 {
-	font-size: 4rem;
-	line-height: 0.5rem;
-}
-
-#landing-header * {
-	text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff,
-		-1px -1px 0 #fff;
-}
-
-#social-boxes {
-	display: grid;
-
-	grid-template-columns: 10rem 10rem 10rem;
-	grid-template-rows: 4rem 4rem 4rem;
-}
-
-.social-box {
-	outline: 1px solid black;
-	height: 100%;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.social-content:hover {
-	background-color: lightgray;
-	font-weight: bold;
-}
-
-.social-hidden {
-	visibility: hidden;
-}
-
-.social-filled {
-	background-color: black;
 }
