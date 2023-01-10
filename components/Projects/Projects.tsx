@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { projectData, ProjectInfo } from '../../context';
+import styles from '/styles/modules/projects.module.scss';
 
 export type ProjectSelectorProps = {
     name: string;
@@ -15,13 +16,13 @@ const ProjectSelector = ({ name, subtitle, tools = [], active, indexSetter }: Pr
     return (
         <div
             onClick={indexSetter}
-            className={`project-selector ${active ? "project-selector-active" : undefined} `}
+            className={`${styles.selector} ${active ? styles.selectorActive : undefined} `}
         >
 
-            <div className="ps-info">
-                <div className="ps-title">{name}</div>
-                <div className="ps-subtitle">{subtitle}</div>
-                <div className="ps-tools">[{tools.map((tool, i) => tool + `${(i === tools.length - 1) ? '' : ' / '}`)}]</div >
+            <div className={styles.selectorInfo}>
+                <div className={styles.selectorTitle}>{name}</div>
+                <div className={styles.selectorSubtitle}>{subtitle}</div>
+                <div className={styles.selectorTools}>[{tools.map((tool, i) => tool + `${(i === tools.length - 1) ? '' : ' / '}`)}]</div >
             </div>
         </div >
     );
@@ -31,21 +32,21 @@ const ProjectBox = ({ info }: { info: ProjectInfo; }) => {
     const { title, blurp, description, logo, tools, website, github } = info;
 
     return (
-        <div className="project-box-col">
-            <div className="pb-general">
+        <div className={styles.boxCol}>
+            <div className={styles.boxGeneral}>
                 {/* <div className="pb-subtitle">{blurp}</div> */}
-                <div className="pb-title">{title}</div>
+                <div className={styles.boxTitle}>{title}</div>
             </div>
-            <div className="pb-info">
-                <div className="pb-description">
+            <div className={styles.boxInfo}>
+                <div className={styles.boxDescription}>
                     <strong>description: </strong> {description}
                 </div>
-                <div className="pb-tools">
+                <div className={styles.boxTools}>
                     <strong>tools: </strong> {tools.map((tool, i) => tool + `${(i === tools.length - 1) ? '' : ', '}`)}
                 </div>
             </div>
 
-            <div className="pb-links">
+            <div className={styles.boxLinks}>
                 {github && <a href={github} target='_blank' rel="noreferrer">github</a>}
                 {website && <a href={website} target='_blank' rel="noreferrer">website</a>}
             </div>
@@ -57,9 +58,9 @@ const Projects = () => {
     const [activeIndex, setIndex] = useState(0);
 
     return (
-        <div className='project-container page-container'>
-            <div className="project-box">
-                <div className="project-select-col">
+        <div className={`${styles.projectContainer} page-container`}>
+            <div className={styles.box}>
+                <div className={styles.selectCol}>
                     <div>PROJECTS</div>
                     <div>SELECT ONE</div>
                     <div>
@@ -83,4 +84,4 @@ const Projects = () => {
     );
 };
 
-export default Projects;;
+export default Projects;

@@ -10,9 +10,7 @@ font-family: 'Michroma', sans-serif;
 font-family: 'Raleway', sans-serif; 
 */
 
-@import url('navbar.css');
-@import url('general.css');
-@import url('projects.css');
+@import 'general';
 
 * {
 	padding: 0;

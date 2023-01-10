@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { projectData, ProjectInfo } from '../../context';
 
+import styles from '/styles/modules/projects.module.scss';
+
 const MobileProject = ({ info }: { info: ProjectInfo; }) => {
     const { title, blurp, description, logo, tools, website, github } = info;
     const [toggled, setToggled] = useState(false);
@@ -14,18 +16,18 @@ const MobileProject = ({ info }: { info: ProjectInfo; }) => {
             <div
                 style={{ display: toggled ? "none" : "flex" }}
                 onClick={toggle}
-                className="m-p-tile">
+                className={styles.mTile}>
                 <span className="mt-2 mb-auto">
                     <strong>tools: </strong>
                     {tools.map((tool, i) => tool + `${(i === tools.length - 1) ? '' : ', '}`)}
                 </span>
-                <span className="m-p-blurp">{blurp}</span>
-                <span className="m-p-company">{title}</span>
+                <span className={styles.mBlurp}>{blurp}</span>
+                <span className={styles.mCompany}>{title}</span>
             </div>
             <div
                 onClick={toggle}
                 style={{ display: !toggled ? "none" : "flex" }}
-                className="m-p-tile-clicked">
+                className={styles.mTileClicked}>
                 {github && <a rel="noreferrer" href={github} target="_blank">github</a>}
                 {website && <a rel="noreferrer" href={website} target="_blank">website</a>}
             </div>

@@ -1,0 +1,30 @@
+.navbarContainer {
+	border-bottom: solid 1px black;
+	background-color: white;
+
+	display: flex;
+	gap: 4rem;
+	align-items: center;
+	justify-content: flex-start;
+
+	padding: 0 2rem 0 2rem;
+	width: 100%;
+	height: 4rem;
+
+	position: sticky;
+	z-index: 100;
+	top: 0;
+}
+
+.item > .nav-item {
+	display: inline-block;
+	font-size: 1.15rem;
+	box-sizing: border-box;
+}
+
+.item > .nav-item:hover {
+	font-weight: bold;
+}
+.item > .nav-item:last-child {
+	margin-left: auto;
+}
