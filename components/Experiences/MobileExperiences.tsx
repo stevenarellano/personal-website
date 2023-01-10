@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { experienceData, ExperienceInfo } from '../../context';
 import { ResponsibilityProps } from './Experience';
 
+import styles from '/styles/modules/experience.module.scss';
+
 const MobileResponsibility = ({ i, content }: ResponsibilityProps) => {
     return (
         <div>
@@ -26,9 +28,9 @@ const MobileExperience = ({ info }: { info: ExperienceInfo; }) => {
 
     return (
         <>
-            <div onClick={() => toggleActive()} className="m-experience">
-                <span className="m-e-company">{company}</span>
-                <img alt={company} className="m-e-thumbnail" src={logo} />
+            <div onClick={() => toggleActive()} className={styles.mExperience}>
+                <span className={styles.mCompany}>{company}</span>
+                <img alt={company} className={styles.mThumbnail} src={logo} />
             </div>
             <div
                 id="overlay"
@@ -36,24 +38,24 @@ const MobileExperience = ({ info }: { info: ExperienceInfo; }) => {
                 style={{ display: active ? "flex" : "none" }}
                 className="overlay" />
             <div
-                className="m-experience-tab"
+                className={styles.mTab}
                 style={{ display: active ? "flex" : "none" }}
             >
-                <div className="m-experience-topbar">
+                <div className={styles.mTopBar}>
                     <span>{role}</span>
                     <span onClick={() => toggleActive()}>X</span>
                 </div>
-                <div className="m-experience-header">
+                <div className={styles.mHeader}>
                     {company}
                 </div>
-                <div className="m-experience-subtitle">
+                <div className={styles.mSubtitle}>
                     <span>{location}</span>
                     <span>{when}</span>
                 </div>
-                <div className="m-experience-resp">
+                <div className={styles.mResp}>
                     responsibilities
                 </div>
-                <div className="m-experience-list">
+                <div className={styles.mList}>
                     {responsibilities.map((content, i) => <MobileResponsibility key={i} i={i} content={content} />)}
                 </div>
             </div>
@@ -80,7 +82,7 @@ const MobileExperiences = () => {
             <button
                 onClick={() => loadMore()}
                 style={{ display: endingIndex >= experienceData.length ? "none" : "flex" }}
-                id="m-e-load-button"
+                className={styles.mLoadButton}
             >
                 see more
             </button>

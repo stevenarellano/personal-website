@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { ExperienceInfo } from '../../context';
 
+import styles from '/styles/modules/experience.module.scss';
+
 export type ResponsibilityProps = {
     i: number;
     content: string;
@@ -9,8 +11,8 @@ export type ResponsibilityProps = {
 const Responsibility = ({ i, content }: ResponsibilityProps) => {
     return (
         <div>
-            <div className="responsibility-title">{i + 1}</div>
-            <div className="responsibility-content">{content}</div>
+            <div className={styles.responsibilityTitle}>{i + 1}</div>
+            <div className={styles.responsibilityContent}>{content}</div>
         </div>
     );
 };
@@ -28,11 +30,11 @@ const Experience = ({ info }: { info: ExperienceInfo; }) => {
 
     return (
         <>
-            <div onClick={toggleModal} className='experience'>
+            <div onClick={toggleModal} className={styles.experience}>
                 <img alt='logo' src={logo} />
-                <div className='e-info'>
-                    <div className='e-title'>{company}</div>
-                    {current && <div className='e-current'>[current]</div>}
+                <div className={styles.info}>
+                    <div className={styles.title}>{company}</div>
+                    {current && <div className={styles.current}>[current]</div>}
                 </div>
             </div>
             <div
@@ -41,39 +43,39 @@ const Experience = ({ info }: { info: ExperienceInfo; }) => {
                 style={{ display: active ? "flex" : "none" }}
             />
             <div
-                className={`experience-modal`}
+                className={styles.experienceModal}
                 style={{ display: active ? "flex" : "none" }}
             >
-                <div className='experience-modal-header'>
+                <div className={styles.modalHeader}>
                     <div>
                         <a
                             href={website}
                             target="_blank"
                             rel="noreferrer"
                             style={{ visibility: website ? "visible" : "hidden" }}
-                            className="experience-modal-website"
+                            className={styles.modalWebsite}
                         >
                             [website]
                         </a>
                         <button onClick={toggleModal}>X</button>
                     </div>
-                    <div id='modal-company-info'>
-                        <div className='flex flex-col' id='MCI-left'>
+                    <div className={styles.modalCompanyInfo}>
+                        <div className={`${styles.MCILeft} flex flex-col`}>
                             <span>{role}</span>
                             <div>
                                 {company}
                                 {subtitle && <span className='ml-2 text-xs'>({subtitle})</span>}
                             </div>
                         </div>
-                        <div className='flex flex-col items-end' id='MCI-right'>
+                        <div className={`${styles.MCIRight} flex flex-col items-end`}>
                             <span className="lowercase">{when}</span>
                             <span className="uppercase">{location}</span>
                         </div>
                     </div>
                 </div>
-                <div id='experience-modal-resp' className='flex flex-col flex-grow mt-4'>
+                <div className={`${styles.modalResp} flex flex-col flex-grow mt-4`}>
                     <div className='flex justify-center items-center'>RESPONSIBILITIES</div>
-                    <div className='responsibility-row flex flex-1'>
+                    <div className={`${styles.responsibilityRow} flex flex-1`}>
                         {responsibilities.map((content, i) => <Responsibility key={i} content={content} i={i} />)}
                     </div>
                 </div>
