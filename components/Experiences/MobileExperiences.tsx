@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { experienceData, ExperienceInfo } from '../../context';
-import { ResponsibilityProps } from './Experience';
+import { EXPERIENCE_DATA, ExperienceInfo } from '../../context';
+
 
 import styles from '/styles/modules/experience.module.scss';
+import { ResponsibilityProps } from './ExperienceModal';
 
 const MobileResponsibility = ({ i, content }: ResponsibilityProps) => {
     return (
@@ -71,17 +72,17 @@ const MobileExperiences = () => {
 
 
     function toggleIndex() { setActive(!active); }
-    function loadMore() { setEndingIndex(Math.min(endingIndex + 3, experienceData.length)); }
+    function loadMore() { setEndingIndex(Math.min(endingIndex + 3, EXPERIENCE_DATA.length)); }
 
     return (
         <div className="mobile-page spacer-top">
             <div className="mobile-header">
                 <span className="m-section-title">EXPERIENCES</span>
             </div>
-            {experienceData.slice(0, endingIndex).map((experience, index) => <MobileExperience info={experience} key={index} />)}
+            {EXPERIENCE_DATA.slice(0, endingIndex).map((experience, index) => <MobileExperience info={experience} key={index} />)}
             <button
                 onClick={() => loadMore()}
-                style={{ display: endingIndex >= experienceData.length ? "none" : "flex" }}
+                style={{ display: endingIndex >= EXPERIENCE_DATA.length ? "none" : "flex" }}
                 className={styles.mLoadButton}
             >
                 see more
