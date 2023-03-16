@@ -1,5 +1,12 @@
-// MOBILE STYLES
+@import '../global/variables.scss';
 
+// _base.scss
+@mixin text-shadow {
+	text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff,
+		-1px -1px 0 #fff;
+}
+
+// _mobile.scss
 .mSubtitle {
 	font-size: 2rem;
 }
@@ -43,18 +50,7 @@
 	color: white;
 }
 
-// WEBPAGE STYLES
-
-@media only screen and (max-width: 1250px) {
-	.blackOffset {
-		display: none;
-	}
-
-	.header > h1 {
-		font-size: 4.5rem !important;
-	}
-}
-
+// _webpage.scss
 .landingContainer {
 	align-items: flex-start;
 	padding: 4rem 2rem 4rem 2rem;
@@ -68,30 +64,34 @@
 }
 
 .socialBox {
-	outline: 1px solid black;
 	height: 100%;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	box-sizing: border-box;
 }
 
+.socialContent {
+	@extend .socialBox;
+}
 .socialContent:hover {
 	background-color: lightgray;
-	font-weight: bold;
 }
 
 .socialFilled {
+	@extend .socialBox;
 	background-color: black;
 }
 
 .socialHidden {
+	@extend .socialBox;
 	visibility: hidden;
 }
 
 .header {
-	text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff,
-		-1px -1px 0 #fff;
+	@include text-shadow;
 }
 .header > h1 {
 	font-size: 6.5rem;
@@ -111,3 +111,18 @@
 	background-color: black;
 	z-index: -1;
 }
+
+@media only screen and (max-width: 1250px) {
+	.blackOffset {
+		display: none;
+	}
+
+	.header > h1 {
+		font-size: 4.5rem !important;
+	}
+}
+
+// main.scss
+// @import '_base';
+// @import '_mobile';
+// @import '_webpage';

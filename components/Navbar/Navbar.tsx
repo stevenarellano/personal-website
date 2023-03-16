@@ -8,7 +8,6 @@ const Navbar = () => {
             <a href="#experiences-page" className={styles.item}>experience</a>
             <a href="#projects-page" className={styles.item}>projects</a>
             <a className={styles.item}></a>
-            {/* <a className={styles.item}>buy me coffee</a> */}
         </div>
     );
 };

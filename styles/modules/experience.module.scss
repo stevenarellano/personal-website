@@ -1,3 +1,5 @@
+@import '../global/variables.scss';
+
 // MobileExperiences.tsx
 
 .mLoadButton {
@@ -151,7 +153,7 @@
 	display: flex;
 	flex-direction: column;
 
-	outline: 1px solid black;
+	outline: 2px solid black;
 }
 
 .experienceBox > div:first-child {
@@ -176,10 +178,9 @@
 }
 
 // Experience.tsx
-
 .experience {
-	border-bottom: 1px solid black;
-	border-right: 1px solid black;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
 
 	position: relative;
 }

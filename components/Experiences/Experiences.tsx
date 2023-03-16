@@ -8,11 +8,7 @@ const Experiences = () => {
         <div className={`${styles.experienceContainer} page-container`}>
             <div className={styles.experienceBox} >
                 <div>EXPERIENCES</div>
-                <div>
-                    {experienceData.map((info, i) => <Experience key={i} info={info} />)}
-                </div>
-
-
+                <div>{experienceData.map((info, i) => <Experience key={i} info={info} />)}</div>
             </div>
         </div>
     );

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { ExperienceInfo } from '../../context';
-
 import styles from '/styles/modules/experience.module.scss';
 
 export type ResponsibilityProps = {

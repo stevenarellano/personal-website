@@ -1,0 +1,52 @@
+@import '../global/variables.scss';
+
+$text-size: 2rem;
+
+.container {
+	height: 100vh;
+	width: 100vw;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.animationContainer {
+	background-color: $bg-primary;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.welcome {
+	font-size: $text-size;
+	font-family: $font-secondary;
+}
+
+.hiddenText {
+	font-size: $text-size;
+	visibility: hidden;
+}
+@keyframes blink {
+	0%,
+	50% {
+		background-color: currentColor;
+	}
+	51%,
+	100% {
+		background-color: transparent;
+	}
+}
+
+.welcomeCursor {
+	display: inline-block;
+
+	width: 1ch; /* 1 character width */
+	height: $text-size;
+	width: $text-size / 2;
+
+	vertical-align: middle;
+	background-color: currentColor;
+	animation: blink 0.4s step-start infinite;
+}

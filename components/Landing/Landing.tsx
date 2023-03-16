@@ -6,36 +6,36 @@ const Landing = () => {
             <div className={styles.blackOffset} />
             <div className={styles.header}>
                 <h1>STEVEN ARELLANO.</h1>
-                <h3>fullstack developer</h3>
+                <h3>dev</h3>
             </div>
             <div className={styles.socialBoxes}>
                 <a
                     href='https://www.linkedin.com/in/stevenjarellano/'
                     target='_blank'
                     rel="noreferrer"
-                    className={`${styles.socialBox} ${styles.socialContent}`}>
+                    className={[styles.socialContent, styles.bL, styles.bT, styles.bR].join(' ')}>
                     linkedin
                 </a>
-                <a className={`${styles.socialBox} ${styles.socialHidden}`} />
-                <a className={`${styles.socialBox} ${styles.socialHidden}`} />
-                <a className={`${styles.socialBox} ${styles.socialFilled}`} />
+                <a className={styles.socialHidden} />
+                <a className={styles.socialHidden} />
+                <a className={styles.socialFilled} />
                 <a
                     href='https://github.com/stevenarellano'
                     target='_blank'
                     rel="noreferrer"
-                    className={`${styles.socialBox} ${styles.socialContent}`}>
+                    className={[styles.socialContent, styles.bT, styles.bR].join(' ')}>
                     github
                 </a>
-                <a className={`${styles.socialBox} ${styles.socialHidden}`} />
+                <a className={styles.socialHidden} />
                 <a
                     href='https://medium.com/@stevenjarellano'
                     target='_blank'
                     rel="noreferrer"
-                    className={`${styles.socialBox} ${styles.socialContent}`}>
+                    className={[styles.socialContent, styles.bT, styles.bB, styles.bL, styles.bR].join(' ')}>
                     medium
                 </a>
-                <a className={`${styles.socialBox} ${styles.socialContent}`} />
-                <a className={`${styles.socialBox} ${styles.socialFilled}`} />
+                <a className={[styles.socialContent, styles.bT, styles.bB, styles.bR].join(' ')} />
+                <a className={styles.socialFilled} />
             </div>
         </div>
     );

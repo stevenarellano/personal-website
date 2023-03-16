@@ -1,3 +1,16 @@
+.item > .nav-item {
+	display: inline-block;
+	font-size: 1.15rem;
+	box-sizing: border-box;
+}
+
+.item > .nav-item:hover {
+	font-weight: bold;
+}
+.item > .nav-item:last-child {
+	margin-left: auto;
+}
+
 .navbarContainer {
 	border-bottom: solid 1px black;
 	background-color: white;
@@ -14,17 +27,24 @@
 	position: sticky;
 	z-index: 100;
 	top: 0;
-}
 
-.item > .nav-item {
-	display: inline-block;
-	font-size: 1.15rem;
-	box-sizing: border-box;
-}
+	.item:not(:first-child) {
+		position: relative;
+		padding-bottom: 5px;
 
-.item > .nav-item:hover {
-	font-weight: bold;
-}
-.item > .nav-item:last-child {
-	margin-left: auto;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 0%;
+			height: 1px;
+			bottom: 0;
+			left: 0;
+			background-color: black;
+			transition: all 0.3s ease-in-out;
+		}
+
+		&:hover:before {
+			width: 100%;
+		}
+	}
 }
