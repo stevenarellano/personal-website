@@ -4,9 +4,6 @@
 	box-sizing: border-box;
 }
 
-.item > .nav-item:hover {
-	font-weight: bold;
-}
 .item > .nav-item:last-child {
 	margin-left: auto;
 }
@@ -46,5 +43,9 @@
 		&:hover:before {
 			width: 100%;
 		}
+	}
+
+	.item:first-child {
+		font-weight: bold;
 	}
 }

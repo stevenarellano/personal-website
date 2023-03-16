@@ -10,7 +10,7 @@ export type ExperienceInfo = {
 	website?: string;
 };
 
-export const experienceData: ExperienceInfo[] = [
+export const EXPERIENCE_DATA: ExperienceInfo[] = [
 	{
 		company: 'ChicagoDAO',
 		role: 'Software Engineer',
@@ -89,4 +89,4 @@ export const experienceData: ExperienceInfo[] = [
 	},
 ];
 
-export default experienceData;
+export default EXPERIENCE_DATA;
