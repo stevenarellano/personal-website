@@ -43,11 +43,55 @@ const Card2 = ({ info, bR = false, bB = false }: ExperienceProps) => {
     );
 };
 
+const Card3 = ({ info, bR = false, bB = false }: ExperienceProps) => {
+    const { company, logo, current } = info;
+    const { active, toggleModal } = useToggleModal();
+    const experienceClasses = [styles.card3, bR && styles.bR, bB && styles.bB].join(' ');
+
+    return (
+        <div onClick={toggleModal} className={experienceClasses}>
+            <div className={styles.circle}>
+                <img alt='logo' src={logo} />
+                <div className={styles.title}>{company}</div>
+                {current && <div className={styles.current}>[current]</div>}
+            </div>
+            <ExperienceModal info={info} active={active} toggleModal={toggleModal} />
+        </div>
+    );
+};
+
+
+const Card4 = ({ info, bR = false, bB = false }: ExperienceProps) => {
+    const { company, logo, current } = info;
+    const { active, toggleModal } = useToggleModal();
+    const experienceClasses = [styles.card4, bR && styles.bR, bB && styles.bB].join(' ');
+
+    return (
+        <div onClick={toggleModal} className={experienceClasses}>
+            <div className={styles.row}>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div className={styles.contentRow}>
+                <div></div>
+                <div className={styles.imgContainer}><img alt='logo' src={logo} /></div>
+                <div className={styles.title}>{company}</div>
+            </div>
+            <div className={styles.row}>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ExperienceModal info={info} active={active} toggleModal={toggleModal} />
+        </div>
+    );
+};
 
 
 const Experience: React.FC<ExperienceProps> = ({ info, bR = false, bB = false }) => {
     return (
-        <Card1 info={info} bR={bR} bB={bB} />
+        <Card4 info={info} bR={bR} bB={bB} />
     );
 };
 
