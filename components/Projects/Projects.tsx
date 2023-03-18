@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { projectData, ProjectInfo } from '../../context';
+import { PROJECT_DATA, ProjectInfo } from '../../context';
 import styles from '/styles/modules/projects.module.scss';
 
 export type ProjectSelectorProps = {
@@ -11,8 +11,6 @@ export type ProjectSelectorProps = {
 };
 
 const ProjectSelector = ({ name, subtitle, tools = [], active, indexSetter }: ProjectSelectorProps) => {
-
-
     return (
         <div
             onClick={indexSetter}
@@ -22,7 +20,7 @@ const ProjectSelector = ({ name, subtitle, tools = [], active, indexSetter }: Pr
             <div className={styles.selectorInfo}>
                 <div className={styles.selectorTitle}>{name}</div>
                 <div className={styles.selectorSubtitle}>{subtitle}</div>
-                <div className={styles.selectorTools}>[{tools.map((tool, i) => tool + `${(i === tools.length - 1) ? '' : ' / '}`)}]</div >
+                <div className={styles.selectorTools}>[{tools.map((tool, i) => tool + `${(i === tools.length - 1) ? '' : ' / '}`)}]</div>
             </div>
         </div >
     );
@@ -64,7 +62,7 @@ const Projects = () => {
                     <div>PROJECTS</div>
                     <div>SELECT ONE</div>
                     <div>
-                        {projectData.map((info, i: number) => {
+                        {PROJECT_DATA.map((info, i: number) => {
                             return (
                                 <ProjectSelector
                                     key={i}
@@ -78,7 +76,7 @@ const Projects = () => {
                         })}
                     </div>
                 </div>
-                <ProjectBox info={projectData[activeIndex]} />
+                <ProjectBox info={PROJECT_DATA[activeIndex]} />
             </div>
         </div>
     );

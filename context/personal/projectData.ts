@@ -7,7 +7,8 @@ export type ProjectInfo = {
 	website?: string;
 	github?: string;
 };
-const projectData: ProjectInfo[] = [
+
+const PROJECT_DATA: ProjectInfo[] = [
 	{
 		tools: ['react, flask'],
 		title: 'Decked Out',
@@ -49,4 +50,4 @@ const projectData: ProjectInfo[] = [
 	},
 ];
 
-export default projectData;
+export default PROJECT_DATA;

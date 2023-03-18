@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { projectData, ProjectInfo } from '../../context';
+import { PROJECT_DATA, ProjectInfo } from '../../context';
 
 import styles from '/styles/modules/projects.module.scss';
 
@@ -41,7 +41,7 @@ const MobileProjects = () => {
             <div className="mobile-header">
                 <span className="m-section-title">PROJECTS</span>
             </div>
-            {projectData.map((content, i) => <MobileProject key={i} info={content} />)}
+            {PROJECT_DATA.map((content, i) => <MobileProject key={i} info={content} />)}
         </div>
     );
 };

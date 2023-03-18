@@ -6,6 +6,7 @@ import { ExperienceModal } from './ExperienceModal';
 
 type ExperienceProps = {
     info: ExperienceInfo;
+    cardId?: number;
     bR?: boolean;
     bB?: boolean;
 };
@@ -87,11 +88,41 @@ const Card4 = ({ info, bR = false, bB = false }: ExperienceProps) => {
         </div>
     );
 };
+const Card5 = ({ info, bR = false, bB = false }: ExperienceProps) => {
+    const { company, logo, current } = info;
+    const { active, toggleModal } = useToggleModal();
+    const experienceClasses = [styles.card5, bR && styles.bR, bB && styles.bB].join(' ');
 
-
-const Experience: React.FC<ExperienceProps> = ({ info, bR = false, bB = false }) => {
     return (
-        <Card4 info={info} bR={bR} bB={bB} />
+        <div onClick={toggleModal} className={experienceClasses}>
+            <div className={styles.innerBox}>
+                <div className={styles.info}>
+                    <div className={styles.title}>{company}</div>
+                    {current && <div className={styles.current}>[current]</div>}
+                </div>
+                <img alt='logo' src={logo} />
+            </div>
+            <div className={styles.lineVertical}></div>
+            <div className={styles.lineHorizontal}></div>
+            <ExperienceModal info={info} active={active} toggleModal={toggleModal} />
+        </div>
+    );
+};
+
+
+
+
+const Experience: React.FC<ExperienceProps> = ({ info, bR = false, bB = false, cardId }) => {
+    const cards = [
+        <Card1 key={1} info={info} bR={bR} bB={bB} />,
+        <Card2 key={2} info={info} bR={bR} bB={bB} />,
+        <Card3 key={3} info={info} bR={bR} bB={bB} />,
+        <Card4 key={4} info={info} bR={bR} bB={bB} />,
+        <Card5 key={5} info={info} bR={bR} bB={bB} />
+    ];
+
+    return (
+        cards[cardId || 0]
     );
 };
 

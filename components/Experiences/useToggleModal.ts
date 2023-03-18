@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 export function useToggleModal() {
 	const [active, setActive] = useState(false);
 	function toggleModal() {
+		
 		setActive(!active);
 	}
 
