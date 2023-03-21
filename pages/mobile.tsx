@@ -5,7 +5,11 @@ import { MobileExperiences, MobileLanding, MobileProjects, Navbar } from '../com
 const MobileLayout: NextPage = () => {
     return (
         <div style={{
-            width: "100%", display: "flex", flexDirection: "column", alignItems: "center"
+            height: "100%",
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center"
         }}>
             <Navbar />
             <MobileLanding />

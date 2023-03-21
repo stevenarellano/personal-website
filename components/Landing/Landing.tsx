@@ -6,7 +6,7 @@ const Landing = () => {
             <div className={styles.blackOffset} />
             <div className={styles.header}>
                 <h1>STEVEN ARELLANO.</h1>
-                <h3>dev</h3>
+                <h3>buildr</h3>
             </div>
             <div className={styles.socialBoxes}>
                 <a

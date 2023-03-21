@@ -38,7 +38,7 @@
 	line-height: 1.1rem;
 
 	padding-bottom: 2rem;
-	border-bottom: solid black 2px;
+	border-bottom: solid black $border-width;
 	font-weight: bold;
 
 	width: 90%;
@@ -153,7 +153,7 @@
 	display: flex;
 	flex-direction: column;
 
-	outline: 2px solid black;
+	outline: $border-width solid black;
 }
 
 .experienceBox > div:first-child {
@@ -162,7 +162,7 @@
 	font-size: 2rem;
 	font-weight: bold;
 
-	border-bottom: 2px solid black;
+	border-bottom: $border-width solid black;
 
 	display: flex;
 	justify-content: center;
@@ -238,7 +238,7 @@
 	height: 70vh;
 
 	background-color: white;
-	border: 2px solid black;
+	border: $border-width solid black;
 
 	z-index: 1001;
 
@@ -261,7 +261,7 @@
 	justify-content: space-between;
 	align-items: center;
 
-	border-bottom: 2px solid black;
+	border-bottom: $border-width solid black;
 
 	width: 100%;
 	height: 3rem;
@@ -275,7 +275,7 @@
 	justify-content: space-between;
 	align-items: flex-end;
 
-	border-bottom: 2px solid black;
+	border-bottom: $border-width solid black;
 
 	width: 100%;
 	height: 10rem;
@@ -294,7 +294,7 @@
 }
 
 .modalResp {
-	border-top: 2px solid black;
+	border-top: $border-width solid black;
 }
 .modalResp > div:first-child {
 	height: 2rem;
@@ -304,7 +304,7 @@
 	flex: 1;
 	display: flex;
 
-	border: 2px solid black;
+	border: $border-width solid black;
 	border-right: 0px solid black;
 	border-bottom: 0px solid black;
 
@@ -490,7 +490,7 @@
 		width: 75%;
 		height: 75%;
 
-		border: solid 2px black;
+		border: solid $border-width black;
 
 		& > img {
 			position: absolute;
@@ -519,7 +519,7 @@
 
 	.lineVertical {
 		@extend .line;
-		width: 2px;
+		width: $border-width;
 		height: 100%;
 		left: 75%;
 	}
@@ -527,14 +527,14 @@
 	.lineHorizontal {
 		@extend .line;
 		width: 100%;
-		height: 2px;
+		height: $border-width;
 		top: 30%;
 	}
 
-	&:hover .lineHorizontal,
-	&:hover .lineVertical {
-		animation: shrink 1s forwards;
-	}
+	// &:hover .lineHorizontal,
+	// &:hover .lineVertical {
+	// 	animation: shrink 1s forwards;
+	// }
 
 	&:hover {
 		background: lightgray;
