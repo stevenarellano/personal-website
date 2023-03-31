@@ -31,11 +31,9 @@ const ProjectBox = ({ info }: { info: ProjectInfo; }) => {
 
     return (
         <div className={styles.boxCol}>
+            <img src={logo} alt='logo' className={styles.boxImg} />
             <div className={styles.boxGeneral}>
-                {/* <div className="pb-subtitle">{blurp}</div> */}
                 <div className={styles.boxTitle}>{title}</div>
-            </div>
-            <div className={styles.boxInfo}>
                 <div className={styles.boxDescription}>
                     <strong>description: </strong> {description}
                 </div>
@@ -43,7 +41,6 @@ const ProjectBox = ({ info }: { info: ProjectInfo; }) => {
                     <strong>tools: </strong> {tools.map((tool, i) => tool + `${(i === tools.length - 1) ? '' : ', '}`)}
                 </div>
             </div>
-
             <div className={styles.boxLinks}>
                 {github && <a href={github} target='_blank' rel="noreferrer">github</a>}
                 {website && <a href={website} target='_blank' rel="noreferrer">website</a>}
