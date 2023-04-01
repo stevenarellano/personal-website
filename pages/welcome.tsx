@@ -7,7 +7,7 @@ interface WelcomeProps {
     setOpening: (bool: boolean) => void;
 }
 
-const LETTER_TYPE_DELAY = 400;
+const LETTER_TYPE_DELAY = 250;
 
 const Welcome: React.FC<WelcomeProps> = ({ typedText = 'welcome!', setOpening }) => {
     const [displayText, setDisplayText] = useState('');
@@ -23,7 +23,7 @@ const Welcome: React.FC<WelcomeProps> = ({ typedText = 'welcome!', setOpening })
                 setHiddenText(hiddenText.substring(1));
                 setIndex(index + 1);
             } else {
-                setClasses(`${styles.animationContainer} animate__animated animate__fadeOutDown`);
+                setClasses(`${styles.animationContainer} animate__animated animate__rotateOutUpLeft`);
                 setTimeout(() => {
                     setOpening(false);
                 }, 750);

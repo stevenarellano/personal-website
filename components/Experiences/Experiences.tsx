@@ -7,13 +7,17 @@ const ExperienceScreen1 = () => {
     return (
         <div className={styles.experienceScreen}>
             <div className={styles.experienceRow2}>
-                <Experience info={EXPERIENCE_DATA[0]} cardId={5} bR bB />
-                <Experience info={EXPERIENCE_DATA[1]} cardId={5} bB />
+                <Experience info={EXPERIENCE_DATA[0]} cardId={6} bR bB />
+                <Experience info={EXPERIENCE_DATA[1]} cardId={6} bB />
             </div>
             <div className={styles.experienceRow3}>
-                <Experience info={EXPERIENCE_DATA[2]} cardId={5} bR />
-                <Experience info={EXPERIENCE_DATA[3]} cardId={5} bR />
-                <Experience info={EXPERIENCE_DATA[4]} cardId={5} />
+                <Experience info={EXPERIENCE_DATA[2]} cardId={6} bR bB />
+                <Experience info={EXPERIENCE_DATA[3]} cardId={6} bR bB />
+                <Experience info={EXPERIENCE_DATA[4]} cardId={6} bB />
+            </div>
+            <div className={styles.experienceRow1}>
+                <Experience info={EXPERIENCE_DATA[5]} cardId={6} bR />
+                <Experience info={EXPERIENCE_DATA[5]} cardId={0} />
             </div>
         </div>
     );

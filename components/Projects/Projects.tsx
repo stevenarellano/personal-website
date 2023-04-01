@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { PROJECT_DATA, ProjectInfo } from '../../context';
 import styles from '/styles/modules/projects.module.scss';
 
@@ -28,9 +28,15 @@ const ProjectSelector = ({ name, subtitle, tools = [], active, indexSetter }: Pr
 
 const ProjectBox = ({ info }: { info: ProjectInfo; }) => {
     const { title, blurp, description, logo, tools, website, github } = info;
+    const [active, setActive] = useState(false);
+
+    useEffect(() => {
+        setActive(false);
+        setTimeout(() => setActive(true), 100);
+    }, [info]);
 
     return (
-        <div className={styles.boxCol}>
+        <div id="project-box" className={`${styles.boxCol} ${active ? styles.boxActive : styles.boxInactive}`}>
             <img src={logo} alt='logo' className={styles.boxImg} />
             <div className={styles.boxGeneral}>
                 <div className={styles.boxTitle}>{title}</div>

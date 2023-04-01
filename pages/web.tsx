@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { Experiences, Landing, Navbar, Projects, } from '../components';
+import { Experiences, Footer, Landing, Navbar, Projects, } from '../components';
 
 const DIVIDER_STYLES = {
     width: 'calc(100% - 16rem)',
@@ -18,6 +18,7 @@ const WebLayout: NextPage = () => {
             <Experiences />
             <div id="projects-page" style={DIVIDER_STYLES} />
             <Projects />
+            <Footer />
         </div >
     );
 };

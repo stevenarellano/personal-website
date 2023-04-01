@@ -10,13 +10,31 @@ export type ProjectInfo = {
 
 const PROJECT_DATA: ProjectInfo[] = [
 	{
-		tools: ['react, flask'],
+		tools: ['react', 'express', 'mongodb'],
+		title: 'Device Link',
+		blurp: 'Actuated Typing Race',
+		description:
+			'A revolutionary new platform that bridges the gap between IoT device owners and data consumers.',
+		github: 'https://github.com/stevenarellano/device-link',
+		logo: '/projects/device-link.png',
+	},
+	{
+		tools: ['arduino', 'express', 'react', '3d-printing'],
+		title: 'TypeTrek',
+		blurp: 'Actuated Typing Race',
+		description:
+			'TypeTrek actuates users to practice typing by making it more enjoyable and interactive.',
+		github: 'https://github.com/stevenarellano/actuated-1v1-typing',
+		logo: '/projects/typetrek.png',
+	},
+	{
+		tools: ['react', 'flask'],
 		title: 'Decked Out',
 		blurp: 'Presentation Generating AI Web App',
 		description:
 			'Decked Out generates a presentation given a short prompt or an essay about what you want the presentation to be about.',
 		github: 'https://github.com/the-buildrs/decked-out',
-		logo: 'https://media.discordapp.net/attachments/1088230792754376827/1091346240660320318/steve_2d_illustration_humans_making_powerpoints_with_the_help_o_1f9180d0-20d3-497c-8026-9aa6d4276aed.png?width=1622&height=936',
+		logo: '/projects/decked-out.png',
 	},
 	{
 		tools: ['react', 'chakraUI', 'express', 'postgresSql'],
@@ -26,7 +44,7 @@ const PROJECT_DATA: ProjectInfo[] = [
 			'Ten Takeaways is an app used to log my progression and book reading as I go through the year. ',
 		github: 'https://github.com/stevenarellano/ten-takeaways',
 		website: 'https://book-summaries.vercel.app/',
-		logo: 'https://cdn.discordapp.com/attachments/1088230792754376827/1091347082692010014/steve_2d_illustration_of_book_journaling_app_with_individuals_r_c1a66f58-b866-42e1-9de9-cd178a7e8511.png',
+		logo: '/projects/ten-takeaways.png',
 	},
 	{
 		tools: ['react'],
@@ -36,7 +54,7 @@ const PROJECT_DATA: ProjectInfo[] = [
 			'This web app helps individuals increase their typing speed by providing a variety of levels and training for an individual todo',
 		github: 'https://github.com/stevenarellano/speed-typing',
 		website: 'https://stevenarellano.github.io/speed-typing/',
-		logo: 'https://cdn.discordapp.com/attachments/1088230792754376827/1091346945777348688/steve_2d_illustration_of_a_typing_environment_that_teaches_you__54164222-30bd-4933-bfc4-de2ccab64f4d.png',
+		logo: '/projects/speed-typing.png',
 	},
 	{
 		tools: ['react', 'chakraUI'],
@@ -46,7 +64,7 @@ const PROJECT_DATA: ProjectInfo[] = [
 			'A clone of the popular (or not so much so anymore) terra finder',
 		github: 'https://github.com/stevenarellano/terra-finder',
 		website: 'https://terra-finder-clone.vercel.app/',
-		logo: 'https://cdn.discordapp.com/attachments/1088230792754376827/1091347128590278696/steve_2d_illustration_of_an_app_that_uses_the_terra_blockchain__cdce9331-e743-4823-a570-4a2b3b5f54a0.png',
+		logo: '/projects/terra-finder.png',
 	},
 ];
 

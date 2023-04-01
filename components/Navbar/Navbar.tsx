@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <div className={styles.navbarContainer}>
             <a href="#" className={styles.item}>SA</a>
-            <a href="#experiences-page" className={styles.item}>experience</a>
+            <a href="#experiences-page" className={styles.item}>experiences</a>
             <a href="#projects-page" className={styles.item}>projects</a>
             <a className={styles.item}></a>
         </div>

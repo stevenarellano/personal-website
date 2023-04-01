@@ -25,9 +25,12 @@
 	z-index: 100;
 	top: 0;
 
+	& > * {
+		text-transform: uppercase;
+	}
+
 	.item:not(:first-child) {
 		position: relative;
-		padding-bottom: 5px;
 
 		&:before {
 			content: '';

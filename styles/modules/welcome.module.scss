@@ -22,6 +22,8 @@ $text-size: 2rem;
 .welcome {
 	font-size: $text-size;
 	font-family: $font-secondary;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .hiddenText {

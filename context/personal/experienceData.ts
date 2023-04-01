@@ -26,6 +26,18 @@ export const EXPERIENCE_DATA: ExperienceInfo[] = [
 		website: 'https://chicagodao.io/',
 	},
 	{
+		company: 'Launch House',
+		role: 'Member',
+		location: 'Los Angeles, CA',
+		responsibilities: [
+			'Participated as member of Launch House, formerly funded by a16z',
+			'Launch House was previously a community for founders to learn and grow their businesses',
+		],
+		when: 'february 2022 - march 2022',
+		logo: 'experiences/launch-house.png',
+		website: 'https://www.launchhouse.com/',
+	},
+	{
 		company: 'Meta',
 		role: 'CS Above & Beyond Fellow',
 		location: 'Menlo Park, CA',
@@ -88,5 +100,15 @@ export const EXPERIENCE_DATA: ExperienceInfo[] = [
 		logo: 'experiences/harris.png',
 	},
 ];
+
+export const BLANK_EXPERIENCE: ExperienceInfo = {
+	company: '',
+	role: '',
+	location: '',
+	responsibilities: [],
+
+	when: '',
+	logo: '',
+};
 
 export default EXPERIENCE_DATA;
