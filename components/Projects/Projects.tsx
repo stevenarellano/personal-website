@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { PROJECT_DATA, ProjectInfo } from '../../context';
 import styles from '/styles/modules/projects.module.scss';
+import Image from 'next/image';
 
 export type ProjectSelectorProps = {
     name: string;
@@ -37,7 +38,9 @@ const ProjectBox = ({ info }: { info: ProjectInfo; }) => {
 
     return (
         <div id="project-box" className={`${styles.boxCol} ${active ? styles.boxActive : styles.boxInactive}`}>
-            <img src={logo} alt='logo' className={styles.boxImg} />
+            <div className={styles.boxImg}>
+                <Image src={logo} layout='fill' alt='logo' className={styles.boxImg} />
+            </div>
             <div className={styles.boxGeneral}>
                 <div className={styles.boxTitle}>{title}</div>
                 <div className={styles.boxDescription}>

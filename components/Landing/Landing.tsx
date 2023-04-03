@@ -1,8 +1,15 @@
+import { useEffect, useState } from 'react';
 import styles from '/styles/modules/landing.module.scss';
 
 const Landing = () => {
+    const [active, setActive] = useState(false);
+    useEffect(() => {
+        setActive(true);
+    }, []);
+
+
     return (
-        <div className={`${styles.landingContainer} page-container`}>
+        <div className={`${styles.landingContainer} page-container ${active ? styles.showActive : ""}`}>
             <div className={styles.blackOffset} />
             <div className={styles.header}>
                 <h1>STEVEN ARELLANO.</h1>

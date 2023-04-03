@@ -23,7 +23,7 @@ const Welcome: React.FC<WelcomeProps> = ({ typedText = 'welcome!', setOpening })
                 setHiddenText(hiddenText.substring(1));
                 setIndex(index + 1);
             } else {
-                setClasses(`${styles.animationContainer} animate__animated animate__rotateOutUpLeft`);
+                setClasses(`${styles.animationContainer} animate__animated animate__bounceOutDown`);
                 setTimeout(() => {
                     setOpening(false);
                 }, 750);
