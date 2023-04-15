@@ -41,7 +41,13 @@ const Landing = () => {
                     className={[styles.socialContent, styles.bT, styles.bB, styles.bL, styles.bR].join(' ')}>
                     medium
                 </a>
-                <a className={[styles.socialContent, styles.bT, styles.bB, styles.bR].join(' ')} />
+                <a
+                    href='https://twitter.com/_stevenarellano'
+                    target='_blank'
+                    rel="noreferrer"
+                    className={[styles.socialContent, styles.bT, styles.bB, styles.bR].join(' ')}>
+                    twitter
+                </a>
                 <a className={styles.socialFilled} />
             </div>
         </div>

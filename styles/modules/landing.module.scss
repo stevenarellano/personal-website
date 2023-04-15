@@ -6,56 +6,12 @@
 		-1px -1px 0 #fff;
 }
 
-// _mobile.scss
-.mSubtitle {
-	font-size: 2rem;
-}
-
-.mTitle {
-	font-size: 4rem;
-	line-height: 3rem;
-	padding-bottom: 2rem;
-}
-
-.mLinkList {
-	margin-top: 2rem;
-	border-top: $border-width solid black;
-	display: flex;
-	flex-direction: column;
-
-	width: 100%;
-}
-
-.mLinkRow {
-	display: flex;
-	width: 100%;
-}
-.mLinkRow > a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	flex: 1;
-	padding: 2rem;
-	box-sizing: border-box;
-	height: 6rem;
-	border-bottom: solid black 1px;
-}
-.mLinkRow > a:first-child {
-	border-right: 1px solid black;
-}
-
-.mFilledLink {
-	background-color: black;
-	color: white;
-}
-
 // _webpage.scss
 .landingContainer {
 	align-items: flex-start;
 	padding: 4rem 4rem 4rem 4rem;
 
-	height: 90vh;
+	height: calc(100vh - #{$nav-height});
 
 	opacity: 0;
 	transition: opacity 0.5s linear;

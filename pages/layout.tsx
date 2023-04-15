@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
 import { Experiences, Footer, Landing, Navbar, Projects, } from '../components';
+import { Page, pageState } from '../context';
+import { useRecoilValue } from 'recoil';
 
 const DIVIDER_STYLES = {
     width: 'calc(100% - 16rem)',
@@ -7,21 +9,29 @@ const DIVIDER_STYLES = {
     margin: "2rem 0",
 };
 
-const WebLayout: NextPage = () => {
+type PageElements = {
+    [key in Page]: JSX.Element;
+};
+
+const PAGES: PageElements = {
+    "LANDING": <Landing />,
+    "EXPERIENCES": <Experiences />,
+    "PROJECTS": <Projects />,
+};
+
+const Layout: NextPage = () => {
+    const pageKey: Page = useRecoilValue(pageState);
+
     return (
         <div style={{
             width: "100%", display: "flex", flexDirection: "column", alignItems: "center"
         }}>
             <Navbar />
-            <Landing />
-            <div id="experiences-page" style={DIVIDER_STYLES} />
-            <Experiences />
-            <div id="projects-page" style={DIVIDER_STYLES} />
-            <Projects />
+            {PAGES[pageKey]}
             <Footer />
         </div >
     );
 };
 
 
-export default WebLayout;
+export default Layout;
