@@ -13,8 +13,7 @@ const PROJECT_DATA: ProjectInfo[] = [
 		tools: ['react', 'express', 'mongodb'],
 		title: 'Device Link',
 		blurp: 'Actuated Typing Race',
-		description:
-			'A revolutionary new platform that bridges the gap between IoT device owners and data consumers.',
+		description: 'IoT platform linking device owners and data consumers.',
 		github: 'https://github.com/stevenarellano/device-link',
 		logo: '/projects/device-link.png',
 	},
@@ -23,7 +22,7 @@ const PROJECT_DATA: ProjectInfo[] = [
 		title: 'TypeTrek',
 		blurp: 'Actuated Typing Race',
 		description:
-			'TypeTrek actuates users to practice typing by making it more enjoyable and interactive.',
+			'Innovative platform connecting IoT device owners and data consumers.',
 		github: 'https://github.com/stevenarellano/actuated-1v1-typing',
 		logo: '/projects/typetrek.png',
 	},
@@ -32,7 +31,7 @@ const PROJECT_DATA: ProjectInfo[] = [
 		title: 'Decked Out',
 		blurp: 'Presentation Generating AI Web App',
 		description:
-			'Decked Out generates a presentation given a short prompt or an essay about what you want the presentation to be about.',
+			'Create presentations from short prompts or essays about any topic.',
 		github: 'https://github.com/the-buildrs/decked-out',
 		logo: '/projects/decked-out.png',
 	},
@@ -41,7 +40,7 @@ const PROJECT_DATA: ProjectInfo[] = [
 		title: 'Ten Takeaways',
 		blurp: 'Book Summary Web App',
 		description:
-			'Ten Takeaways is an app used to log my progression and book reading as I go through the year. ',
+			'App for tracking progress and reading books throughout the year.',
 		github: 'https://github.com/stevenarellano/ten-takeaways',
 		website: 'https://book-summaries.vercel.app/',
 		logo: '/projects/ten-takeaways.png',
@@ -51,7 +50,7 @@ const PROJECT_DATA: ProjectInfo[] = [
 		title: 'Speed Typing',
 		blurp: 'Typing Speed Tester',
 		description:
-			'This web app helps individuals increase their typing speed by providing a variety of levels and training for an individual todo',
+			'Web app offering typing training with multiple levels to increase speed.',
 		github: 'https://github.com/stevenarellano/speed-typing',
 		website: 'https://stevenarellano.github.io/speed-typing/',
 		logo: '/projects/speed-typing.png',

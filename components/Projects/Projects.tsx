@@ -1,88 +1,61 @@
-import { useEffect, useState } from 'react';
+
+import Image from 'next/image';
 import { PROJECT_DATA, ProjectInfo } from '../../context';
 import styles from '/styles/modules/projects.module.scss';
-import Image from 'next/image';
 
-export type ProjectSelectorProps = {
-    name: string;
-    subtitle: string;
-    tools: string[];
-    indexSetter: () => void;
-    active?: boolean;
-};
 
-const ProjectSelector = ({ name, subtitle, tools = [], active, indexSetter }: ProjectSelectorProps) => {
+const Project = ({
+    title,
+    blurp,
+    description,
+    logo,
+    tools,
+    website,
+    github,
+}: ProjectInfo) => {
     return (
-        <div
-            onClick={indexSetter}
-            className={`${styles.selector} ${active ? styles.selectorActive : undefined} `}
-        >
-
-            <div className={styles.selectorInfo}>
-                <div className={styles.selectorTitle}>{name}</div>
-                <div className={styles.selectorSubtitle}>{subtitle}</div>
-                <div className={styles.selectorTools}>[{tools.map((tool, i) => tool + `${(i === tools.length - 1) ? '' : ' / '}`)}]</div>
+        <div className={styles.project}>
+            <div className={styles.imgContainer}>
+                <Image src={logo} alt={title} width={100} height={100} />
             </div>
-        </div >
-    );
-};
-
-const ProjectBox = ({ info }: { info: ProjectInfo; }) => {
-    const { title, blurp, description, logo, tools, website, github } = info;
-    const [active, setActive] = useState(false);
-
-    useEffect(() => {
-        setActive(false);
-        setTimeout(() => setActive(true), 100);
-    }, [info]);
-
-    return (
-        <div id="project-box" className={`${styles.boxCol} ${active ? styles.boxActive : styles.boxInactive}`}>
-            <div className={styles.boxImg}>
-                <Image src={logo} layout='fill' alt='logo' className={styles.boxImg} />
-            </div>
-            <div className={styles.boxGeneral}>
-                <div className={styles.boxTitle}>{title}</div>
-                <div className={styles.boxDescription}>
-                    <strong>description: </strong> {description}
-                </div>
-                <div className={styles.boxTools}>
-                    <strong>tools: </strong> {tools.map((tool, i) => tool + `${(i === tools.length - 1) ? '' : ', '}`)}
-                </div>
-            </div>
-            <div className={styles.boxLinks}>
-                {github && <a href={github} target='_blank' rel="noreferrer">github</a>}
-                {website && <a href={website} target='_blank' rel="noreferrer">website</a>}
-            </div>
+            <div className={styles.title}>{title}</div>
+            <div className={styles.subtitle}>{description}</div>
+            <div className={styles.tools}>tools: {
+                tools.map((tool: string, i: number) => {
+                    return (
+                        <span className={styles.tool} key={i}>
+                            {tool}
+                            {i !== tools.length - 1 && ', '}
+                        </span>
+                    );
+                })
+            }</div>
         </div>
     );
 };
 
-const Projects = () => {
-    const [activeIndex, setIndex] = useState(0);
 
+const Projects = () => {
     return (
         <div className={`${styles.projectContainer} page-container`}>
-            <div className={styles.box}>
-                <div className={styles.selectCol}>
-                    <div>PROJECTS</div>
-                    <div>SELECT ONE</div>
+            <div className={styles.header}>LAST UPDATED: JUNE 22, 2022</div>
+            <div className={styles.cols}>
+                <div className={styles.info}>
                     <div>
-                        {PROJECT_DATA.map((info, i: number) => {
-                            return (
-                                <ProjectSelector
-                                    key={i}
-                                    name={info.title}
-                                    subtitle={info.blurp}
-                                    tools={info.tools}
-                                    active={activeIndex === i}
-                                    indexSetter={() => setIndex(i)}
-                                />
-                            );
-                        })}
+                        PROJECT BOARD
                     </div>
                 </div>
-                <ProjectBox info={PROJECT_DATA[activeIndex]} />
+                <div className={styles.projects}>
+                    {PROJECT_DATA.map((project: ProjectInfo, index: number) => (
+                        <Project
+                            key={index}
+                            title={project.title}
+                            description={project.description}
+                            tools={project.tools}
+                            logo={project.logo}
+                            blurp={''} />
+                    ))}
+                </div>
             </div>
         </div>
     );

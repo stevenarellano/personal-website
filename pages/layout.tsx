@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import { Experiences, Footer, Landing, Navbar, Projects, } from '../components';
 import { Page, pageState } from '../context';
 import { useRecoilValue } from 'recoil';
+import Head from 'next/head';
 
 const DIVIDER_STYLES = {
     width: 'calc(100% - 16rem)',
@@ -23,13 +24,20 @@ const Layout: NextPage = () => {
     const pageKey: Page = useRecoilValue(pageState);
 
     return (
-        <div style={{
-            width: "100%", display: "flex", flexDirection: "column", alignItems: "center"
-        }}>
-            <Navbar />
-            {PAGES[pageKey]}
-            <Footer />
-        </div >
+        <>
+            <Head>
+                <title>steven arellano</title>
+                <meta name="description" content="My personal portfolio website for you, the people" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <div style={{
+                width: "100%", display: "flex", flexDirection: "column", alignItems: "center"
+            }}>
+                <Navbar />
+                {PAGES[pageKey]}
+                <Footer />
+            </div >
+        </>
     );
 };
 
