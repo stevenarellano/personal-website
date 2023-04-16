@@ -22,7 +22,7 @@ const PROJECT_DATA: ProjectInfo[] = [
 		title: 'TypeTrek',
 		blurp: 'Actuated Typing Race',
 		description:
-			'Innovative platform connecting IoT device owners and data consumers.',
+			'Typing game that interacts with the physical world.',
 		github: 'https://github.com/stevenarellano/actuated-1v1-typing',
 		logo: '/projects/typetrek.png',
 	},
