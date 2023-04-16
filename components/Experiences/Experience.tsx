@@ -21,7 +21,7 @@ const Card0 = ({ info, bR = false, bB = false }: ExperienceProps) => {
         <div onClick={toggleModal} className={experienceClasses}>
 
             <div className={styles.info}>
-                no more 
+                no more
             </div>
 
         </div>
@@ -39,7 +39,6 @@ const Card1 = ({ info, bR = false, bB = false }: ExperienceProps) => {
             <img alt='logo' src={logo} />
             <div className={styles.info}>
                 <div className={styles.title}>{company}</div>
-                {current && <div className={styles.current}>[current]</div>}
             </div>
             <ExperienceModal info={info} active={active} toggleModal={toggleModal} />
         </div>

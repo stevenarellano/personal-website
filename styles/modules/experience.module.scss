@@ -1,222 +1,43 @@
 @import '../global/variables.scss';
 
-// MobileExperiences.tsx
-
-.mLoadButton {
-	width: 100%;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-bottom: 1px black solid;
-	font-size: 2rem;
-
-	background-color: black;
-	color: white;
-}
-
-.mTopBar {
-	width: 100%;
-
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
-	padding: 0 1rem;
-}
-
-.mTopBar > span:first-child {
-	font-size: 2rem;
-}
-.mTopBar > span:nth-child(2) {
-	font-size: 2.5rem;
-}
-.mHeader {
-	padding: 0 1rem;
-
-	font-size: 3rem;
-	line-height: 1.1rem;
-
-	padding-bottom: 2rem;
-	border-bottom: solid black $border-width;
-	font-weight: bold;
-
-	width: 90%;
-	overflow: scroll;
-	white-space: nowrap;
-
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
-}
-.mHeader::-webkit-scrollbar {
-	display: none;
-}
-.mSubtitle {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	align-items: center;
-
-	border-bottom: solid 1px black;
-	padding: 0.25rem 1rem;
-	box-sizing: border-box;
-}
-
-.mSubtitle > * {
-	font-size: 1rem;
-	text-transform: lowercase;
-}
-.mSubtitle > span:first-child {
-	font-weight: bold;
-}
-.mExperience {
-	position: relative;
-
-	height: 12rem;
-	width: 100%;
-	border-bottom: solid black 1px;
-}
-.mExperience > * {
-	position: absolute;
-}
-
-.mResp {
-	text-transform: uppercase;
-	font-size: 2rem;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	border-bottom: solid black 1px;
-	padding: 1rem;
-}
-
-.mList {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-
-	width: 100%;
-	padding-bottom: 2rem;
-}
-.mList > div {
-	flex: 1;
-	border-bottom: solid black 1px;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-
-	padding: 0rem 1rem;
-}
-.mList > div > span:first-child {
-	font-size: 2rem;
-}
-
-.mCompany {
-	font-size: 2rem;
-	left: 5%;
-}
-.mThumbnail {
-	height: 6rem;
-
-	left: 50%;
-	top: 50%;
-
-	transform: translate(-50%, -50%);
-}
-.mTab {
-	position: fixed;
-
-	display: flex;
-	flex-direction: column;
-
-	bottom: 0%;
-	left: 0%;
-
-	height: 80vh;
-	width: 100vw;
-
-	background-color: white;
-	z-index: 1001;
-}
-
 // Experiences.tsx
 .experienceContainer {
 	align-items: center;
-	padding: 4rem 4rem 4rem 4rem;
+
+	margin-bottom: 2rem;
 }
 
-.experienceBox {
+.header {
+	height: 3rem;
 	width: 100%;
 
-	display: flex;
-	flex-direction: column;
-
-	outline: $border-width solid black;
-}
-
-.experienceBox > div:first-child {
-	height: 7.5vh;
-
-	font-size: 2rem;
-	font-weight: bold;
-
-	border-bottom: $border-width solid black;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.experienceScreen {
-	width: 100%;
+	border-bottom: solid black $border-width;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-start;
+
+	padding: 0 2rem;
+
+	position: sticky;
+	top: $nav-height;
+	z-index: 100;
+	background-color: white;
 }
-.experinceRow {
+
+.experiences {
+	width: 100%;
+
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
 	align-items: center;
-
-	flex: 1;
-	width: 100%;
-}
-.experienceRow1 {
-	@extend .experinceRow;
-
-	width: 100%;
-
-	& > div {
-		flex: 1;
-	}
-}
-
-.experienceRow2 {
-	@extend .experinceRow;
-
-	& > div:first-child {
-		width: 60%;
-	}
-	& > div:nth-child(2) {
-		flex: 1;
-	}
-}
-.experienceRow3 {
-	@extend .experinceRow;
-
-	& > div {
-		flex: 1;
-	}
+	flex-wrap: wrap;
 }
 
 // Experience.tsx
 .experience {
 	position: relative;
-	height: 30vh;
+	height: 40vh;
+	width: 50%;
 
 	font-family: $font-primary;
 	transition: background-color 0.3s linear;
@@ -364,7 +185,7 @@
 
 	& > img {
 		position: absolute;
-		width: 20%;
+		width: 15%;
 
 		top: 50%;
 		left: 50%;
@@ -372,7 +193,8 @@
 	}
 
 	.info {
-		top: 0;
+		position: absolute;
+		bottom: 0;
 		left: 0;
 
 		display: flex;
@@ -382,7 +204,7 @@
 	}
 	.title {
 		font-size: 1.5rem;
-		font-weight: bold;
+		text-transform: uppercase;
 	}
 }
 
