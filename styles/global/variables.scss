@@ -10,6 +10,11 @@ $border-width: 1px;
 $nav-height: 3rem;
 $side-pad: 2rem;
 
+$breakpoint-xs: 576px; // Extra small devices (portrait phones)
+$breakpoint-sm: 768px; // Small devices (landscape phones)
+$breakpoint-md: 992px; // Medium devices (tablets)
+$breakpoint-lg: 1200px; // Large devices (desktops)
+
 .bT {
 	border-top: solid 2px black;
 }
