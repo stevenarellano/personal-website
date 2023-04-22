@@ -22,11 +22,6 @@ const PAGES: PageElements = {
 
 const Layout: NextPage = () => {
     const pageKey: Page = useRecoilValue(pageState);
-
-    const vh = window.innerHeight * 0.01;
-    // Then we set the value in the --vh custom property to the root of the document
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-
     return (
         <>
             <Head>
@@ -35,7 +30,7 @@ const Layout: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div id="main" style={{
-                width: "100vw", display: "flex", flexDirection: "column", alignItems: "center", height: "100vh",
+                width: "100vw", display: "flex", flexDirection: "column", alignItems: "center", 
             }}>
                 <Navbar />
                 {PAGES[pageKey]}
