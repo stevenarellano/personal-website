@@ -24,7 +24,7 @@ const Layout: NextPage = () => {
     const pageKey: Page = useRecoilValue(pageState);
 
     return (
-        <>
+        <html>
             <Head>
                 <title>steven arellano</title>
                 <meta name="description" content="My personal portfolio website for you, the people" />
@@ -36,7 +36,7 @@ const Layout: NextPage = () => {
                 <Navbar />
                 {PAGES[pageKey]}
             </body >
-        </>
+        </html>
     );
 };
 
