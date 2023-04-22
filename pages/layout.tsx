@@ -31,11 +31,11 @@ const Layout: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <body style={{
-                width: "100vw", display: "flex", flexDirection: "column", alignItems: "center"
+                width: "100vw", display: "flex", flexDirection: "column", alignItems: "center", height: "100vh",
             }}>
                 <Navbar />
                 {PAGES[pageKey]}
-                <Footer />
+
             </body >
         </>
     );
