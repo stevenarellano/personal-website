@@ -30,7 +30,7 @@ const Layout: NextPage = () => {
                 <meta name="description" content="My personal portfolio website for you, the people" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div style={{
+            <div id="main" style={{
                 width: "100%", display: "flex", flexDirection: "column", alignItems: "center"
             }}>
                 <Navbar />
