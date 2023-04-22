@@ -31,7 +31,7 @@ const Layout: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <body style={{
-                width: "100%", display: "flex", flexDirection: "column", alignItems: "center"
+                width: "100vw", display: "flex", flexDirection: "column", alignItems: "center"
             }}>
                 <Navbar />
                 {PAGES[pageKey]}
