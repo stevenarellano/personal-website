@@ -35,7 +35,6 @@ const Layout: NextPage = () => {
             }}>
                 <Navbar />
                 {PAGES[pageKey]}
-
             </body >
         </>
     );
