@@ -9,7 +9,7 @@
 
 .landingContainer {
 	padding: 4rem;
-	height: calc(100% - #{$nav-height});
+	height: calc(100vh - $nav-height);
 	position: relative;
 
 	opacity: 0;

@@ -47,6 +47,10 @@
 		font-weight: bold;
 		font-size: 15px;
 	}
+
+	@media only screen and (max-width: $breakpoint-sm) {
+		display: none;
+	}
 }
 
 .projects {
@@ -61,6 +65,11 @@
 	flex: 1;
 
 	overflow-y: scroll;
+
+	@media only screen and (max-width: $breakpoint-sm) {
+		justify-content: space-between;
+		padding: 0rem 0.5rem;
+	}
 }
 
 .project {
@@ -102,5 +111,16 @@
 		justify-content: center;
 
 		margin-bottom: 0.5rem;
+	}
+
+	@media only screen and (max-width: $breakpoint-sm) {
+		width: 48%;
+
+		margin-bottom: 0.5rem;
+		height: 20rem;
+
+		.tools {
+			display: none;
+		}
 	}
 }

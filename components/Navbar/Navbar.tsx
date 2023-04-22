@@ -12,7 +12,7 @@ const Navbar = () => {
                 onClick={() => setPage('LANDING')}
                 style={{ fontWeight: page === "LANDING" ? 'bold' : undefined }}
                 className={styles.item}>
-SA
+                SA
             </a>
             <a
                 onClick={() => setPage('EXPERIENCES')}
