@@ -9,7 +9,7 @@
 
 .landingContainer {
 	padding: 4rem;
-	height: calc(100vh - #{$nav-height});
+	height: calc(100% - #{$nav-height});
 	position: relative;
 
 	opacity: 0;
@@ -124,7 +124,7 @@
 		}
 
 		@media only screen and (max-width: $breakpoint-xs) {
-			font-size: 2.75rem;
+			font-size: 2rem;
 		}
 	}
 
