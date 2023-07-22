@@ -12,6 +12,20 @@ export type ExperienceInfo = {
 
 export const EXPERIENCE_DATA: ExperienceInfo[] = [
 	{
+		company: 'Google',
+		role: 'Software Engineering Intern',
+		location: 'New York, NY',
+		responsibilities: [
+			'Optimized LLM task performance by 66.21% through experimenting with advanced prompt tuning in Google Colab',
+			'Created 5+ UI components utilizing Angular to call the backend using gRPC and enable client interaction with LLMs',
+			'Developed 9+ gRPC endpoints on the backend utilizing C++ and Python to call LLMs and modify SQL databases',
+		],
+		when: 'april 2023 - july 2023',
+		logo: 'experiences/google.png',
+		current: false,
+		website: 'https://careers.google.com/teams/engineering-technology/',
+	},
+	{
 		company: 'ChicagoDAO',
 		role: 'Software Engineer',
 		location: 'Chicago, IL',
@@ -20,9 +34,9 @@ export const EXPERIENCE_DATA: ExperienceInfo[] = [
 			'Constructing 70% of the React frontend and 50% of the Rocket and MongoDB backend for the group’s Resume Book',
 			'Collaborating on the operations team for the group’s upcoming $1.2 million web3 conference',
 		],
-		when: 'march 2022 - present',
+		when: 'march 2022 - april 2023',
 		logo: 'experiences/dao.png',
-		current: true,
+		current: false,
 		website: 'https://chicagodao.io/',
 	},
 	{
