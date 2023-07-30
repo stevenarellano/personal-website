@@ -19,11 +19,9 @@ const Card0 = ({ info, bR = false, bB = false }: ExperienceProps) => {
 
     return (
         <div onClick={toggleModal} className={experienceClasses}>
-
             <div className={styles.info}>
                 no more
             </div>
-
         </div>
     );
 };

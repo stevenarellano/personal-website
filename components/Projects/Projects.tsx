@@ -30,6 +30,18 @@ const Project = ({
                     );
                 })
             }</div>
+            <div className={styles.links}>
+                {website && (
+                    <a href={website} target="_blank" rel="noreferrer">
+                        <div className={styles.link}>[WEBSITE]</div>
+                    </a>
+                )}
+                {github && (
+                    <a href={github} target="_blank" rel="noreferrer">
+                        <div className={styles.link}>[GITHUB]</div>
+                    </a>
+                )}
+            </div>
         </div>
     );
 };
@@ -38,7 +50,7 @@ const Project = ({
 const Projects = () => {
     return (
         <div className={`${styles.projectContainer} page-container`}>
-            <div className={styles.header}>LAST UPDATED: JUNE 22, 2022</div>
+            <div className={styles.header}>LAST UPDATED: JULY 30, 2023</div>
             <div className={styles.cols}>
                 <div className={styles.info}>
                     <div>
@@ -53,7 +65,9 @@ const Projects = () => {
                             description={project.description}
                             tools={project.tools}
                             logo={project.logo}
-                            blurp={''} />
+                            blurp={''}
+                            github={project.github}
+                            website={project.website} />
                     ))}
                 </div>
             </div>

@@ -4,7 +4,6 @@
 .experienceContainer {
 	align-items: center;
 	margin-bottom: 2rem;
-
 }
 
 .header {
@@ -71,7 +70,7 @@
 	transform: translate(-50%, -50%);
 
 	width: 50vw;
-	min-width: 650px;
+	min-width: 300px;
 	height: 70vh;
 
 	background-color: white;
@@ -85,6 +84,10 @@
 
 	* {
 		font-family: $font-secondary;
+	}
+
+	@media only screen and (max-width: $breakpoint-sm) {
+		width: 100%;
 	}
 }
 .modalHeader {

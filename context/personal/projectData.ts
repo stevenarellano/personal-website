@@ -21,8 +21,7 @@ const PROJECT_DATA: ProjectInfo[] = [
 		tools: ['arduino', 'express', 'react', '3d-printing'],
 		title: 'TypeTrek',
 		blurp: 'Actuated Typing Race',
-		description:
-			'Typing game that interacts with the physical world.',
+		description: 'Typing game that interacts with the physical world.',
 		github: 'https://github.com/stevenarellano/actuated-1v1-typing',
 		logo: '/projects/typetrek.png',
 	},
@@ -61,8 +60,8 @@ const PROJECT_DATA: ProjectInfo[] = [
 		blurp: 'Blockchain querying application',
 		description:
 			'A clone of the popular (or not so much so anymore) terra finder',
-		github: 'https://github.com/stevenarellano/terra-finder',
-		website: 'https://terra-finder-clone.vercel.app/',
+		github: '',
+		website: '',
 		logo: '/projects/terra-finder.png',
 	},
 ];
