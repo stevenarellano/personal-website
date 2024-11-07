@@ -23,7 +23,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, last }) => {
                 <div className="project-details">
                     <div className="project-main-info">
                         <strong>{project.title}</strong>
-                        {project.blurp && <span className="project-blurp"> — {project.blurp}</span>}
+                        {project.blurp && <span className="project-blurp">&nbsp;— {project.blurp}</span>}
                     </div>
                     <div className="project-tools">
                         <em>Tools:</em> {project.tools.join(', ')}

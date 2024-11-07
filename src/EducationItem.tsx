@@ -30,9 +30,6 @@ const EducationItem: React.FC<EducationItemProps> = ({ education, last }) => {
                         <span className="education-degree">{education.degree}</span>
                         <span className="education-location">{education.location}</span>
                     </div>
-                    <div className="education-program">
-                        {education.program}
-                    </div>
                 </div>
             </div>
             <button onClick={toggleExpand} className="education-toggle">

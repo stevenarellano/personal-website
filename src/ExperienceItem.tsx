@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
 import './ExperienceItem.css';
 import LineBreak from './LineBreak';
-
-export type ExperienceInfo = {
-    company: string;
-    role: string;
-    when: string;
-    location: string;
-    team?: string;
-    responsibilities: string[];
-    logo?: string;
-    website?: string;
-};
+import { ExperienceInfo } from './data/experiences';
 
 type ExperienceItemProps = {
     experience: ExperienceInfo;
@@ -33,12 +23,11 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience, last }) => 
                     <div className="experience-main-info">
                         <div className="experience-company">
                             <strong>{experience.company}</strong>
-                            {experience.team && <span className="experience-team"> | {experience.team}</span>}
                         </div>
                         <div className="experience-date">{experience.when}</div>
                     </div>
                     <div className="experience-role-location">
-                        <span className="experience-role">{experience.role}</span>
+                        <span className="experience-role">{experience.role} {experience.subgroup && <span className="experience-subgroup"> ({experience.subgroup})</span>}</span>
                         <span className="experience-location">{experience.location}</span>
                     </div>
                 </div>

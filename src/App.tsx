@@ -5,17 +5,20 @@ import ExperienceItem from './ExperienceItem';
 import ProjectItem from './ProjectItem';
 import EducationItem from './EducationItem';
 import TalksAndPapersItem from './TalksAndPapersItem';
+import AwardItem from './AwardItem';
 
+import LINKS_DATA from './data/links';
 import EXPERIENCE_DATA from './data/experiences';
 import PROJECT_DATA from './data/projects';
 import TALK_AND_PAPER_DATA from './data/talksAndPapers';
 import EDUCATION_DATA from './data/education';
-import LINKS_DATA from './data/links';
+import AWARD_DATA from './data/awards';
 
 const NAV_DATA = [
   { name: 'education', link: '#education' },
   { name: 'experience', link: '#experience' },
   { name: 'talks and papers', link: '#talks-papers' },
+  { name: 'awards', link: '#awards' },
   { name: 'projects', link: '#projects' },
 ];
 
@@ -25,7 +28,7 @@ function App() {
       <section className="profile-header">
         <div className="header-content">
           <div className="text-content">
-            <h2 className='header-title'>Hi, I'm Steve</h2>
+            <h1 style={{ fontSize: '2rem' }}>Hi, I'm Steve</h1>
             <p className="intro">
               <em>passionate about machine learning, high performance computing, and robotics.</em><br />
               <em>curious about neuroscience and innovative urban development.</em><br />
@@ -95,6 +98,17 @@ function App() {
           <ul>
             {TALK_AND_PAPER_DATA.map((item, index) => (
               <TalksAndPapersItem key={index} item={item} last={index === TALK_AND_PAPER_DATA.length - 1} />
+            ))}
+          </ul>
+        </section>
+        <LineBreak color="#000" />
+
+        {/* Awards Section */}
+        <section id="awards">
+          <h2 className='header-title'>Awards</h2>
+          <ul>
+            {AWARD_DATA.map((award, index) => (
+              <AwardItem key={index} award={award} last={index === AWARD_DATA.length - 1} />
             ))}
           </ul>
         </section>

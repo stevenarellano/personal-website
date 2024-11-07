@@ -29,6 +29,9 @@
 	display: flex;
 	justify-content: space-between;
 	color: #666;
+	* {
+		font-size: 0.85rem;
+	}
 }
 
 .education-program {

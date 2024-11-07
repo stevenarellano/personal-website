@@ -31,6 +31,11 @@
 	}
 }
 
+section {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
 .header-title {
 	font-size: 1.25rem;
 	padding-bottom: 1rem;

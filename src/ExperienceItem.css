@@ -23,7 +23,6 @@
 	display: flex;
 	justify-content: space-between;
 	font-size: 1rem;
-	/* background-color: #007bff; */
 }
 
 .experience-role-location {
@@ -31,9 +30,8 @@
 	justify-content: space-between;
 	color: #666;
 	* {
-		font-size: 0.75rem;
+		font-size: 0.85rem;
 	}
-	/* background-color: red; */
 }
 
 .experience-toggle {

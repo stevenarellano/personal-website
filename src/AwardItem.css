@@ -1,33 +1,40 @@
-.talks-papers-item {
+.award-item {
 	list-style: none;
 }
 
-.talks-papers-header {
+.award-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.talks-papers-title-type {
+.award-left {
 	display: flex;
 	align-items: center;
-	gap: 0.5rem;
+	flex-wrap: wrap;
 }
 
-.talks-papers-type {
-	background-color: #f0f0f0;
+.award-left > strong {
+	font-size: 1rem;
+}
+
+.award-extra {
+	margin-left: 0.5rem;
 	color: #555;
-	padding: 0.2rem 0.5rem;
-	border-radius: 4px;
 	font-size: 0.9rem;
 }
 
-.talks-papers-location {
+.award-issuer {
 	color: #666;
 	font-size: 0.9rem;
 }
 
-.talks-papers-toggle {
+.award-year {
+	color: #666;
+	font-size: 0.9rem;
+}
+
+.award-toggle {
 	margin-top: 0.5rem;
 	cursor: pointer;
 	background: none;
@@ -36,23 +43,23 @@
 	font-size: 0.9rem;
 }
 
-.talks-papers-description {
+.award-description {
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.4s ease, padding 0.4s ease;
 	padding: 0 1rem;
 }
 
-.talks-papers-description.expanded {
+.award-description.expanded {
 	max-height: 300px;
 	padding: 1rem;
 }
 
-.talks-papers-link a {
+.award-link a {
 	color: #007bff;
 	text-decoration: none;
 }
 
-.talks-papers-link a:hover {
+.award-link a:hover {
 	text-decoration: underline;
 }

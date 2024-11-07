@@ -3,8 +3,6 @@ import './TalksAndPapersItem.css';
 import LineBreak from './LineBreak';
 import { TalksAndPapersInfo } from './data/talksAndPapers';
 
-
-
 type TalksAndPapersItemProps = {
     item: TalksAndPapersInfo;
     last: boolean;
@@ -18,16 +16,14 @@ const TalksAndPapersItem: React.FC<TalksAndPapersItemProps> = ({ item, last }) =
     return (
         <li className="talks-papers-item">
             <div className="talks-papers-header">
-                <div className="talks-papers-details">
-                    <div className="talks-papers-main-info">
-                        <strong>{item.title}</strong>
-                        <span className="talks-papers-type">
-                            {item.type === 'paper' ? 'Paper' : 'Talk'}
-                        </span>
-                    </div>
-                    <div className="talks-papers-location">
-                        <em>{item.location}</em>
-                    </div>
+                <div className="talks-papers-title-type">
+                    <strong>{item.title}</strong>
+                    <span className="talks-papers-type">
+                        {item.type === 'paper' ? 'Paper' : 'Talk'}
+                    </span>
+                </div>
+                <div className="talks-papers-location">
+                    <em>{item.location}</em>
                 </div>
             </div>
             <button onClick={toggleExpand} className="talks-papers-toggle">
