@@ -1,0 +1,58 @@
+.experience-item {
+	list-style: none;
+}
+
+.experience-header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.experience-logo {
+	width: 25px;
+	height: 25px;
+	object-fit: contain;
+	border-radius: 4px;
+}
+
+.experience-details {
+	flex: 1;
+}
+
+.experience-main-info {
+	display: flex;
+	justify-content: space-between;
+	font-size: 1rem;
+	/* background-color: #007bff; */
+}
+
+.experience-role-location {
+	display: flex;
+	justify-content: space-between;
+	color: #666;
+	* {
+		font-size: 0.75rem;
+	}
+	/* background-color: red; */
+}
+
+.experience-toggle {
+	margin-top: 0.5rem;
+	cursor: pointer;
+	background: none;
+	border: none;
+	color: #007bff;
+	font-size: 0.9rem;
+}
+
+.experience-description {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.4s ease, padding 0.4s ease;
+	padding: 0 1rem;
+}
+
+.experience-description.expanded {
+	max-height: 300px; /* Adjust this based on the content height */
+	padding: 1rem;
+}
