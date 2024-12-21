@@ -12,7 +12,7 @@ const PROJECTS: ProjectInfo[] = [
 	{
 		tools: ['react', 'express', 'mongodb'],
 		title: 'Device Link',
-		blurp: 'Actuated Typing Race',
+		blurp: 'Peer-to-Peer IoT Data Sharing',
 		description: 'IoT platform linking device owners and data consumers.',
 		github: 'https://github.com/stevenarellano/device-link',
 		logo: '/projects/device-link.png',
