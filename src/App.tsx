@@ -4,20 +4,20 @@ import LineBreak from './LineBreak';
 import ExperienceItem from './ExperienceItem';
 import ProjectItem from './ProjectItem';
 import EducationItem from './EducationItem';
-import TalksAndPapersItem from './TalksAndPapersItem';
+import TalksItem from './TalksItem';
 import AwardItem from './AwardItem';
 
 import LINKS_DATA from './data/links';
 import EXPERIENCE_DATA from './data/experiences';
 import PROJECT_DATA from './data/projects';
-import TALK_AND_PAPER_DATA from './data/talksAndPapers';
+import TALK_DATA from './data/talks';
 import EDUCATION_DATA from './data/education';
 import AWARD_DATA from './data/awards';
 
 const NAV_DATA = [
   { name: 'education', link: '#education' },
   { name: 'experience', link: '#experience' },
-  { name: 'talks and papers', link: '#talks-papers' },
+  { name: 'talks', link: '#talks' },
   { name: 'awards', link: '#awards' },
   { name: 'projects', link: '#projects' },
 ];
@@ -92,12 +92,12 @@ function App() {
         </section>
         <LineBreak color="#000" />
 
-        {/* Talks and Papers Section */}
-        <section id="talks-papers">
-          <h2 className='header-title'>Talks and Papers</h2>
+        {/* Talks Section */}
+        <section id="talks">
+          <h2 className='header-title'>Talks</h2>
           <ul>
-            {TALK_AND_PAPER_DATA.map((item, index) => (
-              <TalksAndPapersItem key={index} item={item} last={index === TALK_AND_PAPER_DATA.length - 1} />
+            {TALK_DATA.map((item, index) => (
+              <TalksItem key={index} item={item} last={index === TALK_DATA.length - 1} />
             ))}
           </ul>
         </section>

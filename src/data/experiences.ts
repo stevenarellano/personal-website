@@ -21,7 +21,7 @@ export const EXPERIENCES: ExperienceInfo[] = [
 			'Improved performance for LLM robot control by 32% through advanced prompting and PyTorch fine-tuning',
 			'Developed a web application for users to enter movement and shape requests for a multi-robotic system',
 		],
-		when: 'March 2024 - Present',
+		when: 'March 2024 - November 2024',
 		logo: 'experiences/uchicago-cs.jpg',
 		current: true,
 		website: 'https://www.axlab.cs.uchicago.edu/',
