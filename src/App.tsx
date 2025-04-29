@@ -20,6 +20,7 @@ const NAV_DATA = [
   { name: 'talks', link: '#talks' },
   { name: 'awards', link: '#awards' },
   { name: 'projects', link: '#projects' },
+  { name: 'blog', link: '/blog' },
 ];
 
 function App() {

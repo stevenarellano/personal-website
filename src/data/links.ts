@@ -25,6 +25,12 @@ export const LINKS: LinkInfo[] = [
 		rel: 'noopener noreferrer',
 	},
 	{
+		name: 'blog',
+		link: '/blog',
+		target: '_self',
+		rel: '',
+	},
+	{
 		name: 'mail',
 		link: 'mailto:stevenjarellano2@gmail.com',
 		target: '_self',
