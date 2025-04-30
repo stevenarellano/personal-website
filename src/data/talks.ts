@@ -1,10 +1,4 @@
-export type TalkInfo = {
-  title: string;
-  description?: string;
-  venue: string;
-  date: string;
-  link?: string;
-};
+import { TalkInfo } from '../types';
 
 const TALKS: TalkInfo[] = [
   {

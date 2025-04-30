@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './ProjectItem.css';
-import LineBreak from './LineBreak';
-import { ProjectInfo } from './data/projects';
+import '../../styles/ProjectItem.css';
+import LineBreak from '../common/LineBreak';
+import { ProjectInfo } from '../../types';
 
 
 type ProjectItemProps = {

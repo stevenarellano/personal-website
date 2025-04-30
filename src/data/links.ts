@@ -1,9 +1,4 @@
-export type LinkInfo = {
-	name: string;
-	link: string;
-	target: string;
-	rel: string;
-};
+import { LinkInfo } from '../types';
 
 export const LINKS: LinkInfo[] = [
 	{
@@ -23,12 +18,6 @@ export const LINKS: LinkInfo[] = [
 		link: 'assets/resume.pdf',
 		target: '_blank',
 		rel: 'noopener noreferrer',
-	},
-	{
-		name: 'blog',
-		link: '/blog',
-		target: '_self',
-		rel: '',
 	},
 	{
 		name: 'mail',

@@ -64,6 +64,24 @@ img {
 	align-items: space-between;
 }
 
+.main-nav {
+	margin-bottom: 1rem;
+}
+
+.main-nav a {
+	color: #333;
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+.main-nav a:hover {
+	color: #0070f3;
+}
+
+.main-nav a:not(:last-child)::after {
+	content: '\00a0\00a0\00a0\00a0';
+}
+
 .header-content {
 	display: flex;
 	align-items: center;
@@ -132,7 +150,7 @@ img {
 .blog-content {
 	line-height: 1.8;
 	font-size: 1.1rem;
-	max-width: 800px;
+	max-width: 100%;
 	margin: 0 auto;
 	padding: 0 0rem;
 }
@@ -152,9 +170,15 @@ img {
 }
 
 .blog-post {
-	max-width: 800px;
+	max-width: 100%;
 	margin: 0 auto;
-	padding: 0 1.5rem;
+	padding: 0;
+}
+
+@media (max-width: 768px) {
+	.blog-post {
+		padding: 0 1.5rem;
+	}
 }
 
 .blog-post header {
@@ -184,4 +208,18 @@ footer a {
 
 footer a:hover {
 	text-decoration: underline;
+}
+
+.social-links {
+	margin-bottom: 1rem;
+}
+
+.social-links a {
+	color: #333;
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+.social-links a:hover {
+	color: #0070f3;
 }

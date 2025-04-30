@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './ExperienceItem.css';
-import LineBreak from './LineBreak';
-import { ExperienceInfo } from './data/experiences';
+import '../../styles/ExperienceItem.css';
+import LineBreak from '../common/LineBreak';
+import { ExperienceInfo } from '../../types';
 
 type ExperienceItemProps = {
     experience: ExperienceInfo;
@@ -37,7 +37,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience, last }) => 
             </button>
             <div className={`experience-description ${isExpanded ? 'expanded' : ''}`}>
                 <ul className="experience-responsibilities">
-                    {experience.responsibilities.map((item, idx) => (
+                    {experience.responsibilities.map((item: string, idx: number) => (
                         <li key={idx}>{item}</li>
                     ))}
                 </ul>

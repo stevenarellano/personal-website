@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './AwardItem.css';
-import LineBreak from './LineBreak';
-import { AwardInfo } from './data/awards';
+import '../../styles/AwardItem.css';
+import LineBreak from '../common/LineBreak';
+import { AwardInfo } from '../../types';
 
 type AwardItemProps = {
     award: AwardInfo;

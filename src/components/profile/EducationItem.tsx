@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './EducationItem.css';
-import LineBreak from './LineBreak';
-import { EducationInfo } from './data/education';
+import '../../styles/EducationItem.css';
+import LineBreak from '../common/LineBreak';
+import { EducationInfo } from '../../types';
 
 type EducationItemProps = {
     education: EducationInfo;
@@ -44,10 +44,10 @@ const EducationItem: React.FC<EducationItemProps> = ({ education, last }) => {
                 {education.relevantCourses && education.relevantCourses.length > 0 && (
                     <>
                         <p>
-                            <em>Relevant Courses:</em>
+                            <strong>Relevant Coursework:</strong>
                         </p>
                         <ul className="education-courses">
-                            {education.relevantCourses.map((course, idx) => (
+                            {education.relevantCourses.map((course: string, idx: number) => (
                                 <li key={idx}>{course}</li>
                             ))}
                         </ul>
