@@ -1,4 +1,5 @@
 import React from 'react';
+import { Divider } from '@mui/material';
 
 interface LineBreakProps {
   color?: string;
@@ -6,7 +7,7 @@ interface LineBreakProps {
 
 const LineBreak: React.FC<LineBreakProps> = ({ color = '#000' }) => {
   return (
-    <hr style={{ border: 'none', borderTop: `1px solid ${color}`, margin: '1rem 0' }} />
+    <Divider sx={{ my: 2, borderColor: color }} />
   );
 };
 

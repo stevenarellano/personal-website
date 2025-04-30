@@ -1,5 +1,5 @@
 import React from 'react';
-import LineBreak from '../common/LineBreak';
+import { Container, Box, Divider } from '@mui/material';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -21,19 +21,39 @@ const Layout: React.FC<LayoutProps> = ({
   backText
 }) => {
   return (
-    <div className="App">
-      <Header title={title} intro={intro} showProfileImage={showProfileImage} />
-      <LineBreak color="#000" />
-      <main className="profile-content">
-        {children}
-      </main>
-      {backLink && backText && (
-        <>
-          <br />
-          <Footer backLink={backLink} backText={backText} />
-        </>
-      )}
-    </div>
+    <Container
+      sx={{
+        width: '100%',
+        margin: '0 auto',
+        maxWidth: {
+          xs: '100% !important',
+          sm: '90% !important',
+          md: '60% !important'
+        },
+
+      }}
+    >
+      <Box sx={{
+        backgroundColor: '#fff',
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh',
+        py: 2,
+        px: { xs: 0, md: 2 },
+      }}>
+        <Header title={title} intro={intro} showProfileImage={showProfileImage} />
+        <Divider sx={{ my: 4 }} />
+        <Box component="main" className="profile-content" sx={{ flexGrow: 1 }}>
+          {children}
+        </Box>
+        {backLink && backText && (
+          <>
+            <Box sx={{ my: 4 }} />
+            <Footer backLink={backLink} backText={backText} />
+          </>
+        )}
+      </Box>
+    </Container>
   );
 };
 

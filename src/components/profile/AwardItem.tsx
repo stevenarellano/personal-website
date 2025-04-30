@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../../styles/AwardItem.css';
-import LineBreak from '../common/LineBreak';
+import { Box, Typography, Button, ListItem, Collapse, Divider, Link } from '@mui/material';
+import { ExpandMore, ExpandLess } from '@mui/icons-material';
 import { AwardInfo } from '../../types';
 
 type AwardItemProps = {
@@ -14,32 +14,64 @@ const AwardItem: React.FC<AwardItemProps> = ({ award, last }) => {
     const toggleExpand = () => setIsExpanded(!isExpanded);
 
     return (
-        <li className="award-item">
-            <div className="award-header">
-                <div className="award-left">
-                    <strong>{award.item}</strong>
-                    {award.extra && <span className="award-extra"> ({award.extra})</span>}
-                    <span className="award-issuer">&nbsp;— {award.issuer}</span>
-                </div>
-                <div className="award-year">
+        <ListItem
+            component="li"
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'flex-start',
+                padding: 0,
+            }}
+            className="award-item"
+        >
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', mb: 1 }}>
+                <Box>
+                    <Typography variant="h6" component="div" sx={{ display: 'inline', fontWeight: 'bold' }}>
+                        {award.item}
+                    </Typography>
+                    {award.extra && (
+                        <Typography variant="h6" component="span" sx={{ display: 'inline', fontWeight: 'normal' }}>
+                            {' '}({award.extra})
+                        </Typography>
+                    )}
+                    <Typography variant="h6" component="span" sx={{ display: 'inline', fontWeight: 'normal' }}>
+                        &nbsp;— {award.issuer}
+                    </Typography>
+                </Box>
+                <Typography variant="body2" color="text.secondary">
                     {award.year}
-                </div>
-            </div>
-            <button onClick={toggleExpand} className="award-toggle">
+                </Typography>
+            </Box>
+
+            <Button
+                onClick={toggleExpand}
+                startIcon={isExpanded ? <ExpandLess /> : <ExpandMore />}
+                sx={{ alignSelf: 'flex-start', mt: 1 }}
+                size="small"
+            >
                 {isExpanded ? 'Less' : 'More'}
-            </button>
-            <div className={`award-description ${isExpanded ? 'expanded' : ''}`}>
-                <p>{award.description}</p>
+            </Button>
+
+            <Collapse in={isExpanded} timeout="auto" unmountOnExit sx={{ width: '100%' }}>
+                <Typography variant="body1" paragraph>
+                    {award.description}
+                </Typography>
                 {award.link && (
-                    <p className="award-link">
-                        <a href={award.link} target="_blank" rel="noopener noreferrer">
+                    <Box sx={{ mt: 1 }}>
+                        <Link
+                            href={award.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            underline="hover"
+                        >
                             Learn More
-                        </a>
-                    </p>
+                        </Link>
+                    </Box>
                 )}
-            </div>
-            {!last && <LineBreak />}
-        </li>
+            </Collapse>
+
+            {!last && <Divider sx={{ width: '100%', my: 2 }} />}
+        </ListItem>
     );
 };
 

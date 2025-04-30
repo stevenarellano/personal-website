@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import Layout from './components/layout/Layout';
-import './App.css';
+import { Box, Typography, Link as MuiLink } from '@mui/material';
 
 function parseFrontmatter(content: string): { metadata: any; content: string; } {
   const frontmatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
@@ -103,7 +103,7 @@ const BlogPost: React.FC = () => {
   if (loading) {
     return (
       <Layout title="Loading..." backLink="/blog" backText="Back to Blog List" intro="">
-        <p>Loading post...</p>
+        <Typography>Loading post...</Typography>
       </Layout>
     );
   }
@@ -111,10 +111,31 @@ const BlogPost: React.FC = () => {
   if (error) {
     return (
       <Layout title="Error" backLink="/blog" backText="Back to Blog List" intro="">
-        <div className="error-message">
-          <p>Error: {error.message}</p>
-          <Link to="/blog">Return to blog list</Link>
-        </div>
+        <Box
+          sx={{
+            color: '#d32f2f',
+            p: 2,
+            border: '1px solid #ffcdd2',
+            bgcolor: '#ffebee',
+            borderRadius: '4px',
+            maxWidth: '100%',
+          }}
+        >
+          <Typography>Error: {error.message}</Typography>
+          <MuiLink
+            component={Link}
+            to="/blog"
+            sx={{
+              color: '#333',
+              textDecoration: 'none',
+              '&:hover': {
+                textDecoration: 'underline'
+              }
+            }}
+          >
+            Return to blog list
+          </MuiLink>
+        </Box>
       </Layout>
     );
   }
@@ -122,10 +143,32 @@ const BlogPost: React.FC = () => {
   if (!post) {
     return (
       <Layout title="Not Found" backLink="/blog" backText="Back to Blog List" intro="">
-        <div className="error-message">
-          <p>Post not found</p>
-          <Link to="/blog">Return to blog list</Link>
-        </div>
+        <Box
+          sx={{
+            color: '#d32f2f',
+            p: 2,
+            border: '1px solid #ffcdd2',
+            bgcolor: '#ffebee',
+            borderRadius: '4px',
+            maxWidth: '100%',
+            mx: 'auto'
+          }}
+        >
+          <Typography>Post not found</Typography>
+          <MuiLink
+            component={Link}
+            to="/blog"
+            sx={{
+              color: '#333',
+              textDecoration: 'none',
+              '&:hover': {
+                textDecoration: 'underline'
+              }
+            }}
+          >
+            Return to blog list
+          </MuiLink>
+        </Box>
       </Layout>
     );
   }
@@ -137,15 +180,63 @@ const BlogPost: React.FC = () => {
       backText="Back to Blog List"
       intro=""
     >
-      <article className="blog-post">
-        <header>
-          <h1>{post.title}</h1>
-          <p className="blog-date">{post.date}</p>
-        </header>
-        <div className="blog-content">
+      <Box
+        component="article"
+        sx={{
+          maxWidth: '100%',
+          mx: { xs: 0, md: 'auto' },
+          px: { xs: 0, md: 0 },
+          pt: 2,
+          p: 0,
+        }}
+      >
+        <Box
+          component="header"
+          sx={{ mb: 4 }}
+        >
+          <Typography
+            variant="h1"
+            component="h1"
+            sx={{
+              mt: 4,
+              mb: 2
+            }}
+          >
+            {post.title}
+          </Typography>
+          <Typography
+            sx={{
+              color: '#666',
+              fontSize: '0.9rem',
+              my: 1
+            }}
+          >
+            {post.date}
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            lineHeight: 1.8,
+            fontSize: '1.1rem',
+            maxWidth: '100%',
+            mx: 'auto',
+            p: 0,
+            '& h1, & h2, & h3': {
+              mt: 4,
+              mb: 2
+            },
+            '& p': {
+              mb: 3
+            },
+            '& ul, & ol': {
+              mb: 3,
+              pl: 4
+            }
+          }}
+        >
           <ReactMarkdown>{post.content}</ReactMarkdown>
-        </div>
-      </article>
+        </Box>
+      </Box>
     </Layout>
   );
 };

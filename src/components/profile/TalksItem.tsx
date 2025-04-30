@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/TalksItem.css';
+import { Box, Typography, ListItem, Link, Divider } from '@mui/material';
 import { TalkInfo } from '../../types';
 
 interface TalkItemProps {
@@ -9,26 +9,44 @@ interface TalkItemProps {
 
 const TalksItem: React.FC<TalkItemProps> = ({ item, last }) => {
   return (
-    <li className={`talk-item ${last ? 'last' : ''}`}>
-      <div className="talk-header">
-        <h3 className="talk-title">
+    <ListItem
+      component="li"
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        padding: 0,
+      }}
+      className="talk-item"
+    >
+      <Box sx={{ width: '100%', mb: 1 }}>
+        <Typography variant="h6" component="h3" gutterBottom>
           {item.link ? (
-            <a href={item.link} target="_blank" rel="noopener noreferrer">
+            <Link href={item.link} target="_blank" rel="noopener noreferrer" underline="hover">
               {item.title}
-            </a>
+            </Link>
           ) : (
             item.title
           )}
-        </h3>
-        <div className="talk-metadata">
-          <span className="talk-venue">{item.venue}</span>
-          <span className="talk-date">{item.date}</span>
-        </div>
-      </div>
+        </Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
+          <Typography variant="body2" color="text.secondary">
+            {item.venue}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {item.date}
+          </Typography>
+        </Box>
+      </Box>
+
       {item.description && (
-        <p className="talk-description">{item.description}</p>
+        <Typography variant="body1" paragraph>
+          {item.description}
+        </Typography>
       )}
-    </li>
+
+      {!last && <Divider sx={{ width: '100%', my: 2 }} />}
+    </ListItem>
   );
 };
 

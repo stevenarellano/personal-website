@@ -1,23 +1,38 @@
 import React from 'react';
+import { Box, Link } from '@mui/material';
 import LINKS_DATA from '../../data/links';
 
 const SocialLinks: React.FC = () => {
   return (
-    <div className="social-links">
+    <Box
+      sx={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: 3
+      }}
+      className="social-links"
+    >
       {LINKS_DATA.map((linkInfo, index) => (
-        <span key={index}>
-          <a
-            href={linkInfo.link}
-            target={linkInfo.target}
-            rel={linkInfo.rel}
-          >
-            {linkInfo.name}
-          </a>
-          &emsp;
-        </span>
+        <Link
+          key={index}
+          href={linkInfo.link}
+          target={linkInfo.target}
+          rel={linkInfo.rel}
+          underline="hover"
+          color="inherit"
+          sx={{
+            fontFamily: '"IBM Plex Mono", monospace',
+            textTransform: 'uppercase',
+            fontWeight: 700,
+            fontSize: '0.875rem',
+            letterSpacing: '0.05em'
+          }}
+        >
+          {linkInfo.name}
+        </Link>
       ))}
-    </div>
+    </Box>
   );
 };
 
-export default SocialLinks; 
+export default SocialLinks;
