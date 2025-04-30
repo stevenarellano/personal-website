@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface LineBreakProps {
     color?: string;
     thickness?: string;

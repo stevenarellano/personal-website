@@ -63,7 +63,7 @@ export function useBlogPosts() {
               }
 
               const content = await postResponse.text();
-              const { metadata, content: markdownContent } = parseFrontmatter(content);
+              const { metadata } = parseFrontmatter(content);
 
               return {
                 id: filename.replace('.md', ''),
