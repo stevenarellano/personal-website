@@ -30,7 +30,7 @@ const Layout: React.FC<LayoutProps> = ({
           sm: '90% !important',
           md: '60% !important'
         },
-
+        py: 1,
       }}
     >
       <Box sx={{
@@ -39,16 +39,16 @@ const Layout: React.FC<LayoutProps> = ({
         flexDirection: 'column',
         minHeight: '100vh',
         py: 2,
-        px: { xs: 0, md: 2 },
+        px: { xs: 0, md: 4 },
       }}>
         <Header title={title} intro={intro} showProfileImage={showProfileImage} />
-        <Divider sx={{ my: 4 }} />
+        <Divider sx={{ my: 3 }} />
         <Box component="main" className="profile-content" sx={{ flexGrow: 1 }}>
           {children}
         </Box>
         {backLink && backText && (
           <>
-            <Box sx={{ my: 4 }} />
+            <Box sx={{ my: 3 }} />
             <Footer backLink={backLink} backText={backText} />
           </>
         )}

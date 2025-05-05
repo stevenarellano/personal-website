@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ title, intro, showProfileImage = false 
     >
       <Stack
         direction={{ xs: 'column', md: 'row' }}
-        spacing={4}
+        spacing={3}
         alignItems={{ xs: 'flex-start', md: 'flex-start' }}
         sx={{
           width: '100%',
@@ -32,17 +32,18 @@ const Header: React.FC<HeaderProps> = ({ title, intro, showProfileImage = false 
       >
         <Box sx={{
           width: '100%',
-          maxWidth: { xs: '100%', md: showProfileImage ? '75%' : '100%' },
-          mb: { xs: 5, md: 0 },
+          maxWidth: { xs: '100%', md: showProfileImage ? '70%' : '100%' },
+          mb: { xs: 4, md: 0 },
           flex: 1
         }}>
           <Typography
             variant="h1"
             component="h1"
             sx={{
+              mb: 3,
               fontWeight: 700,
-              fontSize: '2rem',
-              pb: 2
+              fontSize: '1.75rem',
+              pb: 1
             }}
           >
             {title}
@@ -51,19 +52,19 @@ const Header: React.FC<HeaderProps> = ({ title, intro, showProfileImage = false 
             variant="body1"
             className="intro-text"
             sx={{
-              mb: 2,
-              fontSize: '1.1rem',
-              lineHeight: 1.6,
+              mb: 3,
+              fontSize: '1rem',
+              lineHeight: 1.5,
             }}
           >
             {intro}
           </Typography>
-          <Stack spacing={0}>
+          <Stack spacing={3}>
             <Box>
               <Typography
                 variant="subtitle1"
                 sx={{
-                  mb: 2,
+                  mb: 1,
                 }}
               >
                 NAVIGATION
@@ -74,7 +75,7 @@ const Header: React.FC<HeaderProps> = ({ title, intro, showProfileImage = false 
               <Typography
                 variant="subtitle1"
                 sx={{
-                  mb: 2,
+                  mb: 1,
                 }}
               >
                 CONNECT
@@ -89,18 +90,18 @@ const Header: React.FC<HeaderProps> = ({ title, intro, showProfileImage = false 
             display: 'flex',
             justifyContent: { xs: 'center', md: 'flex-end' },
             alignItems: 'flex-start',
-            width: { xs: '100%', md: '25%' },
+            width: { xs: '100%', md: '30%' },
             marginLeft: 'auto'
           }}>
             <Avatar
               src="assets/me.jpeg"
               alt="Steve"
               sx={{
-                width: 250,
-                height: 250,
+                width: 100,
+                height: 100,
                 borderRadius: '4px',
                 border: '1px solid #999',
-                margin: '1rem 0',
+                margin: '0.5rem 0',
                 objectFit: 'cover'
               }}
               variant="square"

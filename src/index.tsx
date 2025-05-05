@@ -24,60 +24,62 @@ const theme = createTheme({
     ].join(','),
     h1: {
       fontFamily: '"Darker Grotesque", sans-serif',
-      fontSize: '2.5rem',
+      fontSize: '2rem',
       fontWeight: 700,
       letterSpacing: '-0.02em',
       textTransform: 'uppercase',
     },
     h2: {
       fontFamily: '"Darker Grotesque", sans-serif',
-      fontSize: '2.25rem',
+      fontSize: '1.75rem',
       fontWeight: 700,
       letterSpacing: '-0.01em',
       textTransform: 'uppercase',
     },
     h3: {
       fontFamily: '"Darker Grotesque", sans-serif',
-      fontSize: '1.75rem',
+      fontSize: '1.5rem',
       fontWeight: 700,
       letterSpacing: '-0.01em',
       textTransform: 'uppercase',
     },
     h4: {
       fontFamily: '"Darker Grotesque", sans-serif',
-      fontSize: '1.5rem',
+      fontSize: '1.25rem',
       fontWeight: 700,
       letterSpacing: '-0.01em',
     },
     h5: {
       fontFamily: '"Darker Grotesque", sans-serif',
-      fontSize: '1.25rem',
+      fontSize: '1.1rem',
       fontWeight: 600,
     },
     h6: {
       fontFamily: '"Darker Grotesque", sans-serif',
-      fontSize: '1.1rem',
+      fontSize: '1rem',
       fontWeight: 600,
     },
     body1: {
       fontFamily: '"Raleway", sans-serif',
-      fontSize: '1rem',
+      fontSize: '0.9rem',
       lineHeight: 1.5,
     },
     body2: {
       fontFamily: '"Raleway", sans-serif',
-      fontSize: '0.875rem',
+      fontSize: '0.8rem',
       lineHeight: 1.43,
     },
     button: {
       fontFamily: '"Darker Grotesque", sans-serif',
       fontWeight: 700,
       textTransform: 'uppercase',
+      fontSize: '0.8rem',
     },
     subtitle1: {
       fontFamily: '"Darker Grotesque", sans-serif',
       fontWeight: 700,
       textTransform: 'uppercase',
+      fontSize: '0.9rem',
     },
   },
   palette: {
@@ -110,7 +112,7 @@ const theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          fontSize: '16px',
+          fontSize: '14px',
           fontFamily: '"Raleway", sans-serif',
           lineHeight: 1.5,
         },
@@ -123,8 +125,8 @@ const theme = createTheme({
           borderRadius: 0,
           fontWeight: 700,
           boxShadow: 'none',
-          paddingTop: 8,
-          paddingBottom: 8,
+          paddingTop: 6,
+          paddingBottom: 6,
           backgroundColor: '#000',
           color: '#fff',
           '&:hover': {
@@ -153,14 +155,14 @@ const theme = createTheme({
         root: {
           borderRadius: 0,
           boxShadow: 'none',
-          padding: '16px 0',
+          padding: '12px 0',
         },
       },
     },
     MuiDivider: {
       styleOverrides: {
         root: {
-          margin: '32px 0',
+          margin: '24px 0',
           borderBottomWidth: 1,
         },
       },
@@ -168,8 +170,8 @@ const theme = createTheme({
     MuiListItem: {
       styleOverrides: {
         root: {
-          paddingTop: 16,
-          paddingBottom: 16,
+          paddingTop: 12,
+          paddingBottom: 12,
         },
       },
     },

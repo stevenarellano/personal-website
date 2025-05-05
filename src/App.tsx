@@ -66,7 +66,8 @@ function App() {
 
     <Layout
       title="Hi, I'm Steve"
-      intro="passionate about machine learning, high performance computing, and robotics. curious about neuroscience and innovative urban development."
+      intro="(formatting/styles got messed up once & haven't fix...)"
+      // passionate about machine learning, high performance computing, and robotics. curious about neuroscience and innovative urban development.
       showProfileImage
     >
       {/* Navigation Section */}
