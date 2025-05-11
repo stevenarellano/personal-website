@@ -4,6 +4,10 @@ body,
 #root {
 	font-family: 'Times New Roman', Times, serif !important;
 	text-transform: lowercase !important;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
 
 /* Reset default styles */
@@ -13,6 +17,35 @@ body,
 	box-sizing: border-box;
 	text-transform: lowercase;
 	font-family: 'Times New Roman', Times, serif;
+}
+
+/* Layout styles for tabs and scrolling */
+.h-full {
+	height: 100%;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.flex-1 {
+	flex: 1;
+}
+
+.overflow-auto {
+	overflow: auto;
+}
+
+.mb-2 {
+	margin-bottom: 0.5rem;
+}
+
+.pb-4 {
+	padding-bottom: 1rem;
 }
 
 /* Reset list styles */

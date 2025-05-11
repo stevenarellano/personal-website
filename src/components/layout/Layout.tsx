@@ -11,8 +11,25 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', width: '100%' }}>
-      <Box component="header" sx={{ width: '100%', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', py: 1, px: 1, mb: 1, borderBottom: '1px dashed', borderColor: 'grey.400' }}>
+    <Box sx={{
+      height: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      width: '100%',
+      overflow: 'hidden' // Prevent scroll on the body
+    }}>
+      <Box component="header" sx={{
+        width: '100%',
+        margin: '0 auto',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        py: 1,
+        px: 1,
+        borderBottom: '1px dashed',
+        borderColor: 'grey.400',
+        flexShrink: 0 // Prevent header from shrinking
+      }}>
         <Typography sx={{ letterSpacing: '-0.05em', fontSize: '1.2rem' }}>
           steven
           <Typography component="span" sx={{ animation: 'blink 1s step-end infinite', ml: 0.25 }}>_</Typography>
@@ -20,12 +37,40 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <Typography component="span" sx={{ animation: 'blink 1s step-end infinite', ml: 0.25 }}>_</Typography>
         </Typography>
       </Box>
-      <Box component="main" sx={{ width: '100%', margin: '0 auto', flexGrow: 1, px: 1 }}>
-        <Box sx={{ border: '1px solid', borderColor: 'grey.400', padding: '0.25rem' }}>
+      <Box component="main" sx={{
+        width: '100%',
+        margin: '0 auto',
+        flexGrow: 1,
+        px: 1,
+        overflow: 'hidden', // Main container doesn't scroll
+        display: 'flex',
+        flexDirection: 'column'
+      }}>
+        <Box sx={{
+          border: '1px solid',
+          borderColor: 'grey.400',
+          padding: '0.25rem',
+          height: '100%',
+          overflow: 'hidden',
+          display: 'flex',
+          flexDirection: 'column'
+        }}>
           {children}
         </Box>
       </Box>
-      <Box component="footer" sx={{ width: '100%', margin: '0 auto', py: 1, px: 1, mt: 1.5, borderTop: '1px dashed', borderColor: 'grey.400', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <Box component="footer" sx={{
+        width: '100%',
+        margin: '0 auto',
+        py: 1,
+        px: 1,
+        mt: 0.5,
+        borderTop: '1px dashed',
+        borderColor: 'grey.400',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexShrink: 0 // Prevent footer from shrinking
+      }}>
         <Typography variant="caption" sx={{ color: 'text.secondary' }}>
           &copy; {new Date().getFullYear()} steven Arellano // all rights reserved
         </Typography>
