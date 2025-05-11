@@ -90,8 +90,7 @@ const TabsContent = React.forwardRef<HTMLDivElement, TabsContentProps>(
         ref={ref}
         role="tabpanel"
         sx={{
-          mt: 2,
-          p: 1,
+          p: 2,
         }}
         {...props}
       >

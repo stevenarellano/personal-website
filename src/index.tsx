@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css'; // Main Tailwind CSS import
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import theme from './theme';
 import { ThemeProvider } from '@mui/material/styles';
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <App />
