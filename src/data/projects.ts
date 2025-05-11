@@ -1,18 +1,10 @@
-export type ProjectInfo = {
-	title: string;
-	blurp: string;
-	description: string;
-	logo: string;
-	tools: string[];
-	website?: string;
-	github?: string;
-};
+import { ProjectInfo } from '../types';
 
 const PROJECTS: ProjectInfo[] = [
 	{
 		tools: ['react', 'express', 'mongodb'],
 		title: 'Device Link',
-		blurp: 'Peer-to-Peer IoT Data Sharing',
+		blurb: 'Peer-to-Peer IoT Data Sharing',
 		description: 'IoT platform linking device owners and data consumers.',
 		github: 'https://github.com/stevenarellano/device-link',
 		logo: '/projects/device-link.png',
@@ -20,7 +12,7 @@ const PROJECTS: ProjectInfo[] = [
 	{
 		tools: ['arduino', 'express', 'react', '3d-printing'],
 		title: 'TypeTrek',
-		blurp: 'Actuated Typing Race',
+		blurb: 'Actuated Typing Race',
 		description: 'Typing game that interacts with the physical world.',
 		github: 'https://github.com/stevenarellano/actuated-1v1-typing',
 		logo: '/projects/typetrek.png',
@@ -28,7 +20,7 @@ const PROJECTS: ProjectInfo[] = [
 	{
 		tools: ['react', 'flask'],
 		title: 'Decked Out',
-		blurp: 'Presentation Generating AI Web App',
+		blurb: 'Presentation Generating AI Web App',
 		description:
 			'Create presentations from short prompts or essays about any topic.',
 		github: 'https://github.com/the-buildrs/decked-out',
@@ -37,7 +29,7 @@ const PROJECTS: ProjectInfo[] = [
 	{
 		tools: ['react', 'chakraUI', 'express', 'postgresSql'],
 		title: 'Ten Takeaways',
-		blurp: 'Book Summary Web App',
+		blurb: 'Book Summary Web App',
 		description:
 			'App for tracking progress and reading books throughout the year.',
 		github: 'https://github.com/stevenarellano/ten-takeaways',
@@ -47,7 +39,7 @@ const PROJECTS: ProjectInfo[] = [
 	{
 		tools: ['react'],
 		title: 'Speed Typing',
-		blurp: 'Typing Speed Tester',
+		blurb: 'Typing Speed Tester',
 		description:
 			'Web app offering typing training with multiple levels to increase speed.',
 		github: 'https://github.com/stevenarellano/speed-typing',
@@ -57,7 +49,7 @@ const PROJECTS: ProjectInfo[] = [
 	{
 		tools: ['react', 'chakraUI'],
 		title: 'Terra Finder Clone',
-		blurp: 'Blockchain querying application',
+		blurb: 'Blockchain querying application',
 		description:
 			'A clone of the popular (or not so much so anymore) terra finder',
 		github: '',
