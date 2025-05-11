@@ -23,12 +23,6 @@ const logoStyle: React.CSSProperties = {
   flexShrink: 0,
 };
 
-// Define styles for tab content
-const tabContentStyle = {
-  maxHeight: 'calc(100vh - 200px)', // Adjust based on your header/footer/tabs height
-  overflowY: 'auto',
-  padding: '0.5rem',
-};
 
 function App() {
   return (
