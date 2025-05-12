@@ -19,6 +19,7 @@ const Card = React.forwardRef<
       boxShadow: 'none',
       background: 'none',
       fontFamily: "'Times New Roman', Times, serif",
+      marginBottom: 0,
     }}
     {...props}
   />
@@ -31,7 +32,6 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <MuiCardHeader
     ref={ref}
-    sx={{ padding: 0 }}
     {...props}
   />
 ));
@@ -47,9 +47,9 @@ const CardTitle = React.forwardRef<
     component="h3"
     sx={{
       fontWeight: 600,
-      lineHeight: 1.2,
       textTransform: 'lowercase',
       fontFamily: "'Times New Roman', Times, serif",
+      marginBottom: 0,
     }}
     {...props}
   />
@@ -68,6 +68,7 @@ const CardDescription = React.forwardRef<
       fontSize: '0.875rem',
       textTransform: 'lowercase',
       fontFamily: "'Times New Roman', Times, serif",
+      marginBottom: 0,
     }}
     {...props}
   />
@@ -80,7 +81,7 @@ const CardContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <MuiCardContent
     ref={ref}
-    sx={{ paddingTop: 0 }}
+    sx={{ paddingTop: 0, marginBottom: 0 }}
     {...props}
   />
 ));
@@ -92,7 +93,7 @@ const CardFooter = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CardActions
     ref={ref}
-    sx={{ padding: 0.5, paddingTop: 0 }}
+    sx={{ paddingTop: 0, marginBottom: 0 }}
     {...props}
   />
 ));

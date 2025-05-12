@@ -1,4 +1,3 @@
-import React from 'react';
 import Layout from './components/layout/Layout';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
@@ -15,13 +14,6 @@ import AWARD_DATA from './data/awards';
 
 import { EducationInfo, ExperienceInfo, ProjectInfo, TalkInfo, AwardInfo } from './types';
 
-const logoStyle: React.CSSProperties = {
-  width: '32px',
-  height: '32px',
-  objectFit: 'contain',
-  borderRadius: '4px',
-  flexShrink: 0,
-};
 
 
 function App() {
@@ -44,73 +36,48 @@ function App() {
           </TabsList>
 
           <div className="flex-1 overflow-auto">
-            <TabsContent value="experience" className="h-full overflow-auto pb-4">
-              <Typography>experience</Typography>
-              <Box display="flex" flexDirection="column" >
+            <TabsContent value="experience" className="h-full overflow-auto">
+              <Box display="flex" flexDirection="column" gap={0}>
                 {EXPERIENCE_DATA.map((exp: ExperienceInfo, index) => (
-                  <Card key={index}>
-                    <CardContent sx={{ p: 0.5 }}>
-                      <Box display="flex" alignItems="center" gap={1}>
-                        {exp.logo && (
-                          <Box component="img"
-                            src={exp.logo}
-                            alt={`${exp.company} logo`}
-                            sx={logoStyle}
-                          />
-                        )}
-                        <Box flexGrow={1}>
-                          <Typography sx={{ lineHeight: 1.1, }}>
-                            {exp.role} - {exp.company}
-                          </Typography>
-                          <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1 }}>
-                            {exp.location} • {exp.when}
-                            {exp.website && (
-                              <>
-                                {' '}•{' '}
-                                <Link href={exp.website} target="_blank" rel="noopener noreferrer" underline="hover">
-                                  website
-                                </Link>
-                              </>
-                            )}
-                          </Typography>
-                        </Box>
-                      </Box>
-                    </CardContent>
+                  <Card key={index} sx={{ backgroundColor: 'transparent', boxShadow: 'none', pb: 1 }}>
+                    <CardHeader
+                      title={`${exp.role}, ${exp.company}`}
+                      subheader={
+                        <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1 }}>
+                          {exp.location} • {exp.when}
+                          {exp.website && (
+                            <>
+                              {' '}•{' '}
+                              <Link href={exp.website} target="_blank" rel="noopener noreferrer" underline="hover">
+                                website
+                              </Link>
+                            </>
+                          )}
+                        </Typography>
+                      }
+                      sx={{ p: 0 }}
+                    />
                   </Card>
                 ))}
               </Box>
             </TabsContent>
 
             <TabsContent value="education" className="h-full overflow-auto pb-4">
-              <Typography sx={{ mb: 0.5 }}>education</Typography>
-              <Typography variant="caption" sx={{ mb: 0.5, display: 'block', color: 'text.secondary' }}>
-                currently studying at the university of chicago</Typography>
-              {EDUCATION_DATA.map((edu: EducationInfo, index) => (
-                <Card key={index} sx={{ mb: 0.5 }}>
-                  <CardHeader sx={{ p: 0.5 }}>
-                    <Box display="flex" justifyContent="space-between" alignItems="flex-start" gap={1}>
-                      <Box flexGrow={1}>
-                        <Typography sx={{ lineHeight: 1.1, mb: 0.1 }}>
-                          {edu.institution}
-                        </Typography>
+              {EDUCATION_DATA && EDUCATION_DATA.map((edu: EducationInfo, index) => (
+                <Card key={index} sx={{ backgroundColor: 'transparent', }}>
+                  <CardHeader
+                    title={edu.institution}
+                    subheader={
+                      <>
                         <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1, mb: 0.1 }}>
-                          {edu.degree}
+                          {edu.degree} • {edu.when}
                         </Typography>
-                        <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1 }}>
-                          {edu.location} — {edu.when}
-                          {edu.GPA && ` — gpa: ${edu.GPA}`}
-                        </Typography>
-                      </Box>
-                      {edu.logo && (
-                        <Box component="img"
-                          src={edu.logo}
-                          alt={`${edu.institution} logo`}
-                          sx={logoStyle}
-                        />
-                      )}
-                    </Box>
-                  </CardHeader>
-                  <CardContent sx={{ p: 0.5, pt: 0 }}>
+
+                      </>
+                    }
+                    sx={{ p: 0.5 }}
+                  />
+                  <CardContent sx={{ p: 0.5, pt: 0, backgroundColor: 'transparent' }}>
                     <Typography sx={{ lineHeight: 1.1, mb: 0.25 }}>relevant courses:</Typography>
                     <Box component="ul" sx={{ pl: 3, m: 0, listStyle: 'disc' }}>
                       {edu.relevantCourses.map((course, i) => (
@@ -127,118 +94,180 @@ function App() {
             </TabsContent>
 
             <TabsContent value="talks" className="h-full overflow-auto pb-4">
-              <Typography sx={{ mb: 0.5 }}>talks</Typography>
-              <Box display="flex" flexDirection="column" gap={1}>
-                {TALK_DATA.map((talk: TalkInfo, index) => (
-                  <Card key={index}>
-                    <CardHeader sx={{ p: 0.5 }}>
-                      <Typography sx={{ lineHeight: 1.1, mb: 0.1 }}>
-                        {talk.title}
-                      </Typography>
-                      <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1 }}>
-                        {talk.venue} — {talk.date}
-                      </Typography>
-                    </CardHeader>
-                    <CardContent sx={{ p: 0.5, pt: 0 }}>
-                      <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1 }}>
-                        {talk.description}
-                      </Typography>
-                    </CardContent>
-                    {talk.link && (
-                      <CardFooter sx={{ p: 0.5, pt: 0.25 }}>
-                        <Link href={talk.link} target="_blank" rel="noopener noreferrer" underline="hover">
-                          <Button variant="text" size="small" sx={{ px: 0.75, py: 0.1 }}>
-                            view talk
-                          </Button>
-                        </Link>
-                      </CardFooter>
-                    )}
-                  </Card>
-                ))}
-              </Box>
+              {TALK_DATA.map((talk: TalkInfo, index) => (
+                <Card key={index} sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
+                  <CardContent sx={{ p: 0.5, pt: 0, backgroundColor: 'transparent' }}>
+                    <Typography sx={{ lineHeight: 1.2, mb: 0.2 }}>
+                      {talk.title}
+                      {' '}
+                      (
+                      {talk.venue}
+                      {' '}
+                      {talk.date}
+                      )
+                    </Typography>
+                    <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1 }}>
+                      {talk.description}
+                    </Typography>
+                  </CardContent>
+                  {talk.link && (
+                    <CardFooter sx={{ p: 0.5, pt: 0.25 }}>
+                      <Link href={talk.link} target="_blank" rel="noopener noreferrer" underline="hover">
+                        <Button variant="text" size="small" sx={{ px: 0.75, py: 0.1 }}>
+                          view talk
+                        </Button>
+                      </Link>
+                    </CardFooter>
+                  )}
+                </Card>
+              ))}
             </TabsContent>
 
-            <TabsContent value="awards" className="h-full overflow-auto pb-4">
-              <Typography sx={{ mb: 0.5 }}>awards & recognitions</Typography>
-              <Box display="flex" flexDirection="column" gap={1}>
+            <TabsContent value="awards" className="h-full overflow-auto">
+              <Box display="flex" flexDirection="column">
                 {AWARD_DATA.map((award: AwardInfo, index) => (
-                  <Card key={index}>
-                    <CardHeader sx={{ p: 0.5 }}>
-                      <Typography sx={{ lineHeight: 1.1, mb: 0.1, display: 'flex', alignItems: 'center' }}>
-                        {award.item}
-                        {award.link && (
-                          <Button variant="text" size="small" sx={{ px: 0.5, py: 0, ml: 0.5, minWidth: 'auto' }}>
-                            <Link href={award.link} target="_blank" rel="noopener noreferrer" sx={{ fontSize: '0.7rem' }}>
-                              more info
-                            </Link>
-                          </Button>
-                        )}
-                      </Typography>
-                      <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1 }}>
-                        {award.issuer} — {award.year}
-                        {award.extra && ` (${award.extra})`}
-                      </Typography>
-                    </CardHeader>
-                    <CardContent sx={{ p: 0.5, pt: 0 }}>
-                      <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1 }}>
+                  <Card key={index} sx={{ backgroundColor: 'transparent', boxShadow: 'none', p: 0.5 }}>
+                    <Box display="flex" flexDirection="column" sx={{ p: 0, m: 0 }}>
+                      <Box display="flex" alignItems="center" flexWrap="wrap">
+                        <Typography
+                          sx={{
+                            lineHeight: 1.1,
+                            fontSize: '1rem',
+                            whiteSpace: 'nowrap',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            maxWidth: '100%',
+                          }}
+                          component="span"
+                        >
+                          {award.item}
+                          {award.link && (
+                            <Typography
+                              component="span"
+                              sx={{
+                                fontSize: '0.7rem',
+                                ml: 0.5,
+                                color: 'inherit',
+                                display: 'inline',
+                                fontWeight: 400,
+                              }}
+                            >
+                              (
+                              <Link
+                                href={award.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                sx={{ fontSize: '0.7rem', color: 'inherit', textDecoration: 'underline' }}
+                              >
+                                more info
+                              </Link>
+                              )
+                            </Typography>
+                          )}
+                        </Typography>
+                        <Typography
+                          sx={{
+                            ml: 1,
+                            color: 'text.secondary',
+                            fontSize: '0.95rem',
+                            lineHeight: 1.1,
+                            whiteSpace: 'nowrap',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                          }}
+                          component="span"
+                        >
+                          {award.issuer} — {award.year}
+                          {award.extra && ` (${award.extra})`}
+                        </Typography>
+                      </Box>
+                      <Typography
+                        sx={{
+                          mt: 0.1,
+                          color: 'text.secondary',
+                          fontSize: '0.95rem',
+                          lineHeight: 1.1,
+                          whiteSpace: 'nowrap',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          maxWidth: '100%',
+                        }}
+                        component="span"
+                      >
                         {award.description}
                       </Typography>
-                    </CardContent>
+                    </Box>
                   </Card>
                 ))}
               </Box>
             </TabsContent>
 
             <TabsContent value="projects" className="h-full overflow-auto pb-4">
-              <Typography sx={{ mb: 0.5 }}>projects</Typography>
-              {PROJECT_DATA.length === 0 && <Typography color="error">No project data available</Typography>}
-              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 1.5 }}>
-                {PROJECT_DATA && PROJECT_DATA.map((proj: ProjectInfo, index) => {
-                  return (
-                    <Box key={index}>
-                      <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                        <CardHeader sx={{ p: 0.75 }}>
-                          <Box display="flex" justifyContent="space-between" alignItems="flex-start" gap={1}>
-                            <Box flexGrow={1}>
-                              <Typography component="h3" sx={{ lineHeight: 1.2, mb: 0.2, fontSize: '1.1rem', letterSpacing: '-0.02em' }}>
-                                {proj.title || 'No Title'}
-                                {(proj.github || proj.website) && ' ('}
-                                {proj.github && (
-                                  <Link href={proj.github} target="_blank" rel="noopener noreferrer" underline="hover">
-                                    github
-                                  </Link>
-                                )}
-                                {proj.github && proj.website && ', '}
-                                {proj.website && (
-                                  <Link href={proj.website} target="_blank" rel="noopener noreferrer" underline="hover">
-                                    website
-                                  </Link>
-                                )}
-                                {(proj.github || proj.website) && ')'}
-                              </Typography>
-                              <Typography variant="caption" sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1, display: 'block' }}>
-                                {proj.blurb || 'No Blurb'}
-                              </Typography>
-                            </Box>
-                            {proj.logo && (
-                              <Box component="img"
-                                src={proj.logo}
-                                alt={`${proj.title || 'Project'} logo`}
-                                sx={{ ...logoStyle, width: '40px', height: '40px' }}
-                              />
-                            )}
-                          </Box>
-                        </CardHeader>
-                        <CardContent sx={{ p: 0.75, pt: 0.5, flexGrow: 1 }}>
-                          <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.2 }}>
-                            {proj.description || 'No Description'}
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </Box>
-                  );
-                })}
-              </Box>
+              {PROJECT_DATA.length === 0 && (
+                <Typography color="error" sx={{ textTransform: 'lowercase' }}>
+                  no project data available
+                </Typography>
+              )}
+
+              {PROJECT_DATA && PROJECT_DATA.map((proj: ProjectInfo, index) => (
+                <Box key={index} sx={{ mb: 1 }}>
+                  <Typography
+                    component="div"
+                    sx={{
+                      fontFamily: "'Times New Roman', Times, serif",
+                      textTransform: 'lowercase',
+                      lineHeight: 1.3,
+                      letterSpacing: '-0.01em',
+                    }}
+                  >
+                    {(proj.title || 'no title').toLowerCase()}
+                    {(proj.github || proj.website) && (
+                      <>
+                        {' ('}
+                        {proj.github && (
+                          <Link
+                            href={proj.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            underline="hover"
+                            sx={{ fontSize: '0.95em', color: 'inherit', textTransform: 'lowercase' }}
+                          >
+                            github
+                          </Link>
+                        )}
+                        {proj.github && proj.website && ', '}
+                        {proj.website && (
+                          <Link
+                            href={proj.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            underline="hover"
+                            sx={{ fontSize: '0.95em', color: 'inherit', textTransform: 'lowercase' }}
+                          >
+                            website
+                          </Link>
+                        )}
+                        {')'}
+                      </>
+                    )}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      color: 'text.secondary',
+                      fontSize: '0.98rem',
+                      fontFamily: "'Times New Roman', Times, serif",
+                      lineHeight: 1.4,
+                      mt: 0,
+                      mb: 0,
+                      whiteSpace: 'pre-line',
+                      textTransform: 'lowercase',
+                    }}
+                  >
+                    {(proj.description || 'no description').toLowerCase()}
+                  </Typography>
+                </Box>
+              ))}
+
             </TabsContent>
           </div>
         </Tabs>

@@ -13,8 +13,8 @@ export type ExperienceInfo = {
 
 export const EXPERIENCES: ExperienceInfo[] = [
 	{
-		company: 'University of Chicago Department of Computer Science',
-		subgroup: 'Actuated Experience Lab',
+		company: 'AxLab',
+		subgroup: 'UChicago',
 		role: 'Researcher',
 		location: 'Chicago, IL',
 		responsibilities: [
