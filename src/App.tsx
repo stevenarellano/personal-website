@@ -42,8 +42,9 @@ function App() {
                   <Card key={index} sx={{ backgroundColor: 'transparent', boxShadow: 'none', pb: 1 }}>
                     <CardHeader
                       title={`${exp.role}, ${exp.company}`}
+                      titleTypographyProps={{ sx: { fontSize: '1rem' } }}
                       subheader={
-                        <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1 }}>
+                        <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1, fontSize: '0.9rem' }}>
                           {exp.location} • {exp.when}
                           {exp.website && (
                             <>
@@ -67,9 +68,10 @@ function App() {
                 <Card key={index} sx={{ backgroundColor: 'transparent', }}>
                   <CardHeader
                     title={edu.institution}
+                    titleTypographyProps={{ sx: { fontSize: '1rem' } }}
                     subheader={
                       <>
-                        <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1, mb: 0.1 }}>
+                        <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1, mb: 0.1, fontSize: '0.9rem' }}>
                           {edu.degree} • {edu.when}
                         </Typography>
 
@@ -78,11 +80,11 @@ function App() {
                     sx={{ p: 0.5 }}
                   />
                   <CardContent sx={{ p: 0.5, pt: 0, backgroundColor: 'transparent' }}>
-                    <Typography sx={{ lineHeight: 1.1, mb: 0.25 }}>relevant courses:</Typography>
+                    <Typography sx={{ lineHeight: 1.1, mb: 0.25, fontSize: '1rem' }}>relevant courses:</Typography>
                     <Box component="ul" sx={{ pl: 3, m: 0, listStyle: 'disc' }}>
                       {edu.relevantCourses.map((course, i) => (
                         <Box component="li" key={i}>
-                          <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1 }}>
+                          <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1, fontSize: '1rem' }}>
                             {course}
                           </Typography>
                         </Box>
@@ -97,7 +99,7 @@ function App() {
               {TALK_DATA.map((talk: TalkInfo, index) => (
                 <Card key={index} sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
                   <CardContent sx={{ p: 0.5, pt: 0, backgroundColor: 'transparent' }}>
-                    <Typography sx={{ lineHeight: 1.2, mb: 0.2 }}>
+                    <Typography sx={{ lineHeight: 1.2, mb: 0.2, fontSize: '1rem' }}>
                       {talk.title}
                       {' '}
                       (
@@ -106,7 +108,7 @@ function App() {
                       {talk.date}
                       )
                     </Typography>
-                    <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1 }}>
+                    <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1, fontSize: '1rem' }}>
                       {talk.description}
                     </Typography>
                   </CardContent>
@@ -145,7 +147,7 @@ function App() {
                             <Typography
                               component="span"
                               sx={{
-                                fontSize: '0.7rem',
+                                fontSize: '0.9rem',
                                 ml: 0.5,
                                 color: 'inherit',
                                 display: 'inline',
@@ -157,7 +159,7 @@ function App() {
                                 href={award.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                sx={{ fontSize: '0.7rem', color: 'inherit', textDecoration: 'underline' }}
+                                sx={{ fontSize: '0.9rem', color: 'inherit', textDecoration: 'underline' }}
                               >
                                 more info
                               </Link>
@@ -169,7 +171,7 @@ function App() {
                           sx={{
                             ml: 1,
                             color: 'text.secondary',
-                            fontSize: '0.95rem',
+                            fontSize: '0.9rem',
                             lineHeight: 1.1,
                             whiteSpace: 'nowrap',
                             overflow: 'hidden',
@@ -185,7 +187,7 @@ function App() {
                         sx={{
                           mt: 0.1,
                           color: 'text.secondary',
-                          fontSize: '0.95rem',
+                          fontSize: '1rem',
                           lineHeight: 1.1,
                           whiteSpace: 'nowrap',
                           overflow: 'hidden',
@@ -218,6 +220,7 @@ function App() {
                       textTransform: 'lowercase',
                       lineHeight: 1.3,
                       letterSpacing: '-0.01em',
+                      fontSize: '1rem',
                     }}
                   >
                     {(proj.title || 'no title').toLowerCase()}
@@ -230,7 +233,7 @@ function App() {
                             target="_blank"
                             rel="noopener noreferrer"
                             underline="hover"
-                            sx={{ fontSize: '0.95em', color: 'inherit', textTransform: 'lowercase' }}
+                            sx={{ fontSize: '0.9rem', color: 'inherit', textTransform: 'lowercase' }}
                           >
                             github
                           </Link>
@@ -242,7 +245,7 @@ function App() {
                             target="_blank"
                             rel="noopener noreferrer"
                             underline="hover"
-                            sx={{ fontSize: '0.95em', color: 'inherit', textTransform: 'lowercase' }}
+                            sx={{ fontSize: '0.9rem', color: 'inherit', textTransform: 'lowercase' }}
                           >
                             website
                           </Link>
@@ -254,7 +257,7 @@ function App() {
                   <Typography
                     sx={{
                       color: 'text.secondary',
-                      fontSize: '0.98rem',
+                      fontSize: '1rem',
                       fontFamily: "'Times New Roman', Times, serif",
                       lineHeight: 1.4,
                       mt: 0,
