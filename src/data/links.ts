@@ -13,12 +13,12 @@ export const LINKS: LinkInfo[] = [
 		target: '_blank',
 		rel: 'noopener noreferrer',
 	},
-	{
-		name: 'resume',
-		link: 'assets/resume.pdf',
-		target: '_blank',
-		rel: 'noopener noreferrer',
-	},
+	// {
+	// 	name: 'resume',
+	// 	link: 'assets/resume.pdf',
+	// 	target: '_blank',
+	// 	rel: 'noopener noreferrer',
+	// },
 	{
 		name: 'mail',
 		link: 'mailto:stevenjarellano2@gmail.com',
