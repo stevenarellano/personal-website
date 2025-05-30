@@ -17,12 +17,12 @@ import { EducationInfo, ExperienceInfo, ProjectInfo, TalkInfo, AwardInfo } from 
 const theme = {
   typography: {
     primary: {
-      fontSize: '0.8rem',
+      fontSize: '0.9rem',
       lineHeight: 1.1,
       color: 'text.primary',
     },
     secondary: {
-      fontSize: '0.7rem',
+      fontSize: '0.8rem',
       lineHeight: 1.1,
       color: 'text.secondary',
     },
@@ -31,7 +31,7 @@ const theme = {
       textTransform: 'lowercase',
       lineHeight: 1.3,
       letterSpacing: '-0.01em',
-      fontSize: '0.8rem',
+      fontSize: '0.9rem',
     }
   }
 };
