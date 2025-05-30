@@ -14,7 +14,27 @@ import AWARD_DATA from './data/awards';
 
 import { EducationInfo, ExperienceInfo, ProjectInfo, TalkInfo, AwardInfo } from './types';
 
-
+const theme = {
+  typography: {
+    primary: {
+      fontSize: '0.8rem',
+      lineHeight: 1.1,
+      color: 'text.primary',
+    },
+    secondary: {
+      fontSize: '0.7rem',
+      lineHeight: 1.1,
+      color: 'text.secondary',
+    },
+    project: {
+      fontFamily: "'Times New Roman', Times, serif",
+      textTransform: 'lowercase',
+      lineHeight: 1.3,
+      letterSpacing: '-0.01em',
+      fontSize: '0.8rem',
+    }
+  }
+};
 
 function App() {
   return (
@@ -42,9 +62,9 @@ function App() {
                   <Card key={index} sx={{ backgroundColor: 'transparent', boxShadow: 'none', pb: 1 }}>
                     <CardHeader
                       title={`${exp.role}, ${exp.company}`}
-                      titleTypographyProps={{ sx: { fontSize: '1rem' } }}
+                      titleTypographyProps={{ sx: theme.typography.primary }}
                       subheader={
-                        <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1, fontSize: '0.9rem' }}>
+                        <Typography sx={{ ...theme.typography.secondary, mt: 0 }}>
                           {exp.location} • {exp.when}
                           {exp.website && (
                             <>
@@ -68,23 +88,22 @@ function App() {
                 <Card key={index} sx={{ backgroundColor: 'transparent', }}>
                   <CardHeader
                     title={edu.institution}
-                    titleTypographyProps={{ sx: { fontSize: '1rem' } }}
+                    titleTypographyProps={{ sx: theme.typography.primary }}
                     subheader={
                       <>
-                        <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1, mb: 0.1, fontSize: '0.9rem' }}>
+                        <Typography sx={{ ...theme.typography.secondary, mt: 0, mb: 0.1 }}>
                           {edu.degree} • {edu.when}
                         </Typography>
-
                       </>
                     }
                     sx={{ p: 0.5 }}
                   />
                   <CardContent sx={{ p: 0.5, pt: 0, backgroundColor: 'transparent' }}>
-                    <Typography sx={{ lineHeight: 1.1, mb: 0.25, fontSize: '1rem' }}>relevant courses:</Typography>
+                    <Typography sx={{ ...theme.typography.primary, mb: 0.25 }}>relevant courses:</Typography>
                     <Box component="ul" sx={{ pl: 3, m: 0, listStyle: 'disc' }}>
                       {edu.relevantCourses.map((course, i) => (
                         <Box component="li" key={i}>
-                          <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1, fontSize: '1rem' }}>
+                          <Typography sx={{ ...theme.typography.secondary, mt: 0 }}>
                             {course}
                           </Typography>
                         </Box>
@@ -99,7 +118,7 @@ function App() {
               {TALK_DATA.map((talk: TalkInfo, index) => (
                 <Card key={index} sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
                   <CardContent sx={{ p: 0.5, pt: 0, backgroundColor: 'transparent' }}>
-                    <Typography sx={{ lineHeight: 1.2, mb: 0.2, fontSize: '1rem' }}>
+                    <Typography sx={{ ...theme.typography.primary, mb: 0.2 }}>
                       {talk.title}
                       {' '}
                       (
@@ -108,7 +127,7 @@ function App() {
                       {talk.date}
                       )
                     </Typography>
-                    <Typography sx={{ mt: 0, color: 'text.secondary', lineHeight: 1.1, fontSize: '1rem' }}>
+                    <Typography sx={{ ...theme.typography.secondary, mt: 0 }}>
                       {talk.description}
                     </Typography>
                   </CardContent>
@@ -133,8 +152,7 @@ function App() {
                       <Box display="flex" alignItems="center" flexWrap="wrap">
                         <Typography
                           sx={{
-                            lineHeight: 1.1,
-                            fontSize: '1rem',
+                            ...theme.typography.primary,
                             whiteSpace: 'nowrap',
                             overflow: 'hidden',
                             textOverflow: 'ellipsis',
@@ -147,7 +165,7 @@ function App() {
                             <Typography
                               component="span"
                               sx={{
-                                fontSize: '0.9rem',
+                                ...theme.typography.secondary,
                                 ml: 0.5,
                                 color: 'inherit',
                                 display: 'inline',
@@ -159,7 +177,7 @@ function App() {
                                 href={award.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                sx={{ fontSize: '0.9rem', color: 'inherit', textDecoration: 'underline' }}
+                                sx={{ ...theme.typography.secondary, color: 'inherit', textDecoration: 'underline' }}
                               >
                                 more info
                               </Link>
@@ -169,10 +187,8 @@ function App() {
                         </Typography>
                         <Typography
                           sx={{
+                            ...theme.typography.secondary,
                             ml: 1,
-                            color: 'text.secondary',
-                            fontSize: '0.9rem',
-                            lineHeight: 1.1,
                             whiteSpace: 'nowrap',
                             overflow: 'hidden',
                             textOverflow: 'ellipsis',
@@ -185,10 +201,8 @@ function App() {
                       </Box>
                       <Typography
                         sx={{
+                          ...theme.typography.secondary,
                           mt: 0.1,
-                          color: 'text.secondary',
-                          fontSize: '1rem',
-                          lineHeight: 1.1,
                           whiteSpace: 'nowrap',
                           overflow: 'hidden',
                           textOverflow: 'ellipsis',
@@ -215,13 +229,7 @@ function App() {
                 <Box key={index} sx={{ mb: 1 }}>
                   <Typography
                     component="div"
-                    sx={{
-                      fontFamily: "'Times New Roman', Times, serif",
-                      textTransform: 'lowercase',
-                      lineHeight: 1.3,
-                      letterSpacing: '-0.01em',
-                      fontSize: '1rem',
-                    }}
+                    sx={theme.typography.project}
                   >
                     {(proj.title || 'no title').toLowerCase()}
                     {(proj.github || proj.website) && (
@@ -233,7 +241,7 @@ function App() {
                             target="_blank"
                             rel="noopener noreferrer"
                             underline="hover"
-                            sx={{ fontSize: '0.9rem', color: 'inherit', textTransform: 'lowercase' }}
+                            sx={{ ...theme.typography.secondary, textTransform: 'lowercase' }}
                           >
                             github
                           </Link>
@@ -245,7 +253,7 @@ function App() {
                             target="_blank"
                             rel="noopener noreferrer"
                             underline="hover"
-                            sx={{ fontSize: '0.9rem', color: 'inherit', textTransform: 'lowercase' }}
+                            sx={{ ...theme.typography.secondary, textTransform: 'lowercase' }}
                           >
                             website
                           </Link>
@@ -256,12 +264,8 @@ function App() {
                   </Typography>
                   <Typography
                     sx={{
-                      color: 'text.secondary',
-                      fontSize: '1rem',
+                      ...theme.typography.secondary,
                       fontFamily: "'Times New Roman', Times, serif",
-                      lineHeight: 1.4,
-                      mt: 0,
-                      mb: 0,
                       whiteSpace: 'pre-line',
                       textTransform: 'lowercase',
                     }}
@@ -270,7 +274,6 @@ function App() {
                   </Typography>
                 </Box>
               ))}
-
             </TabsContent>
           </div>
         </Tabs>
