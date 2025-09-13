@@ -24,6 +24,13 @@ export interface TalkInfo {
   link?: string; // Added optional link
 }
 
+export interface ArtifactInfo {
+  title: string;
+  description: string;
+  type: 'blog' | 'github' | 'other';
+  url: string;
+}
+
 
 export interface ExperienceInfo {
   company: string;

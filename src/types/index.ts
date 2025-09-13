@@ -48,3 +48,10 @@ export interface TalkInfo {
   description?: string;
   link?: string;
 }
+
+export interface ArtifactInfo {
+  title: string;
+  description: string;
+  type: 'blog' | 'github' | 'other';
+  url: string;
+}

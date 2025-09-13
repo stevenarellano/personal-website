@@ -9,8 +9,9 @@ import Link from '@mui/material/Link';
 import EDUCATION_DATA from './data/education';
 import EXPERIENCE_DATA from './data/experiences';
 import TALK_DATA from './data/talks';
+import ARTIFACT_DATA from './data/artifacts';
 
-import { EducationInfo, ExperienceInfo, TalkInfo } from './types';
+import { EducationInfo, ExperienceInfo, TalkInfo, ArtifactInfo } from './types';
 
 const theme = {
   typography: {
@@ -42,6 +43,7 @@ function App() {
             <TabsTrigger value="experience">experience</TabsTrigger>
             <TabsTrigger value="education">education</TabsTrigger>
             <TabsTrigger value="talks">talks</TabsTrigger>
+            <TabsTrigger value="artifacts">artifacts</TabsTrigger>
           </TabsList>
 
           <div className="flex-1 overflow-auto">
@@ -131,6 +133,34 @@ function App() {
               ))}
             </TabsContent>
 
+            <TabsContent value="artifacts" className="h-full overflow-auto pb-4">
+              {ARTIFACT_DATA.length === 0 ? (
+                <Typography color="text.secondary" sx={{ textTransform: 'lowercase' }}>
+                  no artifacts for now...
+                </Typography>
+              ) : (
+                <Box display="flex" flexDirection="column" gap={0}>
+                  {ARTIFACT_DATA.map((artifact: ArtifactInfo, index) => (
+                    <Card key={index} sx={{ backgroundColor: 'transparent', boxShadow: 'none', pb: 1 }}>
+                      <CardHeader
+                        title={`${artifact.title}`}
+                        titleTypographyProps={{ sx: theme.typography.primary }}
+                        subheader={
+                          <Typography sx={{ ...theme.typography.secondary, mt: 0 }}>
+                            {artifact.description}
+                            {' • '}
+                            <Link href={artifact.url} target="_blank" rel="noopener noreferrer" underline="hover">
+                              {artifact.type === 'github' ? 'github' : artifact.type === 'blog' ? 'blog' : 'link'}
+                            </Link>
+                          </Typography>
+                        }
+                        sx={{ p: 0 }}
+                      />
+                    </Card>
+                  ))}
+                </Box>
+              )}
+            </TabsContent>
 
           </div>
         </Tabs>

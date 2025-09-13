@@ -20,10 +20,10 @@ export const LINKS: LinkInfo[] = [
 	// 	rel: 'noopener noreferrer',
 	// },
 	{
-		name: 'mail',
-		link: 'mailto:stevenjarellano2@gmail.com',
-		target: '_self',
-		rel: '',
+		name: 'twitter',
+		link: 'https://x.com/gpusteve',
+		target: '_blank',
+		rel: 'noopener noreferrer',
 	},
 ];
 
