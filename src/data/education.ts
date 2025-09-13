@@ -23,11 +23,12 @@ export const EDUCATION: EducationInfo[] = [
 			'Advanced Computer Architecture',
 			'Advanced Algorithms',
 			'Honors Introduction to Complexity Theory',
+			'Functional Programming',
 			'Data Intensive Computer Systems (PhD)',
 			'Algorithmic Game Theory (PhD)',
 		],
 		GPA: '3.53',
-		when: 'Expected 2025',
+		when: 'June 2025',
 	},
 ];
 

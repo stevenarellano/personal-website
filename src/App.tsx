@@ -9,9 +9,8 @@ import Link from '@mui/material/Link';
 import EDUCATION_DATA from './data/education';
 import EXPERIENCE_DATA from './data/experiences';
 import TALK_DATA from './data/talks';
-import AWARD_DATA from './data/awards';
 
-import { EducationInfo, ExperienceInfo, TalkInfo, AwardInfo } from './types';
+import { EducationInfo, ExperienceInfo, TalkInfo } from './types';
 
 const theme = {
   typography: {
@@ -43,7 +42,6 @@ function App() {
             <TabsTrigger value="experience">experience</TabsTrigger>
             <TabsTrigger value="education">education</TabsTrigger>
             <TabsTrigger value="talks">talks</TabsTrigger>
-            <TabsTrigger value="awards">awards</TabsTrigger>
           </TabsList>
 
           <div className="flex-1 overflow-auto">
@@ -114,8 +112,6 @@ function App() {
                       {' '}
                       (
                       {talk.venue}
-                      {' '}
-                      {talk.date}
                       )
                     </Typography>
                     <Typography sx={{ ...theme.typography.secondary, mt: 0 }}>
@@ -135,79 +131,6 @@ function App() {
               ))}
             </TabsContent>
 
-            <TabsContent value="awards" className="h-full overflow-auto">
-              <Box display="flex" flexDirection="column">
-                {AWARD_DATA.map((award: AwardInfo, index) => (
-                  <Card key={index} sx={{ backgroundColor: 'transparent', boxShadow: 'none', p: 0.5 }}>
-                    <Box display="flex" flexDirection="column" sx={{ p: 0, m: 0 }}>
-                      <Box display="flex" alignItems="center" flexWrap="wrap">
-                        <Typography
-                          sx={{
-                            ...theme.typography.primary,
-                            whiteSpace: 'nowrap',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            maxWidth: '100%',
-                          }}
-                          component="span"
-                        >
-                          {award.item}
-                          {award.link && (
-                            <Typography
-                              component="span"
-                              sx={{
-                                ...theme.typography.secondary,
-                                ml: 0.5,
-                                color: 'inherit',
-                                display: 'inline',
-                                fontWeight: 400,
-                              }}
-                            >
-                              (
-                              <Link
-                                href={award.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                sx={{ ...theme.typography.secondary, color: 'inherit', textDecoration: 'underline' }}
-                              >
-                                more info
-                              </Link>
-                              )
-                            </Typography>
-                          )}
-                        </Typography>
-                        <Typography
-                          sx={{
-                            ...theme.typography.secondary,
-                            ml: 1,
-                            whiteSpace: 'nowrap',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                          }}
-                          component="span"
-                        >
-                          {award.issuer} — {award.year}
-                          {award.extra && ` (${award.extra})`}
-                        </Typography>
-                      </Box>
-                      <Typography
-                        sx={{
-                          ...theme.typography.secondary,
-                          mt: 0.1,
-                          whiteSpace: 'nowrap',
-                          overflow: 'hidden',
-                          textOverflow: 'ellipsis',
-                          maxWidth: '100%',
-                        }}
-                        component="span"
-                      >
-                        {award.description}
-                      </Typography>
-                    </Box>
-                  </Card>
-                ))}
-              </Box>
-            </TabsContent>
 
           </div>
         </Tabs>

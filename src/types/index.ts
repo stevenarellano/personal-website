@@ -48,12 +48,3 @@ export interface TalkInfo {
   description?: string;
   link?: string;
 }
-
-export interface AwardInfo {
-  item: string;
-  issuer: string;
-  year: number;
-  description: string;
-  extra?: string;
-  link?: string;
-} 

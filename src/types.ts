@@ -24,14 +24,6 @@ export interface TalkInfo {
   link?: string; // Added optional link
 }
 
-export interface AwardInfo {
-  issuer: string;
-  item: string;
-  extra?: string;
-  year: number | string;
-  description: string;
-  link?: string;
-}
 
 export interface ExperienceInfo {
   company: string;
