@@ -1,5 +1,5 @@
 import React from 'react';
-import LINKS_DATA from '@/data/links'; // Adjusted path assuming data is in src/data
+import LINKS_DATA from '@/data/links';
 import { Button } from "@/components/ui/button";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       display: 'flex',
       flexDirection: 'column',
       width: '100%',
-      overflow: 'hidden' // Prevent scroll on the body
+      overflow: 'hidden'
     }}>
       <Box component="header" sx={{
         width: '100%',
@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         px: 1,
         borderBottom: '1px dashed',
         borderColor: 'grey.400',
-        flexShrink: 0 // Prevent header from shrinking
+        flexShrink: 0
       }}>
         <Typography sx={{ letterSpacing: '-0.05em', fontSize: '1.2rem' }}>
           steven
@@ -42,7 +42,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         margin: '0 auto',
         flexGrow: 1,
         px: 1,
-        overflow: 'hidden', // Main container doesn't scroll
+        overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column'
       }}>
@@ -69,10 +69,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        flexShrink: 0 // Prevent footer from shrinking
+        flexShrink: 0
       }}>
         <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-          &copy; {new Date().getFullYear()} steven Arellano // all rights reserved
+          &copy; {new Date().getFullYear()} steven Arellano
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           {LINKS_DATA.map((link) => (

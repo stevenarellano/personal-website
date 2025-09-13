@@ -41,7 +41,6 @@ interface TabsTriggerProps {
   [key: string]: any;
 }
 
-// Create a context to manage active tab
 interface TabsContextType {
   value: string;
   onChange: (value: string) => void;
@@ -101,7 +100,6 @@ const TabsContent = React.forwardRef<HTMLDivElement, TabsContentProps>(
 );
 TabsContent.displayName = "TabsContent";
 
-// Exporting a wrapper component that provides the context
 interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
   defaultValue?: string;
   value?: string;
@@ -117,7 +115,6 @@ const Tabs = ({
 }: TabsProps) => {
   const [tabValue, setTabValue] = React.useState(value || defaultValue || "");
 
-  // Update state if controlled value changes
   React.useEffect(() => {
     if (value !== undefined) {
       setTabValue(value);

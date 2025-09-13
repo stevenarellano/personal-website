@@ -13,7 +13,6 @@ function Badge({
   children,
   ...props
 }: BadgeProps) {
-  // Map shadcn variants to MUI chip colors
   const getColor = () => {
     switch (variant) {
       case 'default':

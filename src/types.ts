@@ -3,7 +3,7 @@ export interface LinkInfo {
   link: string;
   target?: string;
   rel?: string;
-  icon?: React.ReactNode; // Optional: if you want to add icons later
+  icon?: React.ReactNode;
 }
 
 export interface EducationInfo {
@@ -21,7 +21,7 @@ export interface TalkInfo {
   description: string;
   venue: string;
   date: string;
-  link?: string; // Added optional link
+  link?: string;
 }
 
 export interface ArtifactInfo {
@@ -39,7 +39,7 @@ export interface ExperienceInfo {
   location: string;
   responsibilities: string[];
   when: string;
-  logo?: string; // Made optional as some might not have it
+  logo?: string;
   subtitle?: string;
   current?: boolean;
   website?: string;

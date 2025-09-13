@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Button as MuiButton, ButtonProps as MuiButtonProps } from "@mui/material";
 
-// Define our custom size type that includes both shadcn and MUI sizes
 type ButtonSize = 'default' | 'sm' | 'lg' | 'icon' | 'small' | 'medium' | 'large';
 
 export interface ButtonProps extends Omit<MuiButtonProps, 'variant' | 'size'> {
@@ -12,15 +11,12 @@ export interface ButtonProps extends Omit<MuiButtonProps, 'variant' | 'size'> {
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ variant = "contained", size = "medium", className, asChild = false, children, ...props }, ref) => {
-    // If asChild is true, just render children with props
     if (asChild && React.isValidElement(children)) {
       return React.cloneElement(children, {
         ...props,
-        // Don't pass ref to the children as it could cause errors
       });
     }
 
-    // Map shadcn variants to MUI variants
     let muiVariant: MuiButtonProps['variant'] = 'contained';
 
     if (variant === 'link' || variant === 'ghost') {
@@ -35,7 +31,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       muiVariant = 'outlined';
     }
 
-    // Map shadcn sizes to MUI sizes
     let muiSize: MuiButtonProps['size'] = 'medium';
     if (size === 'sm' || size === 'small') {
       muiSize = 'small';
@@ -52,7 +47,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         size={muiSize}
         sx={{
           textTransform: "lowercase",
-          // Let theme handle font family
         }}
         {...props}
       >

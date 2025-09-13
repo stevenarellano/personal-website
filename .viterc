@@ -1,0 +1,22 @@
+{
+    "server": {
+        "fs": {
+            "strict": true,
+            "allow": [
+                "..",
+                "../node_modules",
+                "./public"
+            ],
+            "deny": [
+                ".git",
+                ".env*",
+                "**/package-lock.json",
+                "**/yarn.lock",
+                "**/.DS_Store",
+                "**/node_modules/.cache",
+                "**/.vscode",
+                "**/.idea"
+            ]
+        }
+    }
+}

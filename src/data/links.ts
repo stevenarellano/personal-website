@@ -13,12 +13,6 @@ export const LINKS: LinkInfo[] = [
 		target: '_blank',
 		rel: 'noopener noreferrer',
 	},
-	// {
-	// 	name: 'resume',
-	// 	link: 'assets/resume.pdf',
-	// 	target: '_blank',
-	// 	rel: 'noopener noreferrer',
-	// },
 	{
 		name: 'twitter',
 		link: 'https://x.com/gpusteve',
