@@ -8,11 +8,10 @@ import Link from '@mui/material/Link';
 
 import EDUCATION_DATA from './data/education';
 import EXPERIENCE_DATA from './data/experiences';
-import PROJECT_DATA from './data/projects';
 import TALK_DATA from './data/talks';
 import AWARD_DATA from './data/awards';
 
-import { EducationInfo, ExperienceInfo, ProjectInfo, TalkInfo, AwardInfo } from './types';
+import { EducationInfo, ExperienceInfo, TalkInfo, AwardInfo } from './types';
 
 const theme = {
   typography: {
@@ -25,13 +24,6 @@ const theme = {
       fontSize: '0.8rem',
       lineHeight: 1.1,
       color: 'text.secondary',
-    },
-    project: {
-      fontFamily: "'Times New Roman', Times, serif",
-      textTransform: 'lowercase',
-      lineHeight: 1.3,
-      letterSpacing: '-0.01em',
-      fontSize: '0.9rem',
     }
   }
 };
@@ -52,7 +44,6 @@ function App() {
             <TabsTrigger value="education">education</TabsTrigger>
             <TabsTrigger value="talks">talks</TabsTrigger>
             <TabsTrigger value="awards">awards</TabsTrigger>
-            <TabsTrigger value="projects">projects</TabsTrigger>
           </TabsList>
 
           <div className="flex-1 overflow-auto">
@@ -218,63 +209,6 @@ function App() {
               </Box>
             </TabsContent>
 
-            <TabsContent value="projects" className="h-full overflow-auto pb-4">
-              {PROJECT_DATA.length === 0 && (
-                <Typography color="error" sx={{ textTransform: 'lowercase' }}>
-                  no project data available
-                </Typography>
-              )}
-
-              {PROJECT_DATA && PROJECT_DATA.map((proj: ProjectInfo, index) => (
-                <Box key={index} sx={{ mb: 1 }}>
-                  <Typography
-                    component="div"
-                    sx={theme.typography.project}
-                  >
-                    {(proj.title || 'no title').toLowerCase()}
-                    {(proj.github || proj.website) && (
-                      <>
-                        {' ('}
-                        {proj.github && (
-                          <Link
-                            href={proj.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            underline="hover"
-                            sx={{ ...theme.typography.secondary, textTransform: 'lowercase' }}
-                          >
-                            github
-                          </Link>
-                        )}
-                        {proj.github && proj.website && ', '}
-                        {proj.website && (
-                          <Link
-                            href={proj.website}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            underline="hover"
-                            sx={{ ...theme.typography.secondary, textTransform: 'lowercase' }}
-                          >
-                            website
-                          </Link>
-                        )}
-                        {')'}
-                      </>
-                    )}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      ...theme.typography.secondary,
-                      fontFamily: "'Times New Roman', Times, serif",
-                      whiteSpace: 'pre-line',
-                      textTransform: 'lowercase',
-                    }}
-                  >
-                    {(proj.description || 'no description').toLowerCase()}
-                  </Typography>
-                </Box>
-              ))}
-            </TabsContent>
           </div>
         </Tabs>
       </Box>

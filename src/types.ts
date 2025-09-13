@@ -45,13 +45,3 @@ export interface ExperienceInfo {
   current?: boolean;
   website?: string;
 }
-
-export interface ProjectInfo {
-  title: string;
-  blurb: string;
-  description: string;
-  logo?: string; // Made optional
-  tools: string[];
-  website?: string;
-  github?: string;
-} 

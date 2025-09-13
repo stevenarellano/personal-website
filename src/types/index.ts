@@ -40,15 +40,6 @@ export interface ExperienceInfo {
   current?: boolean;
 }
 
-export interface ProjectInfo {
-  title: string;
-  blurp: string;
-  description: string;
-  tools: string[];
-  github?: string;
-  website?: string;
-  logo?: string;
-}
 
 export interface TalkInfo {
   title: string;
