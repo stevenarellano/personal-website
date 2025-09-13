@@ -76,17 +76,22 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           {LINKS_DATA.map((link) => (
-            <Button
+            <Link
               key={link.name}
-              variant="text"
-              size="small"
               href={link.link}
-              sx={{ textTransform: 'lowercase', letterSpacing: '0.05em', px: 0.5, py: 0.25 }}
+              target={link.target}
+              rel={link.rel}
+              color="inherit"
+              underline="none"
             >
-              <Link href={link.link} target={link.target} rel={link.rel} color="inherit" underline="none">
+              <Button
+                variant="text"
+                size="small"
+                sx={{ textTransform: 'lowercase', letterSpacing: '0.05em', px: 0.5, py: 0.25 }}
+              >
                 {link.name}
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           ))}
         </Box>
       </Box>
