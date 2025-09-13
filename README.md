@@ -1,10 +1,16 @@
-## To Run Locally
+# Personal Website
 
-First, run the development server:
+Built with React + TypeScript + Vite
+
+## Quick Start
 
 ```bash
 yarn
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build
+
+```bash
+yarn build
+```

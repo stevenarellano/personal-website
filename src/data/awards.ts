@@ -1,11 +1,4 @@
-export type AwardInfo = {
-	issuer: string;
-	item: string;
-	extra?: string;
-	year: number;
-	description: string;
-	link?: string;
-};
+import { AwardInfo } from '../types';
 
 export const AWARDS: AwardInfo[] = [
 	{

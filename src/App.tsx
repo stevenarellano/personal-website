@@ -1,132 +1,284 @@
-import './App.css';
+import Layout from './components/layout/Layout';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 
-import LineBreak from './LineBreak';
-import ExperienceItem from './ExperienceItem';
-import ProjectItem from './ProjectItem';
-import EducationItem from './EducationItem';
-import TalksAndPapersItem from './TalksAndPapersItem';
-import AwardItem from './AwardItem';
-
-import LINKS_DATA from './data/links';
+import EDUCATION_DATA from './data/education';
 import EXPERIENCE_DATA from './data/experiences';
 import PROJECT_DATA from './data/projects';
-import TALK_AND_PAPER_DATA from './data/talksAndPapers';
-import EDUCATION_DATA from './data/education';
+import TALK_DATA from './data/talks';
 import AWARD_DATA from './data/awards';
 
-const NAV_DATA = [
-  { name: 'education', link: '#education' },
-  { name: 'experience', link: '#experience' },
-  { name: 'talks and papers', link: '#talks-papers' },
-  { name: 'awards', link: '#awards' },
-  { name: 'projects', link: '#projects' },
-];
+import { EducationInfo, ExperienceInfo, ProjectInfo, TalkInfo, AwardInfo } from './types';
+
+const theme = {
+  typography: {
+    primary: {
+      fontSize: '0.9rem',
+      lineHeight: 1.1,
+      color: 'text.primary',
+    },
+    secondary: {
+      fontSize: '0.8rem',
+      lineHeight: 1.1,
+      color: 'text.secondary',
+    },
+    project: {
+      fontFamily: "'Times New Roman', Times, serif",
+      textTransform: 'lowercase',
+      lineHeight: 1.3,
+      letterSpacing: '-0.01em',
+      fontSize: '0.9rem',
+    }
+  }
+};
 
 function App() {
   return (
-    <div className="App">
-      <section className="profile-header">
-        <div className="header-content">
-          <div className="text-content">
-            <h1 style={{ fontSize: '2rem' }}>Hi, I'm Steve</h1>
-            <p className="intro">
-              <em>passionate about machine learning, high performance computing, and robotics.</em><br />
-              <em>curious about neuroscience and innovative urban development.</em><br />
-            </p>
-            <br />
-            <div className="social-links">
-              {LINKS_DATA.map((linkInfo, index) => (
-                <span key={index}>
-                  <a
-                    href={linkInfo.link}
-                    target={linkInfo.target}
-                    rel={linkInfo.rel}
-                  >
-                    {linkInfo.name}
-                  </a>
-                  &emsp;
-                </span>
+    <Layout>
+      <Box sx={{
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden'
+      }}>
+        <Tabs defaultValue="experience" className="h-full flex flex-col">
+          <TabsList className="mb-2">
+            <TabsTrigger value="experience">experience</TabsTrigger>
+            <TabsTrigger value="education">education</TabsTrigger>
+            <TabsTrigger value="talks">talks</TabsTrigger>
+            <TabsTrigger value="awards">awards</TabsTrigger>
+            <TabsTrigger value="projects">projects</TabsTrigger>
+          </TabsList>
+
+          <div className="flex-1 overflow-auto">
+            <TabsContent value="experience" className="h-full overflow-auto">
+              <Box display="flex" flexDirection="column" gap={0}>
+                {EXPERIENCE_DATA.map((exp: ExperienceInfo, index) => (
+                  <Card key={index} sx={{ backgroundColor: 'transparent', boxShadow: 'none', pb: 1 }}>
+                    <CardHeader
+                      title={`${exp.role}, ${exp.company}`}
+                      titleTypographyProps={{ sx: theme.typography.primary }}
+                      subheader={
+                        <Typography sx={{ ...theme.typography.secondary, mt: 0 }}>
+                          {exp.location} • {exp.when}
+                          {exp.website && (
+                            <>
+                              {' '}•{' '}
+                              <Link href={exp.website} target="_blank" rel="noopener noreferrer" underline="hover">
+                                website
+                              </Link>
+                            </>
+                          )}
+                        </Typography>
+                      }
+                      sx={{ p: 0 }}
+                    />
+                  </Card>
+                ))}
+              </Box>
+            </TabsContent>
+
+            <TabsContent value="education" className="h-full overflow-auto pb-4">
+              {EDUCATION_DATA && EDUCATION_DATA.map((edu: EducationInfo, index) => (
+                <Card key={index} sx={{ backgroundColor: 'transparent', }}>
+                  <CardHeader
+                    title={edu.institution}
+                    titleTypographyProps={{ sx: theme.typography.primary }}
+                    subheader={
+                      <>
+                        <Typography sx={{ ...theme.typography.secondary, mt: 0, mb: 0.1 }}>
+                          {edu.degree} • {edu.when}
+                        </Typography>
+                      </>
+                    }
+                    sx={{ p: 0.5 }}
+                  />
+                  <CardContent sx={{ p: 0.5, pt: 0, backgroundColor: 'transparent' }}>
+                    <Typography sx={{ ...theme.typography.primary, mb: 0.25 }}>relevant courses:</Typography>
+                    <Box component="ul" sx={{ pl: 3, m: 0, listStyle: 'disc' }}>
+                      {edu.relevantCourses.map((course, i) => (
+                        <Box component="li" key={i}>
+                          <Typography sx={{ ...theme.typography.secondary, mt: 0 }}>
+                            {course}
+                          </Typography>
+                        </Box>
+                      ))}
+                    </Box>
+                  </CardContent>
+                </Card>
               ))}
-            </div>
+            </TabsContent>
+
+            <TabsContent value="talks" className="h-full overflow-auto pb-4">
+              {TALK_DATA.map((talk: TalkInfo, index) => (
+                <Card key={index} sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
+                  <CardContent sx={{ p: 0.5, pt: 0, backgroundColor: 'transparent' }}>
+                    <Typography sx={{ ...theme.typography.primary, mb: 0.2 }}>
+                      {talk.title}
+                      {' '}
+                      (
+                      {talk.venue}
+                      {' '}
+                      {talk.date}
+                      )
+                    </Typography>
+                    <Typography sx={{ ...theme.typography.secondary, mt: 0 }}>
+                      {talk.description}
+                    </Typography>
+                  </CardContent>
+                  {talk.link && (
+                    <CardFooter sx={{ p: 0.5, pt: 0.25 }}>
+                      <Link href={talk.link} target="_blank" rel="noopener noreferrer" underline="hover">
+                        <Button variant="text" size="small" sx={{ px: 0.75, py: 0.1 }}>
+                          view talk
+                        </Button>
+                      </Link>
+                    </CardFooter>
+                  )}
+                </Card>
+              ))}
+            </TabsContent>
+
+            <TabsContent value="awards" className="h-full overflow-auto">
+              <Box display="flex" flexDirection="column">
+                {AWARD_DATA.map((award: AwardInfo, index) => (
+                  <Card key={index} sx={{ backgroundColor: 'transparent', boxShadow: 'none', p: 0.5 }}>
+                    <Box display="flex" flexDirection="column" sx={{ p: 0, m: 0 }}>
+                      <Box display="flex" alignItems="center" flexWrap="wrap">
+                        <Typography
+                          sx={{
+                            ...theme.typography.primary,
+                            whiteSpace: 'nowrap',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            maxWidth: '100%',
+                          }}
+                          component="span"
+                        >
+                          {award.item}
+                          {award.link && (
+                            <Typography
+                              component="span"
+                              sx={{
+                                ...theme.typography.secondary,
+                                ml: 0.5,
+                                color: 'inherit',
+                                display: 'inline',
+                                fontWeight: 400,
+                              }}
+                            >
+                              (
+                              <Link
+                                href={award.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                sx={{ ...theme.typography.secondary, color: 'inherit', textDecoration: 'underline' }}
+                              >
+                                more info
+                              </Link>
+                              )
+                            </Typography>
+                          )}
+                        </Typography>
+                        <Typography
+                          sx={{
+                            ...theme.typography.secondary,
+                            ml: 1,
+                            whiteSpace: 'nowrap',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                          }}
+                          component="span"
+                        >
+                          {award.issuer} — {award.year}
+                          {award.extra && ` (${award.extra})`}
+                        </Typography>
+                      </Box>
+                      <Typography
+                        sx={{
+                          ...theme.typography.secondary,
+                          mt: 0.1,
+                          whiteSpace: 'nowrap',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          maxWidth: '100%',
+                        }}
+                        component="span"
+                      >
+                        {award.description}
+                      </Typography>
+                    </Box>
+                  </Card>
+                ))}
+              </Box>
+            </TabsContent>
+
+            <TabsContent value="projects" className="h-full overflow-auto pb-4">
+              {PROJECT_DATA.length === 0 && (
+                <Typography color="error" sx={{ textTransform: 'lowercase' }}>
+                  no project data available
+                </Typography>
+              )}
+
+              {PROJECT_DATA && PROJECT_DATA.map((proj: ProjectInfo, index) => (
+                <Box key={index} sx={{ mb: 1 }}>
+                  <Typography
+                    component="div"
+                    sx={theme.typography.project}
+                  >
+                    {(proj.title || 'no title').toLowerCase()}
+                    {(proj.github || proj.website) && (
+                      <>
+                        {' ('}
+                        {proj.github && (
+                          <Link
+                            href={proj.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            underline="hover"
+                            sx={{ ...theme.typography.secondary, textTransform: 'lowercase' }}
+                          >
+                            github
+                          </Link>
+                        )}
+                        {proj.github && proj.website && ', '}
+                        {proj.website && (
+                          <Link
+                            href={proj.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            underline="hover"
+                            sx={{ ...theme.typography.secondary, textTransform: 'lowercase' }}
+                          >
+                            website
+                          </Link>
+                        )}
+                        {')'}
+                      </>
+                    )}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      ...theme.typography.secondary,
+                      fontFamily: "'Times New Roman', Times, serif",
+                      whiteSpace: 'pre-line',
+                      textTransform: 'lowercase',
+                    }}
+                  >
+                    {(proj.description || 'no description').toLowerCase()}
+                  </Typography>
+                </Box>
+              ))}
+            </TabsContent>
           </div>
-          <div className="profile-image-container">
-            <img src="assets/me.jpeg" alt="Steve" className="profile-pic" />
-          </div>
-        </div>
-      </section>
-      <LineBreak color="#000" />
-
-      <main className="profile-content">
-        {/* Navigation Section */}
-        <section id="nav">
-          <div style={{ justifyContent: 'space-between', display: 'flex' }} className="nav-links">
-            {NAV_DATA.map((navItem, index) => (
-              <span key={index}>
-                <a href={navItem.link}>{navItem.name}</a>
-                &emsp;
-              </span>
-            ))}
-          </div>
-        </section>
-        <LineBreak color="#000" />
-
-        {/* Education Section */}
-        <section id="education">
-          <h2 className='header-title'>Education</h2>
-          <ul>
-            {EDUCATION_DATA.map((education, index) => (
-              <EducationItem key={index} education={education} last={index === EDUCATION_DATA.length - 1} />
-            ))}
-          </ul>
-        </section>
-        <LineBreak color="#000" />
-
-        {/* Experience Section */}
-        <section id="experience">
-          <h2 className='header-title'>Experience</h2>
-          <ul>
-            {EXPERIENCE_DATA.map((experience, index) => (
-              <ExperienceItem key={index} experience={experience} last={index === EXPERIENCE_DATA.length - 1} />
-            ))}
-          </ul>
-        </section>
-        <LineBreak color="#000" />
-
-        {/* Talks and Papers Section */}
-        <section id="talks-papers">
-          <h2 className='header-title'>Talks and Papers</h2>
-          <ul>
-            {TALK_AND_PAPER_DATA.map((item, index) => (
-              <TalksAndPapersItem key={index} item={item} last={index === TALK_AND_PAPER_DATA.length - 1} />
-            ))}
-          </ul>
-        </section>
-        <LineBreak color="#000" />
-
-        {/* Awards Section */}
-        <section id="awards">
-          <h2 className='header-title'>Awards</h2>
-          <ul>
-            {AWARD_DATA.map((award, index) => (
-              <AwardItem key={index} award={award} last={index === AWARD_DATA.length - 1} />
-            ))}
-          </ul>
-        </section>
-        <LineBreak color="#000" />
-
-        {/* Projects Section */}
-        <section id="projects">
-          <h2 className='header-title'>Projects</h2>
-          <ul>
-            {PROJECT_DATA.map((project, index) => (
-              <ProjectItem key={index} project={project} last={index === PROJECT_DATA.length - 1} />
-            ))}
-          </ul>
-        </section>
-      </main>
-
-      <br />
-    </div>
+        </Tabs>
+      </Box>
+    </Layout>
   );
 }
 

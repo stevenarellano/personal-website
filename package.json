@@ -2,41 +2,52 @@
 	"name": "personal-website",
 	"version": "0.1.0",
 	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"lint": "eslint src --ext ts,tsx",
+		"format": "prettier --write \"src/**/*.{ts,tsx}\""
+	},
 	"dependencies": {
-		"@testing-library/jest-dom": "^5.14.1",
-		"@testing-library/react": "^13.0.0",
-		"@types/jest": "^27.0.1",
-		"@types/node": "^16.7.13",
-		"@types/react": "^18.0.0",
-		"@types/react-dom": "^18.0.0",
+		"@emotion/react": "^11.14.0",
+		"@emotion/styled": "^11.14.0",
+		"@fontsource/darker-grotesque": "^5.2.5",
+		"@fontsource/ibm-plex-mono": "^5.2.5",
+		"@fontsource/ibm-plex-sans": "^5.2.5",
+		"@fontsource/michroma": "^5.2.5",
+		"@fontsource/raleway": "^5.2.5",
+		"@mui/icons-material": "^7.0.2",
+		"@mui/material": "^7.0.2",
+		"buffer": "^6.0.3",
+		"cross-spawn": "^7.0.5",
+		"gray-matter": "^4.0.3",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
-		"react-scripts": "5.0.1",
-		"typescript": "^4.4.2",
-		"web-vitals": "^2.1.0"
+		"react-markdown": "^10.1.0",
+		"react-router-dom": "^6.22.3",
+		"web-vitals": "^3.5.2"
 	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
+	"devDependencies": {
+		"@testing-library/jest-dom": "^6.4.2",
+		"@testing-library/react": "^14.2.1",
+		"@testing-library/user-event": "^14.5.2",
+		"@types/jest": "^29.5.12",
+		"@types/node": "^20.17.46",
+		"@types/react": "^18.2.58",
+		"@types/react-dom": "^18.2.19",
+		"@typescript-eslint/eslint-plugin": "^7.1.0",
+		"@typescript-eslint/parser": "^7.1.0",
+		"@vitejs/plugin-react": "^4.2.1",
+		"eslint": "^8.57.0",
+		"eslint-plugin-react": "^7.33.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-refresh": "^0.4.5",
+		"postcss": "^8.4.35",
+		"prettier": "^3.2.5",
+		"typescript": "^5.3.3",
+		"vite": "^5.1.4",
+		"vitest": "^1.2.1"
 	}
 }
