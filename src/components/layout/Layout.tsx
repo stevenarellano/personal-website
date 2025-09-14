@@ -12,7 +12,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <Box sx={{
-      height: '100vh',
+      height: '100dvh',
       display: 'flex',
       flexDirection: 'column',
       width: '100%',
@@ -72,7 +72,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         flexShrink: 0
       }}>
         <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-          &copy; {new Date().getFullYear()} steven Arellano
+          &copy; {new Date().getFullYear()}
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           {LINKS_DATA.map((link) => (

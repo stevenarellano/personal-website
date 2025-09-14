@@ -13,6 +13,20 @@ export type ExperienceInfo = {
 
 export const EXPERIENCES: ExperienceInfo[] = [
 	{
+		company: 'Herdora',
+		role: 'Co-founder',
+		location: 'San Francisco, CA',
+		responsibilities: [
+			'Co-founded Y Combinator-backed AI performance optimization company',
+			'Building AI systems that run at hardware speed with intelligent performance monitoring',
+			'Developing automated GPU profiling and continuous optimization solutions',
+		],
+		when: 'May 2025 - Present',
+		logo: 'experiences/herdora.png',
+		current: true,
+		website: 'https://herdora.com/',
+	},
+	{
 		company: 'AxLab',
 		subgroup: 'UChicago',
 		role: 'Researcher',
@@ -23,7 +37,7 @@ export const EXPERIENCES: ExperienceInfo[] = [
 		],
 		when: 'Mar 2024 - Nov 2024',
 		logo: 'experiences/uchicago-cs.jpg',
-		current: true,
+		current: false,
 		website: 'https://www.axlab.cs.uchicago.edu/',
 	},
 	{
