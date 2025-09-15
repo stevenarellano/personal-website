@@ -10,27 +10,33 @@ interface TabsListProps extends React.ComponentPropsWithoutRef<typeof MuiTabs> {
 }
 
 const TabsList = React.forwardRef<HTMLDivElement, TabsListProps>(
-  ({ className, children, ...props }, ref) => (
-    <MuiTabs
-      ref={ref}
-      variant="fullWidth"
-      centered
-      sx={{
-        minHeight: '40px',
-        backgroundColor: 'action.hover',
-        borderRadius: '8px',
-        padding: '4px',
-        '& .MuiTab-root': {
-          textTransform: 'lowercase',
-          fontFamily: "'Times New Roman', Times, serif",
-          minHeight: '32px',
-        }
-      }}
-      {...props}
-    >
-      {children}
-    </MuiTabs>
-  )
+  ({ className, children, ...props }, ref) => {
+    const context = React.useContext(TabsContext);
+
+    return (
+      <MuiTabs
+        ref={ref}
+        variant="fullWidth"
+        centered
+        value={context?.value || false}
+        onChange={(event, newValue) => context?.onChange(newValue)}
+        sx={{
+          minHeight: '40px',
+          backgroundColor: 'action.hover',
+          borderRadius: '8px',
+          padding: '4px',
+          '& .MuiTab-root': {
+            textTransform: 'lowercase',
+            fontFamily: "'Times New Roman', Times, serif",
+            minHeight: '32px',
+          }
+        }}
+        {...props}
+      >
+        {children}
+      </MuiTabs>
+    );
+  }
 );
 TabsList.displayName = "TabsList";
 
@@ -66,7 +72,6 @@ const TabsTrigger = ({ className, value, children, ...props }: TabsTriggerProps)
           color: 'text.primary',
         }
       }}
-      onClick={() => context?.onChange(value)}
       {...props}
     />
   );
