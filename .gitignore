@@ -13,6 +13,7 @@ lerna-debug.log*
 node_modules
 .pnp
 .pnp.js
+package-lock.json
 
 # Testing
 coverage
@@ -20,7 +21,6 @@ coverage
 
 # Production
 dist
-build
 dist-ssr
 
 # Next.js
