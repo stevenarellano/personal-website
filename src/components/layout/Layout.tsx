@@ -1,6 +1,7 @@
 import React from 'react';
 import LINKS_DATA from '@/data/links';
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "@/components/ui/theme-toggle";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
@@ -27,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         py: 1,
         px: 1,
         borderBottom: '1px dashed',
-        borderColor: 'grey.400',
+        borderColor: 'divider',
         flexShrink: 0
       }}>
         <Typography sx={{ letterSpacing: '-0.05em', fontSize: '1.2rem' }}>
@@ -36,6 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           Arellano
           <Typography component="span" sx={{ animation: 'blink 1s step-end infinite', ml: 0.25 }}>_</Typography>
         </Typography>
+        <ThemeToggle />
       </Box>
       <Box component="main" sx={{
         width: '100%',
@@ -48,7 +50,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       }}>
         <Box sx={{
           border: '1px solid',
-          borderColor: 'grey.400',
+          borderColor: 'divider',
           padding: '0.25rem',
           height: '100%',
           overflow: 'hidden',
@@ -65,7 +67,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         px: 1,
         mt: 0.5,
         borderTop: '1px dashed',
-        borderColor: 'grey.400',
+        borderColor: 'divider',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',

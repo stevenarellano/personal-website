@@ -1,9 +1,22 @@
 'use client';
 
-import { ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Analytics } from '@vercel/analytics/react';
-import theme from '../src/theme';
+import { ThemeProvider, useTheme } from '../src/contexts/ThemeContext';
+import { createAppTheme } from '../src/theme';
+
+function ThemeWrapper({ children }: { children: React.ReactNode; }) {
+  const { mode } = useTheme();
+  const theme = createAppTheme(mode);
+
+  return (
+    <MuiThemeProvider theme={theme}>
+      <CssBaseline />
+      {children}
+    </MuiThemeProvider>
+  );
+}
 
 export default function ClientProviders({
   children,
@@ -11,10 +24,11 @@ export default function ClientProviders({
   children: React.ReactNode;
 }) {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      {children}
-      <Analytics />
+    <ThemeProvider>
+      <ThemeWrapper>
+        {children}
+        <Analytics />
+      </ThemeWrapper>
     </ThemeProvider>
   );
 }

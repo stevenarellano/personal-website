@@ -3,17 +3,18 @@ import { createTheme } from '@mui/material/styles';
 const baseFont = "'Times New Roman', Times, serif";
 const baseFontSize = 14;
 
-const theme = createTheme({
+const createAppTheme = (mode: 'light' | 'dark') => createTheme({
   palette: {
-    mode: 'light',
+    mode,
     background: {
-      default: '#ffffff',
-      paper: '#f9f9f9',
+      default: mode === 'light' ? '#ffffff' : '#121212',
+      paper: mode === 'light' ? '#f9f9f9' : '#1e1e1e',
     },
     text: {
-      primary: '#191919',
-      secondary: '#595959',
+      primary: mode === 'light' ? '#191919' : '#ffffff',
+      secondary: mode === 'light' ? '#595959' : '#b3b3b3',
     },
+    divider: mode === 'light' ? '#e0e0e0' : '#333333',
   },
   typography: {
     fontFamily: baseFont,
@@ -110,4 +111,6 @@ const theme = createTheme({
   },
 });
 
-export default theme; 
+// Export the theme creation function and a default light theme
+export { createAppTheme };
+export default createAppTheme('light'); 
